@@ -141,3 +141,84 @@
   .treatment-card strong{font-size:10px}
   .treatment-list div{font-size:10px;padding:9px}
 }
+
+/* Neumonía intrahospitalaria — paneo general */
+.nih-definition{max-width:760px;margin:0 auto 24px;display:grid;grid-template-columns:1fr 230px;gap:10px}
+.nih-definition-main,.nih-nav-card{border:1px solid var(--line);border-radius:9px;background:var(--surface);box-shadow:var(--shadow);padding:15px}
+.nih-definition-main{border-left:3px solid var(--accent)}
+.nih-kicker{display:block;color:var(--accent);font-size:8px;font-weight:800;letter-spacing:.1em;margin-bottom:5px}
+.nih-definition-main>strong{font-family:'Libre Baskerville',serif;font-size:18px}
+.nih-definition-main p{margin:7px 0 0;color:var(--muted);font-size:10px;line-height:1.45}
+.nih-definition-main b{color:var(--text)}
+.nih-nav-card{display:flex;flex-direction:column;justify-content:center;text-align:center;background:var(--surface-2)}
+.nih-nav-card span{font-size:8px;color:var(--accent);font-weight:800;letter-spacing:.1em}
+.nih-nav-card strong{font-size:11px;margin-top:5px}
+.nih-nav-card small{font-size:8px;color:var(--muted);margin-top:4px}
+.nih-section-title{max-width:760px;margin:22px auto 10px;display:flex;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:.07em}
+.nih-section-title span{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:color-mix(in srgb,var(--accent) 10%,var(--surface));color:var(--accent);font-size:8px}
+.nih-suspect{max-width:760px;margin:auto;display:grid;grid-template-columns:170px 28px 1fr;align-items:center;gap:8px}
+.nih-anchor{padding:13px 9px;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));border-radius:9px;background:color-mix(in srgb,var(--accent) 6%,var(--surface));text-align:center}
+.nih-anchor strong{display:block;font-size:9px;color:var(--accent)}
+.nih-anchor small{display:block;margin-top:5px;color:var(--muted);font-size:8px}
+.nih-plus{text-align:center;color:var(--muted);font-size:17px}
+.nih-signs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.nih-signs div{padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:8.5px;font-weight:700;line-height:1.25}
+.nih-signs small{color:var(--muted);font-weight:500}
+.nih-note{grid-column:1/-1;padding:8px 10px;border-radius:7px;background:var(--surface-2);color:var(--muted);font-size:8.5px;line-height:1.35;text-align:center}
+.nih-note b{color:var(--accent)}
+.nih-pathogens{max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.nih-pathogens div{padding:10px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);text-align:center}
+.nih-pathogens strong{display:block;font-size:9px}
+.nih-pathogens small{display:block;margin-top:5px;color:var(--muted);font-size:7.5px;line-height:1.25}
+.nih-stat{max-width:760px;margin:8px auto 0;display:flex;align-items:center;justify-content:center;gap:9px;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)}
+.nih-stat strong{font-family:'Libre Baskerville',serif;font-size:17px;color:var(--accent)}
+.nih-stat span,.nih-stat em{font-size:8px;color:var(--muted)}
+.nih-stat em{padding-left:9px;border-left:1px solid var(--line);font-style:normal}
+.nih-studies{max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.nih-studies div{padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.nih-studies strong{display:block;font-size:7.5px;letter-spacing:.07em;color:var(--accent)}
+.nih-studies span{display:block;margin-top:5px;font-size:8.5px;line-height:1.3;color:var(--text)}
+.nih-timing{max-width:760px;margin:8px auto 0;text-align:center;color:var(--muted);font-size:8.5px}
+.nih-timing b{color:var(--text)}
+.nih-treatment{max-width:760px;margin:auto;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.nih-treatment-head{padding:10px 12px;background:var(--surface-2);font-size:8.5px;color:var(--muted);line-height:1.35}
+.nih-treatment-head b{color:var(--text)}
+.nih-treatment-row{display:grid;grid-template-columns:190px 1fr;border-top:1px solid var(--line)}
+.nih-treatment-row>div{padding:10px;font-size:8.5px;line-height:1.35}
+.nih-treatment-label{background:var(--surface-2);font-weight:800;color:var(--text)}
+.nih-treatment-label small,.nih-treatment-row>div>small{display:block;color:var(--muted);font-weight:500;font-size:7.5px}
+.nih-treatment-row b{color:var(--accent)}
+.nih-alerts{max-width:760px;margin:8px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.nih-alerts div{padding:9px;border-radius:8px;border:1px solid var(--line);background:var(--surface);display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center}
+.nih-alerts strong{font-size:8px;color:#b42318;letter-spacing:.07em}
+.nih-alerts div:last-child strong{color:var(--accent)}
+.nih-alerts span{font-size:8.5px;line-height:1.3;color:var(--muted)}
+.nih-alerts b{color:var(--text)}
+@media(max-width:700px){
+  .nih-definition{grid-template-columns:1fr;margin-bottom:18px}
+  .nih-nav-card{padding:10px}
+  .nih-suspect{grid-template-columns:1fr;gap:6px}
+  .nih-plus{font-size:15px}
+  .nih-signs{grid-template-columns:1fr 1fr}
+  .nih-note{grid-column:1}
+  .nih-pathogens{grid-template-columns:1fr 1fr}
+  .nih-stat{flex-wrap:wrap;gap:5px}
+  .nih-stat em{padding-left:0;border-left:0;width:100%;text-align:center}
+  .nih-studies{grid-template-columns:1fr 1fr}
+  .nih-treatment-row{grid-template-columns:1fr}
+  .nih-treatment-label{border-bottom:1px solid var(--line)}
+  .nih-alerts{grid-template-columns:1fr}
+  .nih-section-title{margin-top:18px}
+}
+@media(min-width:701px){
+  .nih-definition-main{padding:18px}
+  .nih-definition-main p{font-size:11px}
+  .nih-nav-card strong{font-size:12px}
+  .nih-anchor strong{font-size:10px}
+  .nih-signs div{font-size:9px;padding:10px}
+  .nih-pathogens strong{font-size:10px}
+  .nih-studies span{font-size:9px}
+  .nih-treatment-row>div{font-size:9.5px}
+  .nih-treatment-label small,.nih-treatment-row>div>small{font-size:8px}
+  .nih-alerts span{font-size:9px}
+}
