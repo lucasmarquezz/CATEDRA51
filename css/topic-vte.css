@@ -66,3 +66,24 @@
  .tep-flow-diagram .box-text{font-size:10px}
  .tep-flow-diagram .condition{font-size:10px}
 }
+/* ALGORITMO INICIAL DE TRATAMIENTO TEP */
+.tep-treatment-flow{width:min(820px,100%);margin:10px auto 0;text-align:center}
+.treatment-decision{width:min(430px,100%);margin:0 auto;padding:16px 18px;border:1.5px solid var(--accent);border-radius:10px;background:var(--surface);color:var(--text);font-size:14px;font-weight:900}
+.treatment-branches{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-top:42px}
+.treatment-branches:before{content:'';position:absolute;top:-21px;left:25%;right:25%;height:1.5px;background:var(--line)}
+.treatment-branch{position:relative;display:flex;flex-direction:column;align-items:center}
+.treatment-arrow{position:absolute;top:-42px;color:var(--muted);font-size:25px;line-height:1}
+.treatment-condition{font-size:11px;font-weight:900;margin-bottom:8px}
+.treatment-box{width:min(260px,100%);min-height:64px;padding:13px 14px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);color:var(--text);font-size:12px;font-weight:900;line-height:1.35;box-sizing:border-box}
+.treatment-branch.massive .treatment-box{border-color:#b84a4a}
+.treatment-branch.stable .treatment-box{border-color:#d98c2b}
+.treatment-follow{margin-top:13px;padding:7px 12px;border:1px dashed var(--line);border-radius:7px;background:var(--surface-2);color:var(--muted);font-size:9px;font-weight:900;letter-spacing:.08em}
+@media(max-width:700px){
+ .treatment-decision{font-size:11px;padding:12px}
+ .treatment-branches{gap:18px;margin-top:35px}
+ .treatment-branches:before{left:25%;right:25%;top:-18px}
+ .treatment-arrow{top:-36px;font-size:21px}
+ .treatment-condition{font-size:9px}
+ .treatment-box{font-size:9px;min-height:56px;padding:9px}
+ .treatment-follow{font-size:8px;padding:6px 8px}
+}
