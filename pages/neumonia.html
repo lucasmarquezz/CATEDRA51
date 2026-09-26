@@ -46,21 +46,42 @@
       <section class="tab-panel" id="sospecha" role="tabpanel" hidden>
         <div class="panel-heading"><div><span class="eyebrow">SOSPECHA CLÍNICA</span><h2>¿Cuándo lo sospecho?</h2></div><p>Síntomas iniciales y algoritmo para confirmar el diagnóstico.</p></div>
         <div class="symptom-row"><div>FIEBRE</div><div>TOS</div><div>EXPECTORACIÓN</div><div>DISNEA</div><div>DOLOR PLEURÍTICO</div></div>
-        <div class="arrow-down">↓</div>
-        <div class="algorithm-box start">SOSPECHA DE NEUMONÍA</div>
-        <div class="arrow-down">↓</div>
-        <div class="algorithm-box">1. ¿CLÍNICA COMPATIBLE?<br>2. ¿HALLAZGOS AUSCULTATORIOS?</div>
-        <div class="arrow-down">↓</div>
-        <div class="algorithm-box">REALICE RX DE TÓRAX</div>
-        <div class="arrow-down">↓</div>
+        <div class="arrow-down">↓</div><div class="algorithm-box start">SOSPECHA DE NEUMONÍA</div><div class="arrow-down">↓</div><div class="algorithm-box">1. ¿CLÍNICA COMPATIBLE?<br>2. ¿HALLAZGOS AUSCULTATORIOS?</div><div class="arrow-down">↓</div><div class="algorithm-box">REALICE RX DE TÓRAX</div><div class="arrow-down">↓</div>
         <div class="infiltrado-decision"><div class="algorithm-box infiltrado">¿INFILTRADO?</div><div class="decision-branches"><div class="branch branch-yes"><span class="branch-arrow">↓</span><strong>SI</strong><div>SE CONFIRMA NAC</div></div><div class="branch branch-no"><span class="branch-arrow">↓</span><strong>NO</strong><div>CONSIDERAR OTRO DX</div></div></div></div>
       </section>
 
       <section class="tab-panel" id="donde" role="tabpanel" hidden>
         <div class="panel-heading"><div><span class="eyebrow">GRAVEDAD Y CONDUCTA</span><h2>¿Dónde lo trato?</h2></div><p>CURB-65 para determinar el lugar de cuidado + criterios que indican internación independientemente del puntaje.</p></div>
-        <div class="curb-card"><div class="card-title">CURB-65</div><div class="curb-placeholder">Completar criterios y determinación del lugar de cuidado</div></div>
+
+        <div class="curb-card">
+          <div class="curb-header"><div class="card-title">CURB-65</div><div class="curb-total">1 punto por cada criterio</div></div>
+          <div class="curb-grid">
+            <div class="curb-item"><span class="curb-letter">C</span><div><strong>Confusión</strong><small>Alteración del estado mental</small></div><b>1</b></div>
+            <div class="curb-item"><span class="curb-letter">U</span><div><strong>Urea</strong><small>&gt; 7 mmol/L (&gt; 20 mg/dL)</small></div><b>1</b></div>
+            <div class="curb-item"><span class="curb-letter">R</span><div><strong>Frecuencia respiratoria</strong><small>≥ 30/min</small></div><b>1</b></div>
+            <div class="curb-item"><span class="curb-letter">B</span><div><strong>Presión arterial</strong><small>PS &lt; 90 mmHg o PD ≤ 60 mmHg</small></div><b>1</b></div>
+            <div class="curb-item"><span class="curb-letter">65</span><div><strong>Edad</strong><small>≥ 65 años</small></div><b>1</b></div>
+          </div>
+        </div>
+
+        <div class="care-levels">
+          <div class="care-level ambulatory"><span>0–1</span><strong>AMBULATORIO</strong></div>
+          <div class="care-level ward"><span>2</span><strong>SALA</strong></div>
+          <div class="care-level icu"><span>3–5</span><strong>SALA CERRADA / UCI</strong></div>
+        </div>
+
         <div class="or-divider"><span>Y ADEMÁS</span></div>
-        <div class="compact-card independent-card"><div class="card-title">CRITERIOS DE INTERNACIÓN INDEPENDIENTES DEL CURB-65</div><div class="placeholder-lines"><span></span><span></span><span></span><span></span></div></div>
+
+        <div class="compact-card independent-card">
+          <div class="card-title">CRITERIOS DE INTERNACIÓN INDEPENDIENTES DEL CURB-65</div>
+          <div class="independent-grid">
+            <div><span>01</span>Hipoxemia</div>
+            <div><span>02</span>Intolerancia vía oral</div>
+            <div><span>03</span>Riesgo social</div>
+            <div><span>04</span>Inestabilidad hemodinámica</div>
+            <div><span>05</span>Sepsis</div>
+          </div>
+        </div>
       </section>
 
       <section class="tab-panel" id="tratamiento" role="tabpanel" hidden>
