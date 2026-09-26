@@ -1,3 +1,35 @@
+
+/* CATEDRA 51 — Marco visual principal de Abdomen agudo */
+.abdomen-page{max-width:1120px;margin:auto;padding:38px 5% 70px;--abdomen-accent:#a85b32}
+.abdomen-page .back-link{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;margin-bottom:38px}
+.abdomen-page .back-link:hover{color:var(--abdomen-accent)}
+.abdomen-page .topic-hero{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;padding-bottom:34px}
+.abdomen-page .topic-hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(38px,6vw,64px);line-height:1.06;letter-spacing:-.04em;margin:14px 0}
+.abdomen-page .topic-hero p{margin:0;color:var(--muted);font-size:15px}
+.abdomen-page .topic-badge{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:16px 20px;text-align:right;color:var(--muted);font-size:11px;line-height:1.5;letter-spacing:.12em;font-weight:700}
+.abdomen-page .topic-tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);overflow-x:auto;margin-bottom:0}
+.abdomen-page .topic-tab{appearance:none;border:0;background:transparent;color:var(--muted);font:600 13px 'DM Sans',sans-serif;padding:15px 17px;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent}
+.abdomen-page .topic-tab:hover{color:var(--text)}
+.abdomen-page .topic-tab.active{color:var(--abdomen-accent);border-bottom-color:var(--abdomen-accent)}
+.abdomen-page .tab-panel{padding-top:38px}
+.abdomen-page .panel-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:22px}
+.abdomen-page .panel-heading h2{font-family:'Libre Baskerville',serif;font-size:30px;line-height:1.2;margin:9px 0 0}
+.abdomen-page .panel-heading p{max-width:430px;color:var(--muted);font-size:14px;line-height:1.6;margin:0}
+.abdomen-page .eyebrow{font-size:9px;font-weight:800;letter-spacing:.12em;color:var(--abdomen-accent)}
+@media(min-width:701px){
+  .abdomen-page .topic-hero h1{font-size:clamp(44px,5vw,62px)}
+  .abdomen-page .panel-heading h2{font-size:31px}
+}
+@media(max-width:700px){
+  .abdomen-page{padding-top:28px}
+  .abdomen-page .topic-hero{display:block;padding-bottom:28px}
+  .abdomen-page .topic-badge{display:inline-block;margin-top:24px;text-align:left}
+  .abdomen-page .panel-heading{display:block}
+  .abdomen-page .panel-heading p{margin-top:13px}
+  .abdomen-page .topic-tabs{margin-inline:-5%!important;width:110%!important;border-radius:0!important;padding:6px 5%!important}
+  .abdomen-page .topic-tab{font-size:9px!important;padding:9px 11px!important}
+}
+
 /* CATEDRA 51 — Abdomen agudo */
 .abdomen-page{--abdomen-accent:#a85b32}
 .abdomen-tabs{margin-bottom:24px}
@@ -111,3 +143,46 @@
 .age-note strong{color:var(--text)}
 @media(max-width:700px){.mechanism-grid{grid-template-columns:1fr 1fr}.mechanism-grid .class-card:last-child{grid-column:1/-1}.surgical-medical{grid-template-columns:1fr}}
 @media(max-width:430px){.mechanism-grid{grid-template-columns:1fr}.mechanism-grid .class-card:last-child{grid-column:auto}}
+
+/* Ajuste final de escala y jerarquía — consistente con la página Neumonía */
+.abdomen-page .definition-card,
+.abdomen-page .location-table-wrap,
+.abdomen-page .red-flag-hero,
+.abdomen-page .flags-grid,
+.abdomen-page .initial-flow,
+.abdomen-page .approach-columns,
+.abdomen-page .studies-box,
+.abdomen-page .management-priority,
+.abdomen-page .management-grid,
+.abdomen-page .do-not-miss,
+.abdomen-page .section-label,
+.abdomen-page .oral-pearl,
+.abdomen-page .surgical-medical,
+.abdomen-page .age-note{max-width:900px}
+
+.abdomen-page .definition-card{margin-top:0}
+.abdomen-page .section-label{font-size:9px;letter-spacing:.1em}
+.abdomen-page .class-card{padding:16px}
+.abdomen-page .class-card h3{font-size:12px;line-height:1.25}
+.abdomen-page .class-card p{font-size:9px;line-height:1.5}
+.abdomen-page .location-table{min-width:0}
+.abdomen-page .location-table th,.abdomen-page .location-table td{font-size:10px;padding:11px 13px;line-height:1.45}
+.abdomen-page .location-table thead th{font-size:8.5px}
+.abdomen-page .flag-card{padding:13px}
+.abdomen-page .flag-card b{font-size:8px}
+.abdomen-page .flag-card span{font-size:9px;line-height:1.45}
+.abdomen-page .flow-step strong{font-size:9.5px}
+.abdomen-page .flow-step small{font-size:8px}
+.abdomen-page .check-list span,
+.abdomen-page .study-grid span,
+.abdomen-page .management-grid li,
+.abdomen-page .do-not-miss-grid span{font-size:9px}
+@media(max-width:700px){
+  .abdomen-page .panel-heading h2{font-size:26px}
+  .abdomen-page .location-table{min-width:650px}
+  .abdomen-page .location-table th,.abdomen-page .location-table td{font-size:9px}
+  .abdomen-page .flags-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:430px){
+  .abdomen-page .flags-grid{grid-template-columns:1fr}
+}
