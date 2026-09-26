@@ -24,3 +24,22 @@
   .pleural-arrow,.path-arrow{font-size:22px}.pleural-branch{padding:14px}.pleural-condition{width:42px;height:42px;font-size:12px}.pleural-branch span{font-size:11px}.pleural-branch small{font-size:9px}.exudate-path{padding:12px 9px}.path-label{font-size:10px}.exudate-path>small{font-size:9px}.management{padding:10px!important;font-size:10px!important}
   .treatment-card{padding:16px}.treatment-card h3{font-size:16px}.treatment-card div{font-size:11px}.general-card{padding:18px}
 }
+
+/* Ramificación corregida del exudado */
+.light-outcomes{width:min(820px,100%);display:grid;grid-template-columns:220px 1fr;gap:55px;align-items:start}
+.light-outcomes:before{left:25%;right:25%}
+.exudate-column{width:min(520px,100%);margin:0 auto;text-align:center}
+.exudate-column>.exudate-branch{width:230px;margin:0 auto}
+.exudate-arrows{display:grid;grid-template-columns:1fr 1fr;width:70%;margin:2px auto -2px;font-size:25px;line-height:1;color:var(--muted)}
+.exudate-arrows div:first-child{text-align:left}.exudate-arrows div:last-child{text-align:right}
+.exudate-column .exudate-paths{width:100%;padding-top:0;grid-template-columns:1fr 1fr;gap:10px}
+.exudate-column .exudate-path:before{display:none}
+.exudate-column .empyema-path{margin:10px auto 0;width:min(300px,100%);font-size:8px}
+@media(max-width:700px){
+  .light-outcomes{width:100%;grid-template-columns:1fr;gap:12px}
+  .light-outcomes:before{display:none}
+  .exudate-column{width:100%}
+  .exudate-column>.exudate-branch{width:220px}
+  .exudate-arrows{width:58%;font-size:21px}
+  .exudate-column .exudate-paths{grid-template-columns:1fr;gap:8px}
+}
