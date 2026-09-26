@@ -1,0 +1,1 @@
+.empty-panel{min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed var(--border,#d8dee8);border-radius:18px;background:var(--card,#fff);padding:40px}.empty-panel h2{margin:10px 0 0}.topic-tabs{align-items:stretch}.topic-tab{min-height:58px}.active-nav{font-weight:700}
