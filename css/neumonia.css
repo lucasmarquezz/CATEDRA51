@@ -126,3 +126,18 @@
     gap:8px!important;
   }
 }
+
+
+.treatment-card strong{font-size:9px;color:var(--text)}
+.treatment-card b{color:var(--accent)}
+.treatment-card span{display:inline-block;margin-top:3px;color:var(--muted)}
+.treatment-list{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:10px}
+.treatment-list div{padding:8px 9px;border:1px solid var(--line);border-radius:7px;background:var(--surface-2);font-size:9px;color:var(--text);line-height:1.3}
+@media(max-width:700px){
+  .treatment-list{grid-template-columns:1fr}
+  .treatment-list div{font-size:8.5px}
+}
+@media(min-width:701px){
+  .treatment-card strong{font-size:10px}
+  .treatment-list div{font-size:10px;padding:9px}
+}
