@@ -35,14 +35,12 @@
         <button class="topic-tab" data-tab="donde" role="tab" aria-selected="false">03 · ¿Dónde lo trato?</button>
         <button class="topic-tab" data-tab="tratamiento" role="tab" aria-selected="false">04 · Tratamiento y medidas</button>
         <button class="topic-tab" data-tab="derrame" role="tab" aria-selected="false">05 · Derrame paraneumónico</button>
+        <button class="topic-tab" data-tab="intrahospitalaria" role="tab" aria-selected="false">06 · La neumonía intrahospitalaria</button>
       </nav>
 
       <section class="tab-panel active" id="etiologias" role="tabpanel">
         <div class="panel-heading"><div><span class="eyebrow">ETIOLOGÍA</span><h2>Etiologías principales</h2></div><p>Cuadro para relacionar el agente con las pistas clínicas que orientan a sospecharlo.</p></div>
-        <div class="compact-card">
-          <table class="pneumo-table"><thead><tr><th>AGENTE</th><th>PISTAS CLÍNICAS QUE LO HACEN SOSPECHAR</th></tr></thead>
-          <tbody><tr><th>—</th><td>Completar</td></tr><tr><th>—</th><td>Completar</td></tr><tr><th>—</th><td>Completar</td></tr><tr><th>—</th><td>Completar</td></tr></tbody></table>
-        </div>
+        <div class="compact-card"><table class="pneumo-table"><thead><tr><th>AGENTE</th><th>PISTAS CLÍNICAS QUE LO HACEN SOSPECHAR</th></tr></thead><tbody><tr><th>—</th><td>Completar</td></tr><tr><th>—</th><td>Completar</td></tr><tr><th>—</th><td>Completar</td></tr><tr><th>—</th><td>Completar</td></tr></tbody></table></div>
       </section>
 
       <section class="tab-panel" id="sospecha" role="tabpanel" hidden>
@@ -51,7 +49,11 @@
         <div class="arrow-down">↓</div>
         <div class="algorithm-box start">SOSPECHA DE NEUMONÍA</div>
         <div class="arrow-down">↓</div>
-        <div class="algorithm-box">ALGORITMO DE CONFIRMACIÓN<br><small>Contenido pendiente</small></div>
+        <div class="algorithm-box">1. ¿CLÍNICA COMPATIBLE?<br>2. ¿HALLAZGOS AUSCULTATORIOS?</div>
+        <div class="arrow-down">↓</div>
+        <div class="algorithm-box">REALICE RX DE TÓRAX</div>
+        <div class="arrow-down">↓</div>
+        <div class="decision-grid"><div class="decision-box yes"><strong>¿INFILTRADO?</strong><span>SI → SE CONFIRMA NAC</span></div><div class="decision-box no"><strong>¿INFILTRADO?</strong><span>NO → CONSIDERAR OTRO DX</span></div></div>
       </section>
 
       <section class="tab-panel" id="donde" role="tabpanel" hidden>
@@ -63,21 +65,18 @@
 
       <section class="tab-panel" id="tratamiento" role="tabpanel" hidden>
         <div class="panel-heading"><div><span class="eyebrow">CONDUCTA</span><h2>Tratamiento y medidas generales</h2></div><p>Tratamiento organizado según el lugar de cuidado.</p></div>
-        <div class="treatment-grid">
-          <div class="treatment-card"><h3>AMBULATORIO</h3><div>Completar tratamiento</div></div>
-          <div class="treatment-card"><h3>SALA</h3><div>Completar tratamiento</div></div>
-          <div class="treatment-card"><h3>UCI</h3><div>Completar tratamiento</div></div>
-        </div>
+        <div class="treatment-grid"><div class="treatment-card"><h3>AMBULATORIO</h3><div>Completar tratamiento</div></div><div class="treatment-card"><h3>SALA</h3><div>Completar tratamiento</div></div><div class="treatment-card"><h3>UCI</h3><div>Completar tratamiento</div></div></div>
         <div class="general-card"><div class="card-title">MEDIDAS GENERALES</div><div class="placeholder-lines"><span></span><span></span><span></span><span></span></div></div>
       </section>
 
       <section class="tab-panel" id="derrame" role="tabpanel" hidden>
         <div class="panel-heading"><div><span class="eyebrow">COMPLICACIÓN</span><h2>Derrame paraneumónico</h2></div><p>Qué hacer ante un derrame, cuándo realizar toracocentesis, qué buscar y cuál es la conducta.</p></div>
-        <div class="algorithm">
-          <div class="algorithm-box start">NEUMONÍA + DERRAME</div><div class="arrow-down">↓</div>
-          <div class="algorithm-box">¿REALIZAR TORACOCENTESIS?<br><small>Completar indicación</small></div><div class="arrow-down">↓</div>
-          <div class="split-box"><div><strong>¿QUÉ BUSCAR?</strong><span>Completar</span></div><div><strong>CONDUCTA</strong><span>Completar</span></div></div>
-        </div>
+        <div class="algorithm"><div class="algorithm-box start">NEUMONÍA + DERRAME</div><div class="arrow-down">↓</div><div class="algorithm-box">¿REALIZAR TORACOCENTESIS?<br><small>Completar indicación</small></div><div class="arrow-down">↓</div><div class="split-box"><div><strong>¿QUÉ BUSCAR?</strong><span>Completar</span></div><div><strong>CONDUCTA</strong><span>Completar</span></div></div></div>
+      </section>
+
+      <section class="tab-panel" id="intrahospitalaria" role="tabpanel" hidden>
+        <div class="panel-heading"><div><span class="eyebrow">RESPIRATORIO · INFECCIONES</span><h2>La neumonía intrahospitalaria</h2></div><p>Contenido pendiente de completar.</p></div>
+        <div class="compact-card intrahospitalaria-placeholder"><div class="card-title">LA NEUMONÍA INTRAHOSPITALARIA</div><div class="placeholder-lines"><span></span><span></span><span></span><span></span></div></div>
       </section>
     </main>
     <footer><span>CATEDRA 51</span><span>Por L. Márquez</span></footer>
