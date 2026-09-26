@@ -52,7 +52,6 @@
 
       <section class="tab-panel" id="donde" role="tabpanel" hidden>
         <div class="panel-heading"><div><span class="eyebrow">GRAVEDAD Y CONDUCTA</span><h2>¿Dónde lo trato?</h2></div><p>CURB-65 para determinar el lugar de cuidado + criterios que indican internación independientemente del puntaje.</p></div>
-
         <div class="curb-card">
           <div class="curb-header"><div class="card-title">CURB-65</div><div class="curb-total">1 punto por cada criterio</div></div>
           <div class="curb-grid">
@@ -63,25 +62,9 @@
             <div class="curb-item"><span class="curb-letter">65</span><div><strong>Edad</strong><small>≥ 65 años</small></div><b>1</b></div>
           </div>
         </div>
-
-        <div class="care-levels">
-          <div class="care-level ambulatory"><span>0–1</span><strong>AMBULATORIO</strong></div>
-          <div class="care-level ward"><span>2</span><strong>SALA</strong></div>
-          <div class="care-level icu"><span>3–5</span><strong>SALA CERRADA / UCI</strong></div>
-        </div>
-
+        <div class="care-levels"><div class="care-level ambulatory"><span>0–1</span><strong>AMBULATORIO</strong></div><div class="care-level ward"><span>2</span><strong>SALA</strong></div><div class="care-level icu"><span>3–5</span><strong>SALA CERRADA / UCI</strong></div></div>
         <div class="or-divider"><span>Y ADEMÁS</span></div>
-
-        <div class="compact-card independent-card">
-          <div class="card-title">CRITERIOS DE INTERNACIÓN INDEPENDIENTES DEL CURB-65</div>
-          <div class="independent-grid">
-            <div><span>01</span>Hipoxemia</div>
-            <div><span>02</span>Intolerancia vía oral</div>
-            <div><span>03</span>Riesgo social</div>
-            <div><span>04</span>Inestabilidad hemodinámica</div>
-            <div><span>05</span>Sepsis</div>
-          </div>
-        </div>
+        <div class="compact-card independent-card"><div class="card-title">CRITERIOS DE INTERNACIÓN INDEPENDIENTES DEL CURB-65</div><div class="independent-grid"><div><span>01</span>Hipoxemia</div><div><span>02</span>Intolerancia vía oral</div><div><span>03</span>Riesgo social</div><div><span>04</span>Inestabilidad hemodinámica</div><div><span>05</span>Sepsis</div></div></div>
       </section>
 
       <section class="tab-panel" id="tratamiento" role="tabpanel" hidden>
@@ -91,8 +74,36 @@
       </section>
 
       <section class="tab-panel" id="derrame" role="tabpanel" hidden>
-        <div class="panel-heading"><div><span class="eyebrow">COMPLICACIÓN</span><h2>Derrame paraneumónico</h2></div><p>Qué hacer ante un derrame, cuándo realizar toracocentesis, qué buscar y cuál es la conducta.</p></div>
-        <div class="algorithm"><div class="algorithm-box start">NEUMONÍA + DERRAME</div><div class="arrow-down">↓</div><div class="algorithm-box">¿REALIZAR TORACOCENTESIS?<br><small>Completar indicación</small></div><div class="arrow-down">↓</div><div class="split-box"><div><strong>¿QUÉ BUSCAR?</strong><span>Completar</span></div><div><strong>CONDUCTA</strong><span>Completar</span></div></div></div>
+        <div class="panel-heading"><div><span class="eyebrow">COMPLICACIÓN</span><h2>Derrame paraneumónico</h2></div><p>Algoritmo práctico para evaluar el derrame, clasificarlo y definir la conducta.</p></div>
+        <div class="pleural-algorithm">
+          <div class="pleural-box main-box">¿DERRAME SIGNIFICATIVO?<small>Grosor &gt; 10 mm en radiografía en decúbito lateral</small></div>
+          <div class="pleural-arrow">↓</div>
+          <div class="pleural-box action-box"><strong>REALICE</strong><span>1. TORACOCENTESIS</span><span>2. ANÁLISIS DE LÍQUIDO</span><small>Proteínas · LDH · pH · células · glucosa · Gram + cultivo</small></div>
+          <div class="pleural-arrow">↓</div>
+          <div class="pleural-box light-box">PUNTAJE DE CRITERIOS DE LIGHT</div>
+          <div class="pleural-split">
+            <div class="pleural-branch transudate-branch"><div class="pleural-condition">0</div><span>TRASUDADO</span><small>Buscar y tratar causa.<br>Generalmente: ICC · cirrosis · síndrome nefrótico</small></div>
+            <div class="pleural-branch exudate-branch"><div class="pleural-condition">≥ 1</div><span>EXUDADO</span></div>
+          </div>
+          <div class="exudate-paths">
+            <div class="exudate-path">
+              <div class="path-label">COMPLICADO</div>
+              <small>pH &lt; 7,20<br>LDH &gt; 1000</small>
+              <div class="path-arrow">↓</div>
+              <div class="pleural-box management complicated">ATB + DRENAJE</div>
+            </div>
+            <div class="exudate-path">
+              <div class="path-label">NO COMPLICADO</div>
+              <small>pH &gt; 7,20<br>LDH &lt; 1000</small>
+              <div class="path-arrow">↓</div>
+              <div class="pleural-box management uncomplicated">ATB + CONTROL</div>
+            </div>
+            <div class="exudate-path empyema-path">
+              <div class="path-label">¿EMPIEMA O GRAM/CULTIVO +?</div>
+              <small>Vinculado a la evaluación microbiológica del líquido</small>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="tab-panel" id="intrahospitalaria" role="tabpanel" hidden>
