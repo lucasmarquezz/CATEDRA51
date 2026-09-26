@@ -43,19 +43,75 @@
 <div class="tep-algo-box">REALICE<br><strong>RX + ECG</strong></div>
 <div class="tep-arrow">↓</div>
 <div class="tep-algo-box wells">DETERMINE SCORE DE WELLS PARA TEP</div>
-<div class="tep-wells-branches">
-<div class="tep-wells-branch low"><div class="tep-branch-label">&lt; 2 · BAJA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box"><strong>DETERMINE PERC</strong></div><div class="tep-subbranches">
-<div class="tep-subbranch"><div class="tep-condition">SI ES 0</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box excluded">TEP EXCLUIDO</div></div>
-<div class="tep-subbranch"><div class="tep-condition">SI ES ≥ 1</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box dimer-pre">DÍMERO D</div></div>
-</div></div>
-<div class="tep-wells-branch moderate"><div class="tep-branch-label">2–6 · MODERADA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box dimer-pre"><strong>DÍMERO D PREVIO</strong></div><div class="tep-dimer-results">
-<div class="tep-result-branch"><div class="tep-condition">&lt; 500</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box excluded">TEP EXCLUIDO</div></div>
-<div class="tep-result-branch"><div class="tep-condition">&gt; 500</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box angiotic">ANGIO-TC</div></div>
-</div></div>
-<div class="tep-wells-branch high"><div class="tep-branch-label">&gt; 6 · ALTA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box angiotic">ANGIO-TC</div>
-<div class="tep-angio-results"><div class="tep-result-branch"><div class="tep-condition">TEP +</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box echo">ECOCARDIO</div></div><div class="tep-result-branch"><div class="tep-condition">TEP −</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box excluded">TEP EXCLUIDO</div></div></div>
-<div class="tep-echo-results"><div class="tep-result-branch"><div class="tep-condition">DISFUNCIÓN DEL VD +?</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box submassive">SUBMASIVO / MASIVO</div></div><div class="tep-result-branch"><div class="tep-condition">DISFUNCIÓN DEL VD −?</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box lowrisk">TEP DE BAJO RIESGO</div></div></div>
-</div>
+<div class="tep-flow-diagram" aria-label="Algoritmo diagnóstico de TEP">
+<svg viewBox="0 0 1000 900" role="img">
+<defs><marker id="tepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/></marker></defs>
+
+<!-- Wells → probabilidades -->
+<path class="flow-line" d="M500 8 C500 45 185 38 170 78" marker-end="url(#tepArrow)"/>
+<path class="flow-line" d="M500 8 L500 78" marker-end="url(#tepArrow)"/>
+<path class="flow-line" d="M500 8 C500 45 815 38 830 78" marker-end="url(#tepArrow)"/>
+
+<text class="probability low-text" x="170" y="82" text-anchor="middle">&lt; 2 · BAJA PROBABILIDAD</text>
+<text class="probability mod-text" x="500" y="82" text-anchor="middle">2–6 · MODERADA PROBABILIDAD</text>
+<text class="probability high-text" x="830" y="82" text-anchor="middle">&gt; 6 · ALTA PROBABILIDAD</text>
+
+<!-- Probabilidad → conductas -->
+<path class="flow-line" d="M170 92 L170 130" marker-end="url(#tepArrow)"/>
+<rect class="flow-box" x="95" y="135" width="150" height="58" rx="9"/>
+<text class="box-text" x="170" y="170" text-anchor="middle">DETERMINE PERC</text>
+
+<path class="flow-line" d="M500 92 L500 130" marker-end="url(#tepArrow)"/>
+<rect class="flow-box dimer" x="425" y="135" width="150" height="58" rx="9"/>
+<text class="box-text" x="500" y="170" text-anchor="middle">DÍMERO D</text>
+
+<path class="flow-line" d="M830 92 L830 130" marker-end="url(#tepArrow)"/>
+<rect class="flow-box angio" x="755" y="135" width="150" height="58" rx="9"/>
+<text class="box-text" x="830" y="170" text-anchor="middle">ANGIO-TC</text>
+
+<!-- PERC → shared D-dimer / shared exclusion -->
+<text class="condition" x="95" y="225">SI ES 0</text>
+<text class="condition" x="245" y="225">SI ES ≥ 1</text>
+<path class="flow-line" d="M170 193 C170 285 135 300 110 350" marker-end="url(#tepArrow)"/>
+<path class="flow-line" d="M170 193 C170 260 390 260 500 350" marker-end="url(#tepArrow)"/>
+
+<!-- D-dimer → shared exclusion / shared angio -->
+<text class="condition" x="410" y="225">&lt; 500</text>
+<text class="condition" x="590" y="225">&gt; 500</text>
+<path class="flow-line" d="M500 193 C500 280 430 300 390 350" marker-end="url(#tepArrow)"/>
+<path class="flow-line" d="M500 193 C500 270 700 285 830 350" marker-end="url(#tepArrow)"/>
+
+<!-- High probability → shared angio -->
+<path class="flow-line" d="M830 193 C830 260 830 285 830 350" marker-end="url(#tepArrow)"/>
+
+<!-- Shared boxes -->
+<rect class="flow-box excluded" x="300" y="350" width="180" height="60" rx="9"/>
+<text class="box-text" x="390" y="386" text-anchor="middle">TEP EXCLUIDO</text>
+
+<rect class="flow-box angio" x="740" y="350" width="180" height="60" rx="9"/>
+<text class="box-text" x="830" y="386" text-anchor="middle">ANGIO-TC</text>
+
+<!-- Angio → Echo / Excluded -->
+<text class="condition" x="735" y="445">TEP +</text>
+<text class="condition" x="925" y="445">TEP −</text>
+<path class="flow-line" d="M830 410 C830 455 750 470 700 505" marker-end="url(#tepArrow)"/>
+<path class="flow-line" d="M830 410 C830 455 390 470 390 505" marker-end="url(#tepArrow)"/>
+
+<rect class="flow-box echo" x="610" y="505" width="180" height="60" rx="9"/>
+<text class="box-text" x="700" y="541" text-anchor="middle">ECOCARDIO</text>
+
+<!-- Echo → risk -->
+<text class="condition" x="625" y="600">DISFUNCIÓN DEL VD +?</text>
+<text class="condition" x="775" y="600">DISFUNCIÓN DEL VD −?</text>
+<path class="flow-line" d="M700 565 C700 610 650 625 610 660" marker-end="url(#tepArrow)"/>
+<path class="flow-line" d="M700 565 C700 610 750 625 790 660" marker-end="url(#tepArrow)"/>
+
+<rect class="flow-box submassive" x="505" y="660" width="210" height="60" rx="9"/>
+<text class="box-text" x="610" y="696" text-anchor="middle">SUBMASIVO / MASIVO</text>
+
+<rect class="flow-box lowrisk" x="750" y="660" width="210" height="60" rx="9"/>
+<text class="box-text" x="855" y="696" text-anchor="middle">TEP DE BAJO RIESGO</text>
+</svg></div>
 </div>
 </div></section>
 <section class="tab-panel" id="tratamiento" role="tabpanel" hidden><div class="panel-heading"><div><span class="eyebrow">04</span><h2>Tratamiento</h2></div><p>Contenido pendiente de completar.</p></div><div class="empty-topic">SIN INFORMACIÓN CARGADA</div></section>
