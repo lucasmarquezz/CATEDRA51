@@ -43,3 +43,86 @@
   .exudate-arrows{width:58%;font-size:21px}
   .exudate-column .exudate-paths{grid-template-columns:1fr;gap:8px}
 }
+
+
+/* FIX DEFINITIVO — ramificación de EXUDADO */
+.pleural-algorithm .light-outcomes{
+  display:grid!important;
+  grid-template-columns:230px minmax(0,520px)!important;
+  gap:70px!important;
+  align-items:start!important;
+  width:min(820px,100%)!important;
+  margin:0 auto!important;
+}
+.pleural-algorithm .light-outcomes:before{display:none!important}
+.pleural-algorithm .exudate-column{
+  position:relative!important;
+  width:100%!important;
+  margin:0!important;
+  padding-top:0!important;
+}
+.pleural-algorithm .exudate-column>.exudate-branch{
+  position:relative!important;
+  width:230px!important;
+  margin:0 auto!important;
+}
+.pleural-algorithm .exudate-column>.exudate-branch:after{
+  content:''!important;
+  position:absolute!important;
+  left:50%!important;
+  bottom:-18px!important;
+  width:1px!important;
+  height:18px!important;
+  background:var(--line)!important;
+}
+.pleural-algorithm .exudate-column .exudate-arrows{
+  position:relative!important;
+  width:70%!important;
+  height:24px!important;
+  margin:18px auto 0!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  font-size:25px!important;
+  line-height:24px!important;
+  color:var(--muted)!important;
+}
+.pleural-algorithm .exudate-column .exudate-paths{
+  position:relative!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:10px!important;
+}
+.pleural-algorithm .exudate-column .exudate-path:before{
+  display:none!important;
+}
+@media(max-width:700px){
+  .pleural-algorithm .light-outcomes{
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+    width:100%!important;
+  }
+  .pleural-algorithm .exudate-column{
+    width:100%!important;
+  }
+  .pleural-algorithm .exudate-column>.exudate-branch{
+    width:220px!important;
+  }
+  .pleural-algorithm .exudate-column>.exudate-branch:after{
+    bottom:-14px!important;
+    height:14px!important;
+  }
+  .pleural-algorithm .exudate-column .exudate-arrows{
+    width:58%!important;
+    height:21px!important;
+    margin-top:14px!important;
+    font-size:21px!important;
+    line-height:21px!important;
+  }
+  .pleural-algorithm .exudate-column .exudate-paths{
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+  }
+}
