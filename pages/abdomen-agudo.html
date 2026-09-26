@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CATEDRA 51 — Abdomen agudo: definición, clasificación, localización, banderas rojas, abordaje inicial y manejo.">
+  <title>Abdomen agudo | CATEDRA 51</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/abdomen-agudo.css">
+</head>
+<body>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">CATEDRA <span>51</span></div>
+    <nav aria-label="Sistemas">
+      <p class="nav-label">SISTEMAS</p>
+      <a href="../index.html">⌂ Inicio</a>
+      <a href="apuntes.html">📚 Todos los apuntes</a>
+      <details><summary>❤️ Cardiovascular</summary><a href="apuntes.html#cardiovascular">Cardiopatía isquémica</a><a href="apuntes.html#cardiovascular">Insuficiencia cardíaca</a><a href="apuntes.html#cardiovascular">Arritmias</a></details>
+      <details><summary>🫁 Respiratorio</summary><a href="apuntes.html#respiratorio">Insuficiencia respiratoria</a><a href="apuntes.html#respiratorio">EPOC y asma</a><a href="apuntes.html#respiratorio">TEP</a><a href="neumonia.html">Neumonía</a></details>
+      <details open><summary>🩺 Gastroenterología</summary><a href="apuntes.html#gastro">Hepatopatías</a><a href="apuntes.html#gastro">Hemorragia digestiva</a><a class="active-nav" href="abdomen-agudo.html">Abdomen agudo</a></details>
+      <details><summary>🧠 Neurología</summary><a href="apuntes.html#neuro">ACV</a><a href="apuntes.html#neuro">Convulsiones</a></details>
+      <details><summary>🧪 Nefrología</summary><a href="apuntes.html#renal">Injuria renal aguda</a><a href="apuntes.html#renal">Trastornos hidroelectrolíticos</a></details>
+      <details><summary>🦠 Infectología</summary><a href="apuntes.html#infecciones">Sepsis</a><a href="apuntes.html#infecciones">Endocarditis</a></details>
+      <details><summary>🩸 Hematología</summary><a href="apuntes.html#hemato">Anemias</a><a href="apuntes.html#hemato">Leucemias</a></details>
+      <details><summary>⚕️ Endocrinología</summary><a href="descompensacion-diabetica.html">Descompensación diabética</a><a href="apuntes.html#endocrino">Diabetes</a><a href="apuntes.html#endocrino">Tiroides</a></details>
+      <details><summary>🦴 Reumatología</summary><a href="apuntes.html#reuma">Enfermedades autoinmunes</a></details>
+    </nav>
+    <div class="sidebar-bottom"><a href="graficos.html">📊 Gráficos y algoritmos</a><a href="encuestas.html">📋 Encuestas</a><a href="acerca.html">ℹ️ Acerca de CATEDRA 51</a></div>
+  </aside>
+
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-brand">CATEDRA <strong>51</strong></div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo de color">☾ <span>Modo oscuro</span></button>
+    </header>
+
+    <main class="topic-page abdomen-page">
+      <a class="back-link" href="../index.html">← Volver al inicio</a>
+
+      <section class="topic-hero">
+        <div>
+          <div class="eyebrow">GASTROENTEROLOGÍA · URGENCIAS</div>
+          <h1>Abdomen agudo</h1>
+          <p>Reconocer gravedad · localizar · orientar diferenciales · estabilizar · definir conducta</p>
+        </div>
+        <div class="topic-badge">MEDICINA<br>INTERNA</div>
+      </section>
+
+      <nav class="topic-tabs abdomen-tabs" role="tablist" aria-label="Contenido del tema">
+        <button class="topic-tab active" data-tab="definicion" role="tab" aria-selected="true">01 · Definición y clasificación</button>
+        <button class="topic-tab" data-tab="localizacion" role="tab" aria-selected="false">02 · Localización y diferenciales</button>
+        <button class="topic-tab" data-tab="banderas" role="tab" aria-selected="false">03 · Banderas rojas</button>
+        <button class="topic-tab" data-tab="abordaje" role="tab" aria-selected="false">04 · Abordaje inicial</button>
+        <button class="topic-tab" data-tab="manejo" role="tab" aria-selected="false">05 · Manejo</button>
+      </nav>
+
+      <section class="tab-panel active" id="definicion" role="tabpanel">
+        <div class="panel-heading">
+          <div><span class="eyebrow">CONCEPTO</span><h2>Definición y clasificación</h2></div>
+          <p>Síndrome de dolor abdominal de inicio reciente que requiere evaluación para determinar si existe una causa médica, quirúrgica o potencialmente grave.</p>
+        </div>
+
+        <div class="definition-card">
+          <div class="definition-icon">!</div>
+          <div><strong>ABDOMEN AGUDO</strong><p>Dolor abdominal agudo, habitualmente de horas a pocos días de evolución, cuyo diagnóstico y tratamiento deben orientarse rápidamente por la posibilidad de compromiso visceral o necesidad de intervención.</p></div>
+        </div>
+
+        <div class="section-label">CLASIFICACIÓN PRÁCTICA</div>
+        <div class="classification-grid">
+          <article class="class-card surgical"><span>01</span><h3>Quirúrgico</h3><p>Probable necesidad de intervención por perforación, obstrucción, isquemia, hemorragia o inflamación con complicaciones.</p></article>
+          <article class="class-card medical"><span>02</span><h3>No quirúrgico</h3><p>Puede deberse a enfermedades médicas intraabdominales o extraabdominales que no requieren cirugía inicial.</p></article>
+          <article class="class-card vascular"><span>03</span><h3>Vascular</h3><p>Isquemia mesentérica, aneurisma complicado u otras causas vasculares: pensar especialmente ante dolor intenso y factores de riesgo.</p></article>
+          <article class="class-card extra"><span>04</span><h3>Extraabdominal</h3><p>Patología torácica, metabólica, urinaria o ginecológica puede presentarse como dolor abdominal.</p></article>
+        </div>
+
+        <div class="mechanisms">
+          <div><b>Inflamatorio</b><span>Apendicitis · colecistitis · diverticulitis · pancreatitis</span></div>
+          <div><b>Obstructivo</b><span>Íleo · obstrucción intestinal · hernia complicada</span></div>
+          <div><b>Perforativo</b><span>Úlcera perforada · perforación intestinal · peritonitis</span></div>
+          <div><b>Isquémico</b><span>Isquemia mesentérica · estrangulación</span></div>
+          <div><b>Hemorrágico</b><span>Hemoperitoneo · aneurisma roto · sangrado intraabdominal</span></div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="localizacion" role="tabpanel" hidden>
+        <div class="panel-heading">
+          <div><span class="eyebrow">RAZONAMIENTO CLÍNICO</span><h2>Manifestación según localización y diferenciales</h2></div>
+          <p>La localización orienta el diagnóstico, pero no lo confirma. Siempre integrar cronología, irradiación, síntomas asociados y examen físico.</p>
+        </div>
+
+        <div class="pain-map">
+          <div class="abdomen-map">
+            <div class="zone epigastrio">EPIGASTRIO</div>
+            <div class="zone hcd">HCD</div><div class="zone hci">HCI</div>
+            <div class="zone meso">MESOGASTRIO</div>
+            <div class="zone fcd">FCD</div><div class="zone fci">FCI</div>
+            <div class="zone hipogastrio">HIPOGASTRIO</div>
+          </div>
+          <div class="map-note"><strong>Clave:</strong> dolor referido o difuso puede modificar la localización aparente. No descartar una causa grave por una localización atípica.</div>
+        </div>
+
+        <div class="location-table-wrap">
+          <table class="location-table">
+            <thead><tr><th>LOCALIZACIÓN</th><th>DIAGNÓSTICOS A CONSIDERAR</th><th>PISTAS</th></tr></thead>
+            <tbody>
+              <tr><th>Epigastrio</th><td>Pancreatitis · enfermedad ulcerosa/perforación · patología biliar · isquemia · SCA</td><td>Irradiación a espalda, vómitos, melena, factores cardiovasculares</td></tr>
+              <tr><th>Hipocondrio derecho</th><td>Colecistitis · cólico biliar · colangitis · hepatitis · patología pleuropulmonar</td><td>Fiebre, ictericia, Murphy, alteración hepatobiliar</td></tr>
+              <tr><th>Hipocondrio izquierdo</th><td>Patología gástrica · pancreatitis · esplénica · renal · pleuropulmonar</td><td>Irradiación dorsal/hombro, trauma, síntomas urinarios</td></tr>
+              <tr><th>Mesogastrio</th><td>Obstrucción · isquemia mesentérica · pancreatitis · gastroenteritis · aneurisma</td><td>Distensión, vómitos, dolor desproporcionado, factores vasculares</td></tr>
+              <tr><th>FID</th><td>Apendicitis · ileítis/Crohn · litiasis ureteral · hernia · patología ginecológica</td><td>Migración del dolor, fiebre, defensa, síntomas urinarios o ginecológicos</td></tr>
+              <tr><th>FII</th><td>Diverticulitis · patología colorrectal · litiasis ureteral · patología ginecológica</td><td>Alteración del tránsito, fiebre, síntomas urinarios</td></tr>
+              <tr><th>Hipogastrio</th><td>Retención urinaria · cistitis · patología ginecológica · enfermedad colorrectal</td><td>Disuria, hematuria, sangrado genital, síntomas intestinales</td></tr>
+              <tr><th>Difuso</th><td>Peritonitis · obstrucción avanzada · isquemia · perforación · gastroenteritis</td><td>Distensión, defensa/rigidez, deterioro sistémico</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="banderas" role="tabpanel" hidden>
+        <div class="panel-heading">
+          <div><span class="eyebrow">PRIORIZAR GRAVEDAD</span><h2>Banderas rojas</h2></div>
+          <p>Antes de cerrar el diagnóstico, buscar datos que obliguen a estabilizar y acelerar la evaluación.</p>
+        </div>
+
+        <div class="red-flag-hero">
+          <div class="red-flag-symbol">!</div>
+          <div><strong>¿HAY INESTABILIDAD O PERITONITIS?</strong><span>Si la respuesta es sí, la prioridad es reanimación + diagnóstico dirigido + valoración quirúrgica según el contexto.</span></div>
+        </div>
+
+        <div class="flags-grid">
+          <div class="flag-card"><b>HEMODINÁMICAS</b><span>Hipotensión · taquicardia marcada · mala perfusión · síncope · shock</span></div>
+          <div class="flag-card"><b>RESPIRATORIAS</b><span>Hipoxemia · dificultad respiratoria · dolor con compromiso torácico</span></div>
+          <div class="flag-card"><b>PERITONEALES</b><span>Defensa involuntaria · rigidez · rebote/peritonismo · dolor con movilización</span></div>
+          <div class="flag-card"><b>ISQUEMIA</b><span>Dolor intenso desproporcionado al examen · fibrilación auricular · enfermedad vascular</span></div>
+          <div class="flag-card"><b>SEPSIS</b><span>Fiebre o hipotermia + deterioro clínico + sospecha de foco intraabdominal</span></div>
+          <div class="flag-card"><b>HEMORRAGIA</b><span>Melena/hematoquecia con inestabilidad · palidez · síncope · caída de Hb</span></div>
+          <div class="flag-card"><b>OBSTRUCCIÓN</b><span>Vómitos persistentes · distensión · ausencia de gases/materia fecal</span></div>
+          <div class="flag-card"><b>CONTEXTO</b><span>Embarazo · anticoagulación · inmunosupresión · edad avanzada · cirugía abdominal previa</span></div>
+        </div>
+
+        <div class="oral-pearl"><span>PERLA PARA EL ORAL</span><strong>Dolor abdominal + inestabilidad hemodinámica o signos de peritonitis = no demorar la reanimación ni la valoración quirúrgica por esperar todos los estudios.</strong></div>
+      </section>
+
+      <section class="tab-panel" id="abordaje" role="tabpanel" hidden>
+        <div class="panel-heading">
+          <div><span class="eyebrow">PRIMEROS MINUTOS</span><h2>Abordaje inicial</h2></div>
+          <p>Primero determinar estabilidad; después caracterizar el dolor y buscar el diagnóstico que cambia la conducta.</p>
+        </div>
+
+        <div class="initial-flow">
+          <div class="flow-step critical"><span>01</span><strong>ABCDE + signos vitales</strong><small>¿Está estable?</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><span>02</span><strong>Historia dirigida</strong><small>Inicio · sitio · carácter · irradiación · síntomas</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><span>03</span><strong>Examen físico</strong><small>Abdomen + hernias + tactos según indicación</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><span>04</span><strong>Laboratorio + imágenes</strong><small>Según sospecha y gravedad</small></div>
+        </div>
+
+        <div class="approach-columns">
+          <article class="approach-card">
+            <h3>ANAMNESIS DIRIGIDA</h3>
+            <div class="check-list">
+              <span>Inicio y evolución</span><span>Localización e irradiación</span><span>Tipo e intensidad del dolor</span><span>Relación con comidas/movimientos</span><span>Vómitos y tránsito intestinal</span><span>Fiebre / escalofríos</span><span>Disuria / hematuria</span><span>Sangrado digestivo o genital</span><span>Cirugías abdominales previas</span><span>Medicaciones: AINE, anticoagulantes, corticoides</span>
+            </div>
+          </article>
+          <article class="approach-card">
+            <h3>EXAMEN FÍSICO</h3>
+            <div class="check-list">
+              <span>Estado general y perfusión</span><span>Signos vitales</span><span>Inspección: distensión, cicatrices, hernias</span><span>Auscultación</span><span>Palpación superficial y profunda</span><span>Defensa, rigidez y signos de irritación peritoneal</span><span>Puño-percusión renal</span><span>Examen inguinal</span><span>Tacto rectal o pélvico cuando esté indicado</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="studies-box">
+          <div class="box-title">ESTUDIOS: PEDIRLOS SEGÚN LA PREGUNTA CLÍNICA</div>
+          <div class="study-grid">
+            <div><b>Laboratorio</b><span>Hemograma · función renal/electrolitos · hepatograma · glucemia · orina · lipasa según sospecha · lactato si compromiso sistémico</span></div>
+            <div><b>ECG</b><span>Considerarlo ante epigastralgia/dolor alto o factores cardiovasculares.</span></div>
+            <div><b>Ecografía</b><span>Especialmente útil en patología biliar, hepatobiliar, urinaria y situaciones seleccionadas.</span></div>
+            <div><b>TC</b><span>Clave en múltiples causas de abdomen agudo cuando el paciente está estable y la pregunta clínica lo justifica.</span></div>
+            <div><b>Rx</b><span>Puede aportar en obstrucción, perforación u otras sospechas, pero no reemplaza la imagen indicada.</span></div>
+            <div><b>β-hCG</b><span>En personas con posibilidad de embarazo y dolor abdominal.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="manejo" role="tabpanel" hidden>
+        <div class="panel-heading">
+          <div><span class="eyebrow">CONDUCTA</span><h2>Manejo</h2></div>
+          <p>Medidas generales + tratamiento etiológico. La conducta definitiva depende de la causa y de la estabilidad del paciente.</p>
+        </div>
+
+        <div class="management-priority">
+          <div class="priority-step"><span>01</span><strong>ESTABILIZAR</strong><small>Vía IV · monitorización · fluidos según necesidad · oxígeno si corresponde</small></div>
+          <div class="priority-step"><span>02</span><strong>CONTROLAR SÍNTOMAS</strong><small>Analgesia y antieméticos; tratar dolor no debe retrasarse por temor a “enmascarar” el cuadro.</small></div>
+          <div class="priority-step"><span>03</span><strong>PREVENIR COMPLICACIONES</strong><small>Ayuno cuando corresponda · corregir alteraciones hidroelectrolíticas · reevaluación seriada</small></div>
+          <div class="priority-step"><span>04</span><strong>TRATAR LA CAUSA</strong><small>Antibióticos, drenaje, endoscopia o cirugía según diagnóstico y gravedad.</small></div>
+        </div>
+
+        <div class="management-grid">
+          <article><h3>🩺 MEDIDAS GENERALES</h3><ul><li>Monitorización y reevaluación clínica.</li><li>Acceso venoso y laboratorio según gravedad.</li><li>Ayuno si existe posibilidad de procedimiento o cirugía.</li><li>Reposición de volumen si hay hipovolemia.</li><li>Analgesia adecuada y antieméticos cuando estén indicados.</li></ul></article>
+          <article><h3>🦠 ANTIBIÓTICOS</h3><ul><li>No son de rutina para todo abdomen agudo.</li><li>Indicarlos cuando exista sospecha de infección intraabdominal o sepsis, según foco y epidemiología.</li><li>En perforación/peritonitis, el antibiótico acompaña al control del foco.</li></ul></article>
+          <article><h3>🔪 CONTROL DEL FOCO</h3><ul><li>Valoración quirúrgica urgente ante peritonitis, perforación, isquemia u otras causas quirúrgicas.</li><li>Drenaje percutáneo o endoscópico en situaciones seleccionadas.</li><li>La demora en el control del foco puede empeorar el pronóstico.</li></ul></article>
+          <article><h3>🔄 REEVALUACIÓN</h3><ul><li>Repetir signos vitales y examen abdominal.</li><li>Evaluar respuesta a analgesia y fluidos.</li><li>Si la evolución no coincide con la hipótesis inicial, reconsiderar el diagnóstico.</li></ul></article>
+        </div>
+
+        <div class="do-not-miss">
+          <div class="do-not-miss-title">NO TE OLVIDES</div>
+          <div class="do-not-miss-grid">
+            <span><b>Dolor epigástrico</b> → considerar SCA, no solo patología digestiva.</span>
+            <span><b>Dolor desproporcionado</b> → pensar isquemia mesentérica.</span>
+            <span><b>Paciente anticoagulado</b> → aumentar sospecha de sangrado.</span>
+            <span><b>Cirugía previa</b> → pensar adherencias/obstrucción.</span>
+            <span><b>Persona con posibilidad de embarazo</b> → descartar embarazo ectópico según contexto.</span>
+            <span><b>Peritonitis</b> → pensar en necesidad de control del foco.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>CATEDRA 51</span><span>Por L. Márquez</span></footer>
+  </div>
+  <script src="../js/main.js"></script>
+  <script src="../js/abdomen-agudo.js"></script>
+</body>
+</html>
