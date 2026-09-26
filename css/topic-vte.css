@@ -43,3 +43,26 @@
  .tep-subbranches:before,.tep-dimer-results:before,.tep-angio-results:before,.tep-echo-results:before{left:25%;right:25%}
  .tep-subbranch:before,.tep-result-branch:before{font-size:15px}
 }
+/* DIAGRAMA UNIFICADO TEP — cuadros compartidos y flechas curvas */
+.tep-flow-diagram{width:min(1000px,100%);margin:14px auto 0;overflow:hidden}
+.tep-flow-diagram svg{display:block;width:100%;height:auto;overflow:visible}
+.tep-flow-diagram .flow-line{fill:none;stroke:var(--muted);stroke-width:1.8}
+.tep-flow-diagram .flow-box{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.tep-flow-diagram .flow-box.dimer{fill:var(--surface);stroke:#d98c2b}
+.tep-flow-diagram .flow-box.angio{fill:var(--surface);stroke:#b84a4a}
+.tep-flow-diagram .flow-box.excluded{fill:var(--surface);stroke:#4f9b68}
+.tep-flow-diagram .flow-box.echo{fill:var(--surface);stroke:#7b63a8}
+.tep-flow-diagram .flow-box.submassive{fill:var(--surface);stroke:#b84a4a}
+.tep-flow-diagram .flow-box.lowrisk{fill:var(--surface);stroke:#4f9b68}
+.tep-flow-diagram .box-text{fill:var(--text);font:800 11px 'DM Sans',sans-serif;letter-spacing:.02em}
+.tep-flow-diagram .condition{fill:var(--text);font:900 11px 'DM Sans',sans-serif}
+.tep-flow-diagram .probability{fill:var(--text);font:900 15px 'DM Sans',sans-serif}
+.tep-flow-diagram .mod-text{fill:#d98c2b}
+.tep-flow-diagram .high-text{fill:#b84a4a}
+@media(max-width:700px){
+ .tep-flow-diagram{width:100%;overflow-x:auto}
+ .tep-flow-diagram svg{min-width:760px;width:760px;margin:auto}
+ .tep-flow-diagram .probability{font-size:13px}
+ .tep-flow-diagram .box-text{font-size:10px}
+ .tep-flow-diagram .condition{font-size:10px}
+}
