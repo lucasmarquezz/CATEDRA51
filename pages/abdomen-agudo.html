@@ -177,37 +177,71 @@
       </section>
 
       <section class="tab-panel" id="manejo" role="tabpanel" hidden>
-        <div class="panel-heading">
-          <div><span class="eyebrow">CONDUCTA</span><h2>Manejo</h2></div>
-          <p>Medidas generales + tratamiento etiológico. La conducta definitiva depende de la causa y de la estabilidad del paciente.</p>
-        </div>
+  <div class="panel-heading">
+    <div><span class="eyebrow">CONDUCTA</span><h2>Manejo</h2></div>
+    <p>Medidas iniciales, analgesia, estudios dirigidos y criterios que obligan a una conducta quirúrgica urgente.</p>
+  </div>
 
-        <div class="management-priority">
-          <div class="priority-step"><span>01</span><strong>ESTABILIZAR</strong><small>Vía IV · monitorización · fluidos según necesidad · oxígeno si corresponde</small></div>
-          <div class="priority-step"><span>02</span><strong>CONTROLAR SÍNTOMAS</strong><small>Analgesia y antieméticos; tratar dolor no debe retrasarse por temor a “enmascarar” el cuadro.</small></div>
-          <div class="priority-step"><span>03</span><strong>PREVENIR COMPLICACIONES</strong><small>Ayuno cuando corresponda · corregir alteraciones hidroelectrolíticas · reevaluación seriada</small></div>
-          <div class="priority-step"><span>04</span><strong>TRATAR LA CAUSA</strong><small>Antibióticos, drenaje, endoscopia o cirugía según diagnóstico y gravedad.</small></div>
-        </div>
+  <div class="management-priority">
+    <div class="priority-step"><span>01</span><strong>AYUNO</strong><small>Nada por vía oral ante sospecha de causa quirúrgica u obstrucción, en previsión de eventual intervención.</small></div>
+    <div class="priority-step"><span>02</span><strong>HIDRATACIÓN</strong><small>Reanimación con líquidos IV en pacientes con deshidratación, shock o antes de cirugía.</small></div>
+    <div class="priority-step"><span>03</span><strong>ANALGESIA</strong><small>Administrar de forma temprana. No retener por miedo a “enmascarar” el cuadro.</small></div>
+    <div class="priority-step"><span>04</span><strong>ANTIBIÓTICOS</strong><small>Ante sospecha de foco infeccioso/perforativo, previo a o junto con la resolución quirúrgica.</small></div>
+  </div>
 
-        <div class="management-grid">
-          <article><h3>🩺 MEDIDAS GENERALES</h3><ul><li>Monitorización y reevaluación clínica.</li><li>Acceso venoso y laboratorio según gravedad.</li><li>Ayuno si existe posibilidad de procedimiento o cirugía.</li><li>Reposición de volumen si hay hipovolemia.</li><li>Analgesia adecuada y antieméticos cuando estén indicados.</li></ul></article>
-          <article><h3>🦠 ANTIBIÓTICOS</h3><ul><li>No son de rutina para todo abdomen agudo.</li><li>Indicarlos cuando exista sospecha de infección intraabdominal o sepsis, según foco y epidemiología.</li><li>En perforación/peritonitis, el antibiótico acompaña al control del foco.</li></ul></article>
-          <article><h3>🔪 CONTROL DEL FOCO</h3><ul><li>Valoración quirúrgica urgente ante peritonitis, perforación, isquemia u otras causas quirúrgicas.</li><li>Drenaje percutáneo o endoscópico en situaciones seleccionadas.</li><li>La demora en el control del foco puede empeorar el pronóstico.</li></ul></article>
-          <article><h3>🔄 REEVALUACIÓN</h3><ul><li>Repetir signos vitales y examen abdominal.</li><li>Evaluar respuesta a analgesia y fluidos.</li><li>Si la evolución no coincide con la hipótesis inicial, reconsiderar el diagnóstico.</li></ul></article>
-        </div>
+  <div class="management-grid">
+    <article>
+      <h3>💊 ANALGESIA — NO RETENER</h3>
+      <p class="management-lead">La analgesia <b>NO altera la precisión diagnóstica</b>. Tratar el dolor.</p>
+      <div class="dose-list">
+        <div><strong>Ketorolac</strong><span>30 mg IV</span></div>
+        <div><strong>Morfina</strong><span>0,1 mg/kg IV titulada</span></div>
+        <div><strong>Hioscina (Buscapina)</strong><span>Para cólico suave</span></div>
+      </div>
+    </article>
 
-        <div class="do-not-miss">
-          <div class="do-not-miss-title">NO TE OLVIDES</div>
-          <div class="do-not-miss-grid">
-            <span><b>Dolor epigástrico</b> → considerar SCA, no solo patología digestiva.</span>
-            <span><b>Dolor desproporcionado</b> → pensar isquemia mesentérica.</span>
-            <span><b>Paciente anticoagulado</b> → aumentar sospecha de sangrado.</span>
-            <span><b>Cirugía previa</b> → pensar adherencias/obstrucción.</span>
-            <span><b>Persona con posibilidad de embarazo</b> → descartar embarazo ectópico según contexto.</span>
-            <span><b>Peritonitis</b> → pensar en necesidad de control del foco.</span>
-          </div>
-        </div>
-      </section>
+    <article>
+      <h3>🖥️ TC ABDOMINAL CON CONTRASTE</h3>
+      <p class="management-lead">Considerarla si:</p>
+      <ul>
+        <li>Existe duda diagnóstica.</li>
+        <li>Hay sospecha quirúrgica.</li>
+        <li>Paciente obeso o mayor en quien la ecografía es insuficiente.</li>
+      </ul>
+      <div class="evidence-chip">Sensibilidad para apendicitis &gt;95%</div>
+    </article>
+
+    <article class="urgent-surgery-card">
+      <h3>🔪 CIRUGÍA URGENTE SI</h3>
+      <div class="urgent-list">
+        <span>Peritonitis</span>
+        <span>Apendicitis complicada</span>
+        <span>Colecistitis gangrenosa</span>
+        <span>Obstrucción con signos de isquemia</span>
+        <span>Perforación</span>
+      </div>
+    </article>
+
+    <article>
+      <h3>🦠 ANTIBIÓTICOS</h3>
+      <p class="management-lead">Indicados empíricamente ante sospecha de foco infeccioso/perforativo.</p>
+      <div class="focus-list">
+        <span>Apendicitis</span><span>Diverticulitis complicada</span><span>Colangitis</span><span>Peritonitis</span>
+      </div>
+      <p class="management-note">Previo a o junto con la resolución quirúrgica.</p>
+    </article>
+  </div>
+
+  <div class="do-not-miss">
+    <div class="do-not-miss-title">MEDIDAS INICIALES DE TRATAMIENTO</div>
+    <div class="do-not-miss-grid treatment-summary">
+      <span><b>Ayuno:</b> ante sospecha de causa quirúrgica u obstrucción.</span>
+      <span><b>Hidratación:</b> líquidos IV si hay deshidratación, shock o antes de cirugía.</span>
+      <span><b>Analgesia:</b> temprana; no retrasa ni enmascara el diagnóstico.</span>
+      <span><b>Antibióticos:</b> ante sospecha de foco infeccioso/perforativo.</span>
+    </div>
+  </div>
+</section>
     </main>
 
     <footer><span>CATEDRA 51</span><span>Por L. Márquez</span></footer>
