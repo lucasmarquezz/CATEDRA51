@@ -25,3 +25,21 @@
   .tep-subbranches .tep-algo-box,.tep-dimer-results .tep-algo-box,.tep-angio-results .tep-algo-box,.tep-echo-results .tep-algo-box{font-size:8px;min-height:48px;padding:8px 5px}
   .tep-condition{min-height:24px}
 }
+/* AJUSTE VISUAL — ramas TEP */
+.tep-wells-branch>.tep-algo-box{min-height:48px!important;padding:8px 12px!important;font-size:9px!important}
+.tep-wells-branch>.tep-algo-box strong{font-size:10px!important}
+.tep-subbranches,.tep-dimer-results,.tep-angio-results,.tep-echo-results{position:relative}
+.tep-subbranches:before,.tep-dimer-results:before,.tep-angio-results:before,.tep-echo-results:before{
+ content:'';position:absolute;top:-10px;left:25%;right:25%;height:1px;background:var(--line)
+}
+.tep-subbranch:before,.tep-result-branch:before{
+ content:'↓';display:block;height:16px;margin-top:-10px;color:var(--muted);font-size:17px;line-height:16px
+}
+.tep-wells-branch>.tep-arrow-branch{height:18px;font-size:17px}
+@media(max-width:700px){
+ .tep-wells-branch>.tep-algo-box{min-height:44px!important;padding:7px 9px!important;font-size:8px!important}
+ .tep-wells-branch>.tep-algo-box strong{font-size:9px!important}
+ .tep-subbranches,.tep-dimer-results,.tep-angio-results,.tep-echo-results{gap:5px}
+ .tep-subbranches:before,.tep-dimer-results:before,.tep-angio-results:before,.tep-echo-results:before{left:25%;right:25%}
+ .tep-subbranch:before,.tep-result-branch:before{font-size:15px}
+}
