@@ -242,3 +242,17 @@
 .abdomen-page .study-indication-grid b{color:var(--text)}
 @media(max-width:700px){.abdomen-page .study-indication-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:430px){.abdomen-page .study-indication-grid{grid-template-columns:1fr}}
+
+
+/* Pestaña 2 — diferenciales en bloque visual */
+.abdomen-page .differentials-box{max-width:900px;margin:18px auto 0;padding:17px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);box-shadow:var(--shadow)}
+.abdomen-page .differentials-header{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:11px}
+.abdomen-page .differentials-header h3{margin:5px 0 0;font-family:'Libre Baskerville',serif;font-size:16px;line-height:1.25}
+.abdomen-page .differentials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.abdomen-page .differential-item{padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);border-top:3px solid var(--abdomen-accent)}
+.abdomen-page .differential-item b{display:block;font-size:8px;letter-spacing:.08em;color:var(--abdomen-accent)}
+.abdomen-page .differential-item span{display:block;margin-top:6px;font-size:9px;line-height:1.45;color:var(--muted)}
+.abdomen-page .differential-item.extra{border-top-color:#66758a}.abdomen-page .differential-item.extra b{color:#66758a}
+.abdomen-page .differential-item.gyn{border-top-color:#9b5c7a}.abdomen-page .differential-item.gyn b{color:#9b5c7a}
+.abdomen-page .differential-item.elderly{border-top-color:#b58924}.abdomen-page .differential-item.elderly b{color:#9a761d}
+@media(max-width:700px){.abdomen-page .differentials-header{display:block}.abdomen-page .differentials-grid{grid-template-columns:1fr}}
