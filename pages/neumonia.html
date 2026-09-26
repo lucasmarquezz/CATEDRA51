@@ -81,26 +81,16 @@
           <div class="pleural-box action-box"><strong>REALICE</strong><span>1. TORACOCENTESIS</span><span>2. ANÁLISIS DE LÍQUIDO</span><small>Proteínas · LDH · pH · células · glucosa · Gram + cultivo</small></div>
           <div class="pleural-arrow">↓</div>
           <div class="pleural-box light-box">PUNTAJE DE CRITERIOS DE LIGHT</div>
-          <div class="pleural-split">
+          <div class="pleural-split light-outcomes">
             <div class="pleural-branch transudate-branch"><div class="pleural-condition">0</div><span>TRASUDADO</span><small>Buscar y tratar causa.<br>Generalmente: ICC · cirrosis · síndrome nefrótico</small></div>
-            <div class="pleural-branch exudate-branch"><div class="pleural-condition">≥ 1</div><span>EXUDADO</span></div>
-          </div>
-          <div class="exudate-paths">
-            <div class="exudate-path">
-              <div class="path-label">COMPLICADO</div>
-              <small>pH &lt; 7,20<br>LDH &gt; 1000</small>
-              <div class="path-arrow">↓</div>
-              <div class="pleural-box management complicated">ATB + DRENAJE</div>
-            </div>
-            <div class="exudate-path">
-              <div class="path-label">NO COMPLICADO</div>
-              <small>pH &gt; 7,20<br>LDH &lt; 1000</small>
-              <div class="path-arrow">↓</div>
-              <div class="pleural-box management uncomplicated">ATB + CONTROL</div>
-            </div>
-            <div class="exudate-path empyema-path">
-              <div class="path-label">¿EMPIEMA O GRAM/CULTIVO +?</div>
-              <small>Vinculado a la evaluación microbiológica del líquido</small>
+            <div class="exudate-column">
+              <div class="pleural-branch exudate-branch"><div class="pleural-condition">≥ 1</div><span>EXUDADO</span></div>
+              <div class="exudate-arrows"><div>↙</div><div>↘</div></div>
+              <div class="exudate-paths">
+                <div class="exudate-path"><div class="path-label">COMPLICADO</div><small>pH &lt; 7,20<br>LDH &gt; 1000</small><div class="path-arrow">↓</div><div class="pleural-box management complicated">ATB + DRENAJE</div></div>
+                <div class="exudate-path"><div class="path-label">NO COMPLICADO</div><small>pH &gt; 7,20<br>LDH &lt; 1000</small><div class="path-arrow">↓</div><div class="pleural-box management uncomplicated">ATB + CONTROL</div></div>
+              </div>
+              <div class="pleural-box empyema-path">¿EMPIEMA O GRAM/CULTIVO +?</div>
             </div>
           </div>
         </div>
