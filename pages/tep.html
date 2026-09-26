@@ -44,9 +44,18 @@
 <div class="tep-arrow">↓</div>
 <div class="tep-algo-box wells">DETERMINE SCORE DE WELLS PARA TEP</div>
 <div class="tep-wells-branches">
-<div class="tep-wells-branch low"><div class="tep-branch-label">&lt; 2 · BAJA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box"><strong>DETERMINE PERC</strong></div></div>
-<div class="tep-wells-branch moderate"><div class="tep-branch-label">2–6 · MODERADA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box"><strong>DÍMERO D</strong></div></div>
-<div class="tep-wells-branch high"><div class="tep-branch-label">&gt; 6 · ALTA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box"><strong>ANGIO-TC</strong></div></div>
+<div class="tep-wells-branch low"><div class="tep-branch-label">&lt; 2 · BAJA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box"><strong>DETERMINE PERC</strong></div><div class="tep-subbranches">
+<div class="tep-subbranch"><div class="tep-condition">SI ES 0</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box excluded">TEP EXCLUIDO</div></div>
+<div class="tep-subbranch"><div class="tep-condition">SI ES ≥ 1</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box dimer-pre">DÍMERO D PREVIO</div></div>
+</div></div>
+<div class="tep-wells-branch moderate"><div class="tep-branch-label">2–6 · MODERADA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box dimer-pre"><strong>DÍMERO D PREVIO</strong></div><div class="tep-dimer-results">
+<div class="tep-result-branch"><div class="tep-condition">&lt; 500</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box excluded">TEP EXCLUIDO</div></div>
+<div class="tep-result-branch"><div class="tep-condition">&gt; 500</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box angiotic">ANGIO-TC</div></div>
+</div></div>
+<div class="tep-wells-branch high"><div class="tep-branch-label">&gt; 6 · ALTA PROBABILIDAD</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box angiotic">ANGIO-TC</div>
+<div class="tep-angio-results"><div class="tep-result-branch"><div class="tep-condition">TEP +</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box echo">ECOCARDIO</div></div><div class="tep-result-branch"><div class="tep-condition">TEP −</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box excluded">TEP EXCLUIDO</div></div></div>
+<div class="tep-echo-results"><div class="tep-result-branch"><div class="tep-condition">DISFUNCIÓN DEL VD +?</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box submassive">SUBMASIVO / MASIVO</div></div><div class="tep-result-branch"><div class="tep-condition">DISFUNCIÓN DEL VD −?</div><div class="tep-arrow-branch">↓</div><div class="tep-algo-box lowrisk">TEP DE BAJO RIESGO</div></div></div>
+</div>
 </div>
 </div></section>
 <section class="tab-panel" id="tratamiento" role="tabpanel" hidden><div class="panel-heading"><div><span class="eyebrow">04</span><h2>Tratamiento</h2></div><p>Contenido pendiente de completar.</p></div><div class="empty-topic">SIN INFORMACIÓN CARGADA</div></section>
