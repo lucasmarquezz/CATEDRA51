@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Farmacología | CATEDRA 51">
+  <title>Farmacología | CATEDRA 51</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">CATEDRA <span>51</span></div>
+    <nav aria-label="Farmacología">
+      <p class="nav-label">FARMACOLOGÍA</p>
+      <a href="../index.html">← Inicio</a>
+      <details open>
+        <summary>💊 Farmacología</summary>
+        <a href="#antibioticos">Antibióticos</a>
+        <a href="#analgesicos">Analgésicos</a>
+        <a href="#enfermedades-cronicas">Enfermedades crónicas</a>
+      </details>
+    </nav>
+    <div class="sidebar-bottom"><a href="apuntes.html">📚 Todos los apuntes</a></div>
+  </aside>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-brand">CATEDRA <strong>51</strong></div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo de color">☾ <span>Modo oscuro</span></button>
+    </header>
+    <main class="home">
+      <section class="hero">
+        <div class="eyebrow">MEDICINA · FARMACOLOGÍA</div>
+        <h1>Farmacología</h1>
+        <p class="author">CATEDRA 51</p>
+      </section>
+      <section class="must-know">
+        <div id="antibioticos"></div>
+        <div id="analgesicos"></div>
+        <div id="enfermedades-cronicas"></div>
+      </section>
+    </main>
+    <footer><span>CATEDRA 51</span><span>Por L. Márquez</span></footer>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
