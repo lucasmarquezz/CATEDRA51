@@ -25,6 +25,7 @@ details a{display:block;padding:7px 10px 7px 32px;color:var(--muted);font-size:1
 .hero-actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.primary-btn,.secondary-btn{padding:12px 18px;border-radius:10px;font-weight:600;font-size:14px}.primary-btn{background:var(--accent);color:#fff}.secondary-btn{border:1px solid var(--line);background:var(--surface)}
 .must-know{border-top:1px solid var(--line);padding-top:55px}.section-heading{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:28px}.section-heading h2{font-family:'Libre Baskerville',serif;font-size:30px;margin:10px 0 0}.section-heading p{max-width:400px;color:var(--muted);font-size:14px;line-height:1.6}
 .topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.topic-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;min-height:150px;box-shadow:var(--shadow);transition:transform .2s,border-color .2s}.topic-card:hover{transform:translateY(-3px);border-color:var(--accent)}.topic-card span{font-size:11px;color:var(--accent);font-weight:700}.topic-card h3{margin:22px 0 7px;font-size:17px}.topic-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.dedication{border-top:1px solid var(--line);margin-top:70px;padding:34px 10px 10px;text-align:center}.dedication p{max-width:700px;margin:0 auto;color:var(--muted);font-family:"Libre Baskerville",serif;font-size:13px;line-height:1.8;font-style:italic}
 footer{border-top:1px solid var(--line);margin:0 clamp(18px,5vw,64px);padding:25px 0;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:12px}
 .menu-toggle{display:none}
 
@@ -54,7 +55,7 @@ footer{border-top:1px solid var(--line);margin:0 clamp(18px,5vw,64px);padding:25
   .hero-actions{margin-top:28px;display:grid;grid-template-columns:1fr}.primary-btn,.secondary-btn{text-align:center;padding:13px 16px}
   .must-know{padding-top:42px}.section-heading{display:block;margin-bottom:22px}.section-heading h2{font-size:25px;line-height:1.25}.section-heading p{margin-top:13px;max-width:none}
   .topic-grid{grid-template-columns:1fr;gap:10px}.topic-card{min-height:0;padding:19px}.topic-card h3{margin:14px 0 6px}
-  footer{margin:0 18px;padding:22px 0;flex-direction:column;gap:7px}
+  footer{margin:0 18px;padding:22px 0;flex-direction:column;gap:7px}.dedication{margin-top:48px;padding:28px 0 8px}.dedication p{font-size:12px;line-height:1.75}
 }
 @media(max-width:380px){
   .topbar{padding-left:66px}.topbar-brand{font-size:14px}.menu-toggle{left:11px}.home{padding-left:15px;padding-right:15px}
