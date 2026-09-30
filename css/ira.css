@@ -50,3 +50,21 @@
 .ira-red-flag-card p{margin:6px 0;color:var(--text);font-size:12px;line-height:1.5}
 @media(max-width:850px){.ira-mechanism-grid,.ira-intrinsic-grid,.ira-obstruction-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.ira-detail-card{padding:17px}.ira-mechanism-grid,.ira-intrinsic-grid,.ira-obstruction-grid{grid-template-columns:1fr}.ira-clue-row{display:block}.ira-clue-row strong{display:block;margin-top:3px;white-space:normal}}
+
+/* Aclaración visual: lugar afectado/obstruido → lesión o causas */
+.ira-explanation-bar{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 12px;padding:9px 13px;border:1px solid rgba(242,207,74,.55);border-radius:9px;background:rgba(242,207,74,.10);color:var(--muted);font-size:10px;letter-spacing:.04em;text-transform:uppercase}
+.ira-explanation-bar strong{color:var(--text);text-decoration:underline;text-decoration-color:#f2cf4a;text-decoration-thickness:3px;text-underline-offset:2px}
+.ira-explanation-bar span:nth-child(2){color:#c9a900;font-weight:900;font-size:14px}
+.ira-explanation-bar-red{border-color:rgba(201,75,75,.35);background:rgba(201,75,75,.06)}
+.ira-explanation-bar-red strong{text-decoration-color:#e57373}
+.ira-explanation-bar-red span:nth-child(2){color:#c94b4b}
+.ira-intrinsic-grid>div,.ira-obstruction-grid>div{position:relative;overflow:hidden}
+.ira-intrinsic-grid>div::before,.ira-obstruction-grid>div::before{content:"LUGAR";display:block;margin-bottom:5px;color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.12em;text-decoration:underline;text-decoration-color:#f2cf4a;text-decoration-thickness:2px;text-underline-offset:2px}
+.ira-intrinsic-grid .ira-place,.ira-obstruction-grid .ira-place{color:var(--text);font-weight:900}
+.ira-intrinsic-grid span{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
+.ira-intrinsic-grid span::before{content:"LESIÓN";display:block;margin-bottom:3px;color:var(--muted);font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.ira-intrinsic-grid small{margin-top:4px}
+.ira-intrinsic-grid small::before{content:"CAUSAS / DATOS CLAVE";display:block;margin-bottom:3px;color:var(--muted);font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.ira-obstruction-grid span{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
+.ira-obstruction-grid span::before{content:"CAUSAS";display:block;margin-bottom:3px;color:var(--muted);font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:520px){.ira-explanation-bar{flex-wrap:wrap;gap:5px 9px;justify-content:flex-start}}
