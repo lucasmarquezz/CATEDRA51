@@ -59,7 +59,7 @@
 .ira-explanation-bar-red strong{text-decoration-color:#e57373}
 .ira-explanation-bar-red span:nth-child(2){color:#c94b4b}
 .ira-intrinsic-grid>div,.ira-obstruction-grid>div{position:relative;overflow:hidden}
-.ira-intrinsic-grid>div::before,.ira-obstruction-grid>div::before{content:"LUGAR";display:block;margin-bottom:5px;color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.12em;text-decoration:underline;text-decoration-color:#f2cf4a;text-decoration-thickness:2px;text-underline-offset:2px}
+.ira-intrinsic-grid>div::before,.ira-obstruction-grid>div::before{content:"LUGAR";display:block;margin-bottom:5px;color:var(--accent);font-size:9px;font-weight:900;letter-spacing:.12em;text-decoration:none}
 .ira-intrinsic-grid .ira-place,.ira-obstruction-grid .ira-place{color:var(--text);font-weight:900}
 .ira-intrinsic-grid span{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
 .ira-intrinsic-grid span::before{content:"LESIÓN";display:block;margin-bottom:3px;color:var(--muted);font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
@@ -68,3 +68,25 @@
 .ira-obstruction-grid span{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
 .ira-obstruction-grid span::before{content:"CAUSAS";display:block;margin-bottom:3px;color:var(--muted);font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 @media(max-width:520px){.ira-explanation-bar{flex-wrap:wrap;gap:5px 9px;justify-content:flex-start}}
+
+/* Definición, KDIGO y factores de riesgo */
+.ira-definition-card,.ira-kdigo-card{max-width:900px;margin:0 auto 18px;padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);box-shadow:var(--shadow)}
+.ira-section-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--accent)}
+.ira-definition-card h3,.ira-kdigo-card h3{margin:7px 0 9px;font-family:'Libre Baskerville',serif;font-size:21px}
+.ira-definition-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+.ira-kdigo-intro{margin:0 0 14px;color:var(--muted);font-size:12px}
+.ira-kdigo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ira-kdigo-grid>div{padding:15px;border:1px solid var(--line);border-radius:9px;background:var(--surface);position:relative}
+.ira-kdigo-grid span{display:block;margin-bottom:8px;color:var(--accent);font-size:10px;font-weight:900}
+.ira-kdigo-grid strong{display:block;margin-bottom:5px;font-size:13px}
+.ira-kdigo-grid p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.ira-kdigo-key{margin-top:12px;padding:11px 13px;border-left:4px solid #f2cf4a;border-radius:7px;background:rgba(242,207,74,.10);font-size:11px;line-height:1.5}
+.ira-risk-card-main{max-width:900px;margin:0 auto}
+.ira-risk-table-wrap{overflow-x:auto}
+.ira-risk-table{width:100%;border-collapse:collapse;min-width:560px}
+.ira-risk-table th,.ira-risk-table td{padding:12px 14px;text-align:left;vertical-align:top;border:1px solid var(--line)}
+.ira-risk-table th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);background:rgba(127,127,127,.07)}
+.ira-risk-table th:first-child{text-decoration:underline;text-decoration-color:#f2cf4a;text-decoration-thickness:3px;text-underline-offset:3px}
+.ira-risk-table th:last-child{text-decoration:underline;text-decoration-color:#76b5e8;text-decoration-thickness:3px;text-underline-offset:3px}
+.ira-risk-table td{font-size:12px;line-height:1.6;color:var(--muted)}
+@media(max-width:700px){.ira-kdigo-grid{grid-template-columns:1fr}.ira-definition-card,.ira-kdigo-card,.ira-risk-card-main{padding:18px}}
