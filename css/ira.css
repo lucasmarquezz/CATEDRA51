@@ -26,3 +26,27 @@
 .ira-classification-table td:nth-child(2){font-weight:600}
 .ira-classification-table td:nth-child(3){color:var(--muted)}
 @media(max-width:800px){.ira-classification-table-wrap{margin-left:0;margin-right:0}.ira-classification-table th,.ira-classification-table td{padding:13px 12px}}
+
+.ira-type-sections{max-width:1100px;margin:26px auto 0;display:grid;gap:18px}
+.ira-detail-card{padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);box-shadow:var(--shadow)}
+.ira-detail-label{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--accent)}
+.ira-detail-card h3{margin:7px 0 8px;font-family:'Libre Baskerville',serif;font-size:21px}
+.ira-detail-intro{margin:0 0 16px;color:var(--muted)}
+.ira-mechanism-grid,.ira-intrinsic-grid,.ira-obstruction-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ira-mechanism-card,.ira-intrinsic-grid>div,.ira-obstruction-grid>div{padding:14px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
+.ira-mechanism-card h4{margin:0 0 8px;font-size:14px}
+.ira-mechanism-card p,.ira-intrinsic-grid span,.ira-intrinsic-grid small,.ira-obstruction-grid span{display:block;margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.ira-intrinsic-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ira-intrinsic-grid strong,.ira-obstruction-grid strong{display:block;margin-bottom:5px;font-size:13px}
+.ira-intrinsic-grid span{font-weight:700;color:var(--text);margin-bottom:4px}
+.ira-intrinsic-grid small{font-size:11px}
+.ira-clue-card{max-width:850px;margin:14px auto 0;padding:14px;border:1px solid #9ac9a1;border-radius:10px;background:rgba(80,170,95,.08)}
+.ira-clue-title{margin-bottom:8px;font-size:10px;font-weight:800;letter-spacing:.1em;color:#31833d}
+.ira-clue-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid rgba(80,170,95,.2);font-size:11px}
+.ira-clue-row strong{color:#31833d;white-space:nowrap}
+.ira-obstruction-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ira-red-flag-card{margin-top:15px;padding:15px 17px;border:1px solid #e4a0a0;border-left:4px solid #c94b4b;border-radius:9px;background:rgba(201,75,75,.07)}
+.ira-red-flag-card h4{margin:0 0 9px;color:#b33b3b;font-size:12px;text-decoration-line:underline;text-decoration-color:#e57373;text-decoration-thickness:3px;text-underline-offset:3px}
+.ira-red-flag-card p{margin:6px 0;color:var(--text);font-size:12px;line-height:1.5}
+@media(max-width:850px){.ira-mechanism-grid,.ira-intrinsic-grid,.ira-obstruction-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.ira-detail-card{padding:17px}.ira-mechanism-grid,.ira-intrinsic-grid,.ira-obstruction-grid{grid-template-columns:1fr}.ira-clue-row{display:block}.ira-clue-row strong{display:block;margin-top:3px;white-space:normal}}
