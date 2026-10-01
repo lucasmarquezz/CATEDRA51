@@ -90,3 +90,36 @@
 .ira-risk-table th:last-child{text-decoration:underline;text-decoration-color:#76b5e8;text-decoration-thickness:3px;text-underline-offset:3px}
 .ira-risk-table td{font-size:12px;line-height:1.6;color:var(--muted)}
 @media(max-width:700px){.ira-kdigo-grid{grid-template-columns:1fr}.ira-definition-card,.ira-kdigo-card,.ira-risk-card-main{padding:18px}}
+
+/* Algoritmo diagnóstico IRA */
+.ira-dx-flow{max-width:920px;margin:0 auto 24px;text-align:center}
+.ira-dx-start,.ira-dx-question{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:900;letter-spacing:.04em;font-size:13px;border:1px solid var(--line);background:var(--surface-2)}
+.ira-dx-start{border:2px solid #f2cf4a}
+.ira-dx-arrow,.ira-dx-cause-arrow{font-size:22px;font-weight:900;line-height:1.2;margin:5px 0}
+.ira-dx-question{box-shadow:var(--shadow)}
+.ira-dx-branches{display:grid;grid-template-columns:1fr 1.45fr;gap:12px;margin-top:12px;align-items:start}
+.ira-dx-branch{padding:13px;border-radius:10px;border:1px solid var(--line);background:var(--surface-2);font-size:12px}
+.ira-dx-branch>span{display:inline-block;font-size:10px;font-weight:900;padding:4px 10px;border-radius:99px;margin-bottom:8px}
+.ira-dx-no>span{background:rgba(120,120,120,.12)}
+.ira-dx-yes>span{background:rgba(70,160,100,.14);color:#2d8a51}
+.ira-dx-study{padding:12px;border-radius:8px;background:rgba(70,160,100,.08);border:1px solid rgba(70,160,100,.28)}
+.ira-dx-study strong{display:block;font-size:11px;text-decoration:underline;text-decoration-color:#f2cf4a;text-decoration-thickness:3px;text-underline-offset:3px}
+.ira-dx-study small{display:block;margin-top:6px;line-height:1.5;color:var(--muted)}
+.ira-dx-arrow-inline{font-size:18px;margin:4px}
+.ira-dx-determine{display:inline-block;padding:9px 16px;border-radius:8px;background:rgba(242,207,74,.12);border:1px solid rgba(242,207,74,.45);font-weight:900;font-size:11px}
+.ira-dx-cause-subtitle{font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--muted)}
+.ira-dx-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ira-dx-card{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);box-shadow:var(--shadow)}
+.ira-dx-card-title{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.ira-dx-card-title span{font-size:10px;font-weight:900;color:var(--accent)}
+.ira-dx-card-title h3{margin:0;font-family:'Libre Baskerville',serif;font-size:18px}
+.ira-dx-label{font-size:9px;font-weight:900;letter-spacing:.08em;margin:12px 0 7px;text-decoration:underline;text-decoration-color:#f2cf4a;text-decoration-thickness:3px;text-underline-offset:3px}
+.ira-dx-card ul{margin:0;padding-left:17px;font-size:11px;line-height:1.75;color:var(--muted)}
+.ira-dx-pattern{margin:13px 0;padding:9px;border-radius:7px;background:rgba(242,207,74,.10);font-size:10px;font-weight:900;text-align:center}
+.ira-dx-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+.ira-sediment-clues{margin:14px 0;padding:12px;border:2px solid #e7b93f;border-radius:9px;background:rgba(242,207,74,.10)}
+.ira-sediment-title{font-size:9px;font-weight:900;letter-spacing:.06em;text-decoration:underline;text-decoration-color:#f2cf4a;text-decoration-thickness:3px;text-underline-offset:3px;margin-bottom:9px}
+.ira-sediment-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ira-sediment-grid div{padding:8px;border-radius:6px;background:var(--surface);font-size:10px;line-height:1.4}
+.ira-sediment-grid strong{display:block;font-size:10px}.ira-sediment-grid span{color:var(--muted)}
+@media(max-width:900px){.ira-dx-cards{grid-template-columns:1fr}.ira-dx-branches{grid-template-columns:1fr}.ira-sediment-grid{grid-template-columns:1fr}}
