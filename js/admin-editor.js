@@ -42,6 +42,7 @@
       const result = JSON.parse(returnedAuth);
       if (result.login === allowedLogin && result.token) {
         accessToken = result.token;
+        window.setTimeout(enterEditing, 0);
       } else {
         window.alert(result.error || "Esta cuenta no está autorizada para editar CATEDRA51.");
       }
