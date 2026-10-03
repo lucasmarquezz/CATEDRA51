@@ -6,7 +6,6 @@
   let accessToken = null;
   let editing = false;
   let dirty = false;
-  let popup = null;
   let originalNavHTML = "";
   let originalBottomHTML = "";
 
@@ -32,6 +31,31 @@
     @media(max-width:620px){.c51-admin-toolbar{top:auto;bottom:8px;left:8px;right:8px;transform:none;max-width:none}.c51-admin-toolbar button{padding:9px 10px;font-size:12px}.c51-admin-status{min-width:0}}
   `;
   document.head.append(style);
+
+  const authHashParams = new URLSearchParams(window.location.hash.slice(1));
+  const returnedAuth = authHashParams.get("c51_auth");
+  if (returnedAuth) {
+    const cleaned = new URL(window.location.href);
+    cleaned.hash = "";
+    window.history.replaceState({}, "", cleaned.href);
+    try {
+      const result = JSON.parse(returnedAuth);
+      if (result.login === allowedLogin && result.token) {
+        accessToken = result.token;
+      } else {
+        window.alert(result.error || "Esta cuenta no está autorizada para editar CATEDRA51.");
+      }
+    } catch {
+      window.alert("No se pudo completar el inicio de sesión de GitHub.");
+    }
+  }
+  const authErrorUrl = new URL(window.location.href);
+  const authError = authErrorUrl.searchParams.get("c51_auth_error");
+  if (authError) {
+    authErrorUrl.searchParams.delete("c51_auth_error");
+    window.history.replaceState({}, "", authErrorUrl.href);
+    window.alert(authError);
+  }
 
   const openButton = widget.querySelector("button");
   openButton.addEventListener("click", async function () {
@@ -59,6 +83,8 @@
     const callbackUrl = new URL(window.location.href);
     callbackUrl.searchParams.set("c51_auth", "1");
     const channel = new BroadcastChannel("catedra51-admin-auth");
+    let timeout;
+    let onMessage;
     const cleanup = function () {
       window.clearTimeout(timeout);
       channel.close();
@@ -84,11 +110,11 @@
       openButton.disabled = false;
       enterEditing();
     }
-    function onMessage(event) {
+    onMessage = function (event) {
       if (event.origin !== workerUrl) return;
       handleResult(event.data);
-    }
-    const timeout = window.setTimeout(function () {
+    };
+    timeout = window.setTimeout(function () {
       cleanup();
       if (!accessToken) {
         openButton.disabled = false;
