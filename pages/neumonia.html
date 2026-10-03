@@ -28,7 +28,18 @@
     <header class="topbar"><div class="topbar-brand">CATEDRA <strong>51</strong></div><button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo de color">☾ <span>Modo oscuro</span></button></header>
     <main class="topic-page">
       <a class="back-link" href="../index.html">← Volver al inicio</a>
-      <section class="topic-hero"><div><div class="eyebrow">RESPIRATORIO · INFECCIONES</div><h1>Neumonía</h1><p>Etiologías · sospecha · gravedad · tratamiento · derrame paraneumónico</p></div><div class="topic-badge">MEDICINA<br>INTERNA</div></section>
+      <section class="topic-hero">
+        <div class="topic-hero-main"><div class="eyebrow">RESPIRATORIO · INFECCIONES</div><h1>Neumonía</h1><p>Etiologías · sospecha · gravedad · tratamiento · derrame paraneumónico</p></div>
+        <div class="topic-hero-side">
+          <div class="topic-badge">MEDICINA<br>INTERNA</div>
+          <aside class="quiz-launch" aria-label="Evaluación de conocimientos">
+            <span class="eyebrow">AUTOEVALUACIÓN</span>
+            <h2>¿Cuánto sabés de Neumonía?</h2>
+            <p>Poné a prueba tus conocimientos con preguntas clínicas.</p>
+            <button id="startQuiz" class="quiz-start-btn" type="button">PON A PRUEBA EL CONOCIMIENTO SOBRE EL TEMA <span>→</span></button>
+          </aside>
+        </div>
+      </section>
       <nav class="topic-tabs" role="tablist" aria-label="Contenido del tema">
         <button class="topic-tab active" data-tab="etiologias" role="tab" aria-selected="true">01 · Etiologías principales</button>
         <button class="topic-tab" data-tab="sospecha" role="tab" aria-selected="false">02 · ¿Cuándo lo sospecho?</button>
@@ -37,13 +48,6 @@
         <button class="topic-tab" data-tab="derrame" role="tab" aria-selected="false">05 · Derrame paraneumónico</button>
         <button class="topic-tab" data-tab="intrahospitalaria" role="tab" aria-selected="false">06 · La neumonía intrahospitalaria</button>
       </nav>
-
-      <aside class="quiz-launch" aria-label="Evaluación de conocimientos">
-        <span class="eyebrow">AUTOEVALUACIÓN</span>
-        <h2>¿Cuánto sabés de Neumonía?</h2>
-        <p>Poné a prueba tus conocimientos con preguntas clínicas.</p>
-        <button id="startQuiz" class="quiz-start-btn">PON A PRUEBA EL CONOCIMIENTO SOBRE EL TEMA <span>→</span></button>
-      </aside>
 
       <section class="quiz-panel" id="quizPanel" hidden aria-live="polite">
         <div class="quiz-header"><div><span class="eyebrow">MODO EXAMEN</span><h2>Poné a prueba tus conocimientos</h2></div><button id="closeQuiz" class="quiz-close" type="button" aria-label="Cerrar evaluación">×</button></div>
