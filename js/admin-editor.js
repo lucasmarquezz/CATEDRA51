@@ -6,6 +6,7 @@
   let accessToken = null;
   let editing = false;
   let dirty = false;
+  let popup = null;
   let originalNavHTML = "";
   let originalBottomHTML = "";
 
@@ -32,32 +33,6 @@
   `;
   document.head.append(style);
 
-  const authHashParams = new URLSearchParams(window.location.hash.slice(1));
-  const returnedAuth = authHashParams.get("c51_auth");
-  if (returnedAuth) {
-    const cleaned = new URL(window.location.href);
-    cleaned.hash = "";
-    window.history.replaceState({}, "", cleaned.href);
-    try {
-      const result = JSON.parse(returnedAuth);
-      if (result.login === allowedLogin && result.token) {
-        accessToken = result.token;
-        window.setTimeout(enterEditing, 0);
-      } else {
-        window.alert(result.error || "Esta cuenta no está autorizada para editar CATEDRA51.");
-      }
-    } catch {
-      window.alert("No se pudo completar el inicio de sesión de GitHub.");
-    }
-  }
-  const authErrorUrl = new URL(window.location.href);
-  const authError = authErrorUrl.searchParams.get("c51_auth_error");
-  if (authError) {
-    authErrorUrl.searchParams.delete("c51_auth_error");
-    window.history.replaceState({}, "", authErrorUrl.href);
-    window.alert(authError);
-  }
-
   const openButton = widget.querySelector("button");
   openButton.addEventListener("click", async function () {
     if (editing) {
@@ -81,53 +56,43 @@
     const workerUrl = config.workerUrl.replace(/\/$/, "");
     const loginUrl = new URL(workerUrl + "/auth/start");
     loginUrl.searchParams.set("origin", window.location.origin);
-    const callbackUrl = new URL(window.location.href);
-    callbackUrl.searchParams.set("c51_auth", "1");
-    const channel = new BroadcastChannel("catedra51-admin-auth");
-    let timeout;
-    let onMessage;
-    const cleanup = function () {
-      window.clearTimeout(timeout);
-      channel.close();
-      window.removeEventListener("message", onMessage);
-    };
-    function handleResult(data) {
-      if (data?.type !== "c51-admin-auth") return;
-      cleanup();
-      if (data.error) {
-        window.alert(data.error);
-        openButton.disabled = false;
-        openButton.textContent = "ADMINISTRADORES";
-        return;
-      }
-      if (data.login !== allowedLogin || !data.token) {
-        window.alert("Esta cuenta no está autorizada para editar CATEDRA51.");
-        openButton.disabled = false;
-        openButton.textContent = "ADMINISTRADORES";
-        return;
-      }
-      accessToken = data.token;
-      openButton.textContent = "ABRIR EDITOR";
-      openButton.disabled = false;
-      enterEditing();
+    popup = window.open(loginUrl.href, "catedra51-admin-login", "width=600,height=720,noopener=no");
+    if (!popup) {
+      window.alert("El navegador bloqueó la ventana de inicio de sesión. Permití las ventanas emergentes para CATEDRA51 y volvé a intentar.");
+      return;
     }
-    onMessage = function (event) {
-      if (event.origin !== workerUrl) return;
-      handleResult(event.data);
-    };
-    timeout = window.setTimeout(function () {
-      cleanup();
+    openButton.disabled = true;
+    openButton.textContent = "ESPERANDO A GITHUB…";
+
+    const timeout = window.setTimeout(function () {
       if (!accessToken) {
         openButton.disabled = false;
         openButton.textContent = "ADMINISTRADORES";
       }
     }, 5 * 60 * 1000);
+
+    function onMessage(event) {
+      if (event.origin !== workerUrl || event.data?.type !== "c51-admin-auth") return;
+      window.clearTimeout(timeout);
+      window.removeEventListener("message", onMessage);
+      if (event.data.error) {
+        window.alert(event.data.error);
+        openButton.disabled = false;
+        openButton.textContent = "ADMINISTRADORES";
+        return;
+      }
+      if (event.data.login !== allowedLogin || !event.data.token) {
+        window.alert("Esta cuenta no está autorizada para editar CATEDRA51.");
+        openButton.disabled = false;
+        openButton.textContent = "ADMINISTRADORES";
+        return;
+      }
+      accessToken = event.data.token;
+      openButton.textContent = "ABRIR EDITOR";
+      openButton.disabled = false;
+      enterEditing();
+    }
     window.addEventListener("message", onMessage);
-    channel.onmessage = function (event) { handleResult(event.data); };
-    loginUrl.searchParams.set("return_to", callbackUrl.href);
-    openButton.disabled = true;
-    openButton.textContent = "ABRIENDO GITHUB…";
-    window.location.assign(loginUrl.href);
   }
 
   function enterEditing() {
