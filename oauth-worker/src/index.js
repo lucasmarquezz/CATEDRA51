@@ -34,6 +34,7 @@ function startLogin(url, env) {
   authorize.searchParams.set("redirect_uri", callback.href);
   authorize.searchParams.set("state", state);
   authorize.searchParams.set("allow_signup", "false");
+  authorize.searchParams.set("scope", "repo");
 
   return new Response(null, {
     status: 302,
