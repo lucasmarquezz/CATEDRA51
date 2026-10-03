@@ -56,43 +56,51 @@
     const workerUrl = config.workerUrl.replace(/\/$/, "");
     const loginUrl = new URL(workerUrl + "/auth/start");
     loginUrl.searchParams.set("origin", window.location.origin);
-    popup = window.open(loginUrl.href, "catedra51-admin-login", "width=600,height=720,noopener=no");
-    if (!popup) {
-      window.alert("El navegador bloqueó la ventana de inicio de sesión. Permití las ventanas emergentes para CATEDRA51 y volvé a intentar.");
-      return;
-    }
-    openButton.disabled = true;
-    openButton.textContent = "ESPERANDO A GITHUB…";
-
-    const timeout = window.setTimeout(function () {
-      if (!accessToken) {
-        openButton.disabled = false;
-        openButton.textContent = "ADMINISTRADORES";
-      }
-    }, 5 * 60 * 1000);
-
-    function onMessage(event) {
-      if (event.origin !== workerUrl || event.data?.type !== "c51-admin-auth") return;
+    const callbackUrl = new URL(window.location.href);
+    callbackUrl.searchParams.set("c51_auth", "1");
+    const channel = new BroadcastChannel("catedra51-admin-auth");
+    const cleanup = function () {
       window.clearTimeout(timeout);
+      channel.close();
       window.removeEventListener("message", onMessage);
-      if (event.data.error) {
-        window.alert(event.data.error);
+    };
+    function handleResult(data) {
+      if (data?.type !== "c51-admin-auth") return;
+      cleanup();
+      if (data.error) {
+        window.alert(data.error);
         openButton.disabled = false;
         openButton.textContent = "ADMINISTRADORES";
         return;
       }
-      if (event.data.login !== allowedLogin || !event.data.token) {
+      if (data.login !== allowedLogin || !data.token) {
         window.alert("Esta cuenta no está autorizada para editar CATEDRA51.");
         openButton.disabled = false;
         openButton.textContent = "ADMINISTRADORES";
         return;
       }
-      accessToken = event.data.token;
+      accessToken = data.token;
       openButton.textContent = "ABRIR EDITOR";
       openButton.disabled = false;
       enterEditing();
     }
+    function onMessage(event) {
+      if (event.origin !== workerUrl) return;
+      handleResult(event.data);
+    }
+    const timeout = window.setTimeout(function () {
+      cleanup();
+      if (!accessToken) {
+        openButton.disabled = false;
+        openButton.textContent = "ADMINISTRADORES";
+      }
+    }, 5 * 60 * 1000);
     window.addEventListener("message", onMessage);
+    channel.onmessage = function (event) { handleResult(event.data); };
+    loginUrl.searchParams.set("return_to", callbackUrl.href);
+    openButton.disabled = true;
+    openButton.textContent = "ABRIENDO GITHUB…";
+    window.location.assign(loginUrl.href);
   }
 
   function enterEditing() {
