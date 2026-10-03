@@ -34,7 +34,6 @@ function startLogin(url, env) {
   authorize.searchParams.set("redirect_uri", callback.href);
   authorize.searchParams.set("state", state);
   authorize.searchParams.set("allow_signup", "false");
-  authorize.searchParams.set("scope", "repo");
 
   return new Response(null, {
     status: 302,
@@ -93,31 +92,19 @@ async function finishLogin(request, url, env) {
   return callbackPage(siteOrigin, {
     token: tokenData.access_token,
     login: user.login
-  }, stateCookie(""), params.get("return_to"));
+  }, stateCookie(""));
 }
 
-function callbackPage(targetOrigin, result, clearCookie, returnTo = "") {
+function callbackPage(targetOrigin, result, clearCookie) {
   const payload = JSON.stringify(result).replace(/</g, "\\u003c");
-  const safeReturnTo = (() => { try { const parsed = new URL(returnTo); return parsed.origin === targetOrigin ? parsed.href : ""; } catch { return ""; } })();
   const html = `<!doctype html><html lang="es"><meta charset="utf-8"><title>Acceso a CATEDRA51</title>
 <body><p>Volviendo a CATEDRA51…</p><script>
 const result = ${payload};
-const returnTo = ${JSON.stringify(safeReturnTo)};
-try {
-  const channel = new BroadcastChannel("catedra51-admin-auth");
-  channel.postMessage({ type: "c51-admin-auth", ...result });
-  channel.close();
-} catch {}
 if (window.opener) {
   window.opener.postMessage({ type: "c51-admin-auth", ...result }, ${JSON.stringify(targetOrigin)});
   window.close();
-} else if (returnTo) {
-  const destination = new URL(returnTo);
-  if (result.token) destination.hash = "c51_auth=" + encodeURIComponent(JSON.stringify(result));
-  else destination.searchParams.set("c51_auth_error", result.error || "No se pudo iniciar sesión.");
-  window.location.replace(destination.href);
 } else {
-  document.body.textContent = result.error || "Vuelve a CATEDRA51 para continuar.";
+  document.body.textContent = result.error || "Cierra esta ventana y vuelve a CATEDRA51.";
 }
 </script></body></html>`;
   return new Response(html, {
