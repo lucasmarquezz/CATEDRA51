@@ -39,7 +39,7 @@
   <button class="topic-tab" data-tab="diagnostico" role="tab" aria-selected="false">03 · Algoritmo diagnóstico</button>
   <button class="topic-tab" data-tab="tratamiento" role="tab" aria-selected="false">04 · Gravedad y tratamiento</button>
   <button class="topic-tab" data-tab="control" role="tab" aria-selected="false">05 · Control</button>
-  <button class="topic-tab pending-tab" data-tab="crisis" role="tab" aria-selected="false" disabled title="Pendiente de incorporar el material específico">06 · Crisis asmática · Pendiente</button>
+  <button class="topic-tab" data-tab="crisis" role="tab" aria-selected="false">06 · Crisis asmática</button>
 </nav>
 
 <section class="tab-panel active" id="fisiopatologia" role="tabpanel">
@@ -166,8 +166,40 @@
 </section>
 
 <section class="tab-panel" id="crisis" role="tabpanel" hidden>
-  <div class="panel-heading"><div><span class="eyebrow">SECCIÓN PENDIENTE</span><h2>Crisis asmática</h2></div><p>Esta sección se completará cuando se incorpore el material específico previsto para el manejo de las exacerbaciones agudas.</p></div>
-  <div class="age-note"><strong>Contenido reservado:</strong> clasificación de gravedad, signos de alarma, abordaje inicial, tratamiento según gravedad, criterios de internación y alta. No se desarrolla en esta versión.</div>
+  <div class="panel-heading"><div><span class="eyebrow">URGENCIAS PEDIÁTRICAS</span><h2>Crisis asmática: reconocerla y medir la gravedad</h2></div><p>Reconocer rápidamente el deterioro clínico permite identificar la crisis grave y los signos de paro respiratorio inminente.</p></div>
+
+  <div class="definition-card">
+    <div class="definition-icon">!</div>
+    <div><strong>Diagnóstico clínico</strong><p>Niño asmático con tos, disnea, tiraje y sibilancias que no ceden con salbutamol: crisis asmática hasta que se pruebe otra cosa. Se evalúa con examen físico y saturometría; la espirometría se difiere en la crisis moderada o grave y la radiografía no es de rutina, sólo si se sospecha una complicación (neumotórax, neumomediastino, atelectasia) o un simulador.</p></div>
+  </div>
+
+  <div class="suspicion-grid">
+    <article class="suspicion-card caution"><h3>Lo que no es</h3><ul><li><strong>Neumotórax a tensión:</strong> hipoventilación de un solo lado, mediastino desplazado.</li><li><strong>Bronquiolitis:</strong> menor de 2 años, primer episodio.</li></ul></article>
+    <article class="suspicion-card positive"><h3>Claves para valorar gravedad</h3><ul><li>La taquicardia y las retracciones marcan gravedad.</li><li>El paro lo anuncia el agotamiento muscular: respiración paradójica, bradicardia, silencio auscultatorio y deterioro del sensorio.</li></ul></article>
+  </div>
+
+  <div class="section-label">CRISIS GRAVE VS. PARO RESPIRATORIO INMINENTE</div>
+  <div class="comparison-table-wrap"><table class="comparison-table"><thead><tr><th>Dato</th><th>Crisis grave</th><th>Paro respiratorio inminente</th></tr></thead><tbody>
+    <tr><th>Habla</th><td>Palabras sueltas</td><td>No puede hablar</td></tr>
+    <tr><th>Conciencia</th><td>Agitado</td><td>Somnoliento o confuso</td></tr>
+    <tr><th>Músculos accesorios</th><td>Tiraje y retracción supraesternal</td><td><strong>Movimiento toracoabdominal paradójico</strong></td></tr>
+    <tr><th>Sibilancias</th><td>Fuertes, en inspiración y espiración</td><td><strong>Tórax silente: sibilancias ausentes</strong></td></tr>
+    <tr><th>Pulso</th><td>Más de 120 por minuto</td><td><strong>Bradicardia</strong></td></tr>
+    <tr><th>Saturación al aire</th><td>Menor de 90 %</td><td>Hipoxemia pese al oxígeno</td></tr>
+  </tbody></table></div>
+
+  <div class="oral-pearl"><span>SIGNOS DE ALARMA</span><strong>Movimiento toracoabdominal paradójico, bradicardia, tórax silente y deterioro del sensorio sugieren agotamiento y paro respiratorio inminente.</strong></div>
+
+  <div class="section-label">TRATAMIENTO EN LA GUARDIA</div>
+  <div class="treatment-list">
+    <article><span>01 · OXÍGENO</span><div><h3>Corregir la hipoxemia</h3><p>Oxígeno para sostener la saturación por encima de 92 %.</p></div></article>
+    <article><span>02 · BRONCODILATADOR</span><div><h3><strong>Salbutamol</strong></h3><p>En aerosol con aerocámara (2 a 8 disparos) o nebulizado, cada 20 minutos, tres dosis en la primera hora.</p></div></article>
+    <article><span>03 · CORTICOIDE SISTÉMICO</span><div><h3>Administrar temprano</h3><p>Prednisona <strong>1–2 mg/kg/día (máximo 60 mg)</strong> o dexametasona <strong>0,6 mg/kg (máximo 16 mg)</strong>, con una segunda dosis al día siguiente.</p></div></article>
+    <article><span>04 · SI LA RESPUESTA ES INSUFICIENTE</span><div><h3>Ipratropio y sulfato de magnesio</h3><p>Ipratropio: se agrega si la primera tanda de salbutamol no alcanza; nunca en lugar del beta 2. En la crisis grave que no responde, sulfato de magnesio IV <strong>25–75 mg/kg (máximo 2,5 g)</strong>.</p></div></article>
+    <article><span>05 · DESTINO</span><div><h3>Alta, internación o terapia intensiva</h3><p>Alta con FEM mayor de 70 % y saturación mayor de 92 % al aire por 4 horas, con corticoide oral 3 a 7 días. Sin mejoría en 1–2 horas, internación; paro inminente, terapia intensiva.</p></div></article>
+  </div>
+
+  <div class="age-note"><strong>Nota de estudio:</strong> contenido organizado a partir del material que compartiste. Antes de usar dosis o umbrales para la atención clínica, contrastarlos con la guía institucional vigente y la evaluación del paciente.</div>
 </section>
 
 <section class="source-note" aria-labelledby="bibliografia">
