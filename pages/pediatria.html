@@ -6,6 +6,27 @@
   <meta name="description" content="Pediatría | CATEDRA 51">
   <title>Pediatría | CATEDRA 51</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .clinical-topic{margin-top:34px;border-top:1px solid var(--line);padding-top:38px;scroll-margin-top:90px}
+    .clinical-topic h2,.clinical-topic h3{font-family:'Libre Baskerville',serif}
+    .clinical-topic .topic-intro{color:var(--muted);line-height:1.7;max-width:850px}
+    .clinical-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 18px}
+    .clinical-tab{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:10px 13px;border-radius:10px;cursor:pointer;font:inherit;font-size:13px;text-align:left}
+    .clinical-tab[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .clinical-panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,3vw,30px);box-shadow:var(--shadow);line-height:1.7;scroll-margin-top:95px}
+    .clinical-panel h3{font-size:21px;margin:0 0 15px}.clinical-panel h4{margin:22px 0 8px;color:var(--accent)}
+    .clinical-panel p,.clinical-panel li{font-size:14px}.clinical-panel li{margin:5px 0}
+    .clinical-panel table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+    .clinical-panel th,.clinical-panel td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    .clinical-panel th{background:var(--surface-2)}
+    .source-note{border-left:4px solid var(--accent);background:var(--surface-2);padding:13px 16px;border-radius:0 10px 10px 0;margin:16px 0;font-size:13px}
+    .clinical-callout{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:14px 0}
+    .algorithm{display:grid;gap:9px;margin:15px 0}
+    .algorithm-step{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);font-size:14px}
+    .algorithm-step strong{color:var(--accent)}
+    .clinical-panel[hidden]{display:none}
+    @media(max-width:700px){.clinical-tab{flex:1 1 145px}.clinical-panel table{display:block;overflow-x:auto}.clinical-panel h3{font-size:19px}}
+  </style>
 </head>
 <body>
   <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
@@ -71,6 +92,141 @@
           <a class="topic-card" href="pediatria-farmacos.html"><span>06</span><h3>💊 Fármacos</h3><p>Tablas de fármacos pediátricos por grupo.</p></a>
         </div>
       </section>
+
+      <section class="clinical-topic" id="neumonia-supuracion" aria-labelledby="pneumo-title">
+        <span class="eyebrow">PEDIATRÍA · RESPIRATORIO</span>
+        <h2 id="pneumo-title">Neumonía de la comunidad y supuración pleuropulmonar</h2>
+        <p class="topic-intro">Apunte de estudio organizado en nueve pestañas. La guía de la SAP de IRAB se usa para las recomendaciones específicas de menores de 2 años; los capítulos de Dartiguelongue amplían el marco clínico y quirúrgico. Las diferencias entre fuentes o poblaciones se señalan en el apartado correspondiente, sin asumir que una recomendación es universal.</p>
+        <div class="clinical-tabs" role="tablist" aria-label="Secciones de neumonía y supuración">
+          <button class="clinical-tab" role="tab" id="p-tab-1" aria-controls="p-panel-1" aria-selected="true" data-panel="1">1. Definición y clasificación</button>
+          <button class="clinical-tab" role="tab" id="p-tab-2" aria-controls="p-panel-2" aria-selected="false" data-panel="2">2. Fisiopatología</button>
+          <button class="clinical-tab" role="tab" id="p-tab-3" aria-controls="p-panel-3" aria-selected="false" data-panel="3">3. Etiologías y riesgos</button>
+          <button class="clinical-tab" role="tab" id="p-tab-4" aria-controls="p-panel-4" aria-selected="false" data-panel="4">4. Clínica</button>
+          <button class="clinical-tab" role="tab" id="p-tab-5" aria-controls="p-panel-5" aria-selected="false" data-panel="5">5. Algoritmo diagnóstico</button>
+          <button class="clinical-tab" role="tab" id="p-tab-6" aria-controls="p-panel-6" aria-selected="false" data-panel="6">6. Gravedad e internación</button>
+          <button class="clinical-tab" role="tab" id="p-tab-7" aria-controls="p-panel-7" aria-selected="false" data-panel="7">7. Tratamiento y soporte</button>
+          <button class="clinical-tab" role="tab" id="p-tab-8" aria-controls="p-panel-8" aria-selected="false" data-panel="8">8. Complicaciones</button>
+          <button class="clinical-tab" role="tab" id="p-tab-9" aria-controls="p-panel-9" aria-selected="false" data-panel="9">9. Supuración pleuropulmonar</button>
+        </div>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-1" aria-labelledby="p-tab-1">
+          <h3>1. Definición y clasificación</h3>
+          <h4>Neumonía adquirida en la comunidad (NAC)</h4>
+          <p>Infección aguda del parénquima pulmonar adquirida fuera del hospital. La definición de neumonía bacteriana del consenso SAP destaca la infección parenquimatosa con signos de ocupación alveolar y opacidad radiológica sin pérdida de volumen; puede tener localización única o múltiple.</p>
+          <ul><li><strong>Según adquisición:</strong> comunitaria o asociada a la atención de salud, según contexto y definición empleada.</li><li><strong>Según etiología:</strong> viral, bacteriana típica o por agentes atípicos; la clínica y la radiología por sí solas no siempre permiten identificar con certeza el agente.</li><li><strong>Según evolución:</strong> no complicada o complicada (derrame pleural/empiema, necrosis, absceso, neumotórax, entre otras).</li><li><strong>Según extensión:</strong> lobar/segmentaria o multifocal, de acuerdo con el patrón clínico-radiológico.</li></ul>
+          <div class="source-note"><strong>Alcance de la fuente:</strong> el consenso SAP citado está orientado a infección respiratoria aguda baja en menores de 2 años. No trasladar automáticamente todos sus umbrales a escolares, adolescentes o neonatos.</div>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-2" aria-labelledby="p-tab-2" hidden>
+          <h3>2. Fisiopatología</h3>
+          <ol><li>El agente alcanza las vías respiratorias inferiores, habitualmente por microaspiración de secreciones; las defensas locales pueden no controlar la infección.</li><li>La respuesta inflamatoria produce edema y ocupación de alvéolos por células y exudado, con consolidación del parénquima.</li><li>La alteración de la ventilación y de la relación ventilación/perfusión puede causar hipoxemia y aumento del trabajo respiratorio.</li><li>Si la infección progresa, puede extenderse a la pleura y al espacio pleural, generando derrame paraneumónico y, en algunos casos, infección purulenta (empiema).</li><li>En cuadros necrotizantes puede haber destrucción del tejido pulmonar, cavitación, neumatoceles o fístula broncopleural.</li></ol>
+          <p>La progresión no es obligatoria: la mayoría de las neumonías no complicadas evoluciona favorablemente con tratamiento y soporte adecuados.</p>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-3" aria-labelledby="p-tab-3" hidden>
+          <h3>3. Etiologías y factores de riesgo</h3>
+          <h4>Etiologías orientativas por edad</h4>
+          <ul><li><strong>Menores de 2 años:</strong> los virus son causas frecuentes de infección respiratoria baja; si se sospecha etiología bacteriana, considerar neumococo y otros agentes según edad, antecedentes y contexto.</li><li><strong>Niños mayores:</strong> <em>Streptococcus pneumoniae</em> es una causa bacteriana importante; la participación de <em>Mycoplasma pneumoniae</em> aumenta desde aproximadamente los 4 años.</li><li><strong>Neonatos:</strong> tienen un espectro etiológico propio y requieren evaluación y tratamiento específicos para esa edad.</li><li><strong>Neumonía complicada:</strong> neumococo sigue siendo relevante. Considerar <em>Staphylococcus aureus</em>, incluido SAMR comunitario, ante sepsis grave/shock, necrosis, absceso, bullas, piotórax/neumotórax o infección de piel y partes blandas.</li></ul>
+          <h4>Factores que aumentan la preocupación clínica</h4>
+          <ul><li>Edad muy pequeña, prematuridad o comorbilidad relevante.</li><li>Inmunodeficiencia, enfermedad cardiopulmonar crónica u otras condiciones predisponentes.</li><li>Vacunación incompleta, malnutrición o dificultad para asegurar hidratación y seguimiento.</li><li>Progresión rápida, hipoxemia, aspecto tóxico o sospecha de complicación.</li></ul>
+          <div class="source-note"><strong>Interpretación:</strong> el agente probable depende de la edad y del síndrome. Estos datos orientan la sospecha, pero no sustituyen la evaluación clínica ni microbiológica cuando está indicada.</div>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-4" aria-labelledby="p-tab-4" hidden>
+          <h3>4. Manifestaciones clínicas</h3>
+          <ul><li>Tos y fiebre, con taquipnea con o sin tiraje.</li><li>Aumento del trabajo respiratorio: tiraje, aleteo nasal, quejido, dificultad para alimentarse o hablar según edad.</li><li>Crepitantes, disminución del murmullo vesicular o signos de condensación; la auscultación puede ser poco específica.</li><li>Hipoxemia, irritabilidad, decaimiento o rechazo alimentario en cuadros más graves.</li><li>Si existe compromiso pleural: fiebre persistente, dolor torácico/pleurítico, disminución del murmullo vesicular y matidez; puede observarse empeoramiento o falta de mejoría esperada.</li></ul>
+          <h4>Frecuencia respiratoria en reposo</h4>
+          <p>El consenso SAP para menores de 2 años considera taquipnea, con el niño tranquilo y afebril, por encima de los siguientes umbrales:</p>
+          <table><thead><tr><th>Edad</th><th>Frecuencia respiratoria</th></tr></thead><tbody><tr><td>Menor de 2 meses</td><td>&gt; 60/min</td></tr><tr><td>2–11 meses</td><td>&gt; 50/min</td></tr><tr><td>12 meses o más</td><td>&gt; 40/min</td></tr></tbody></table>
+          <div class="source-note">Estos puntos de corte son los del consenso citado para su población y contexto; interpretar siempre junto con edad, fiebre, estado general y signos de dificultad respiratoria.</div>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-5" aria-labelledby="p-tab-5" hidden>
+          <h3>5. Algoritmo diagnóstico</h3>
+          <div class="algorithm">
+            <div class="algorithm-step"><strong>Paso 1 · Evaluación inicial:</strong> valorar estado general, conciencia, trabajo respiratorio, frecuencia respiratoria, perfusión, hidratación y saturación de oxígeno.</div>
+            <div class="algorithm-step"><strong>Paso 2 · ¿Hay signos de alarma?</strong> hipoxemia, dificultad respiratoria moderada/grave, shock, alteración de conciencia o incapacidad para alimentarse → estabilización y evaluación hospitalaria urgente.</div>
+            <div class="algorithm-step"><strong>Paso 3 · Probabilidad clínica de NAC:</strong> integrar fiebre/tos/taquipnea y hallazgos pulmonares con edad, vacunas, comorbilidades y evolución.</div>
+            <div class="algorithm-step"><strong>Paso 4 · Estudios según contexto:</strong> la radiografía no es necesariamente rutinaria en toda presentación no complicada; considerar imágenes si hay gravedad, diagnóstico incierto, evolución desfavorable o sospecha de complicación. Los estudios de laboratorio tienen utilidad limitada para distinguir por sí solos etiología viral de bacteriana.</div>
+            <div class="algorithm-step"><strong>Paso 5 · Reevaluación:</strong> si no mejora en 48–72 h, empeora o persiste la fiebre/toxicidad, revisar diagnóstico, adherencia, cobertura antimicrobiana y buscar derrame, empiema, necrosis, absceso u otro foco.</div>
+          </div>
+          <h4>Si se sospecha supuración pleuropulmonar</h4>
+          <p>Ecografía pleural para confirmar y caracterizar el derrame/loculaciones cuando está disponible; radiografía de tórax para evaluar extensión; tomografía computada si se necesita diferenciar compromiso pleural de parenquimatoso o buscar necrosis, absceso, bullas, atelectasia, colapso o piotórax/neumotórax. Si se drena, enviar líquido pleural para estudio directo y cultivo; según disponibilidad/contexto, antígenos o PCR. Considerar tuberculosis si la sospecha epidemiológica/clínica lo justifica.</p>
+          <div class="source-note">No se propone una batería universal de laboratorio: seleccionar los estudios según gravedad, evolución y si el resultado cambiará la conducta.</div>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-6" aria-labelledby="p-tab-6" hidden>
+          <h3>6. Gravedad e internación</h3>
+          <h4>Indicaciones para evaluación hospitalaria/internación</h4>
+          <ul><li>Dificultad respiratoria moderada o grave: tiraje marcado, quejido o cianosis.</li><li>Hipoxemia o insuficiencia respiratoria; el consenso SAP enumera saturación de O₂ &lt; 90% como criterio de gravedad.</li><li>Alteración del sensorio, convulsiones, compromiso hemodinámico o shock.</li><li>Imposibilidad de alimentarse/hidratarse, deshidratación relevante o condiciones que impiden un cuidado seguro en domicilio.</li><li>Ausencia de respuesta al antibiótico luego de 48–72 horas, progresión rápida en 48–72 horas o sospecha de complicación (derrame complicado/empiema, necrosis o absceso).</li><li>Edad pequeña, comorbilidad o factores de riesgo que aumenten la probabilidad de evolución grave.</li></ul>
+          <div class="clinical-callout"><strong>Regla práctica:</strong> la decisión no depende de un solo número. Integrar saturación, trabajo respiratorio, estado general, edad, comorbilidades, tolerancia oral, evolución y posibilidad de seguimiento.</div>
+          <p><strong>Supuración pleuropulmonar:</strong> el consenso SAP la considera motivo de hospitalización en todos los casos.</p>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-7" aria-labelledby="p-tab-7" hidden>
+          <h3>7. Tratamiento y soporte</h3>
+          <h4>NAC no complicada</h4>
+          <ul><li>Tratamiento de soporte: hidratación, alimentación fraccionada según tolerancia, control de fiebre/dolor y oxígeno si existe hipoxemia.</li><li>Si se considera probable una NAC bacteriana no complicada, el consenso SAP mantiene amoxicilina oral a <strong>80–90 mg/kg/día</strong> como opción de elección en su población objetivo.</li><li>Macrólidos: reservar para sospecha de infección por agentes atípicos (p. ej., <em>Mycoplasma</em>/<em>Chlamydia</em>) o situaciones seleccionadas de alergia grave a penicilina, según cuadro y guía local.</li><li>La elección debe adecuarse a edad, alergias, gravedad, vacunación, epidemiología y recomendaciones institucionales; neonatos y pacientes graves requieren esquemas específicos.</li></ul>
+          <h4>Duración: señalar la fuente y la población</h4>
+          <div class="source-note"><strong>Consenso SAP:</strong> pauta habitual de 10 días en NAC no complicada; en pacientes seleccionados mayores de 6 meses con buena evolución y al menos 5 días de estabilidad clínica, contempla considerar 5–7 días. No aplicar esta reducción automáticamente a cuadros complicados, mala evolución o poblaciones no cubiertas por esa recomendación.</div>
+          <h4>Supuración pleuropulmonar</h4>
+          <ul><li>Internación, antibióticos intravenosos empíricos y ajuste según evolución, microbiología y epidemiología local.</li><li>En menores de 1 mes, el consenso indica esquemas propios de neumonía neonatal. En mayores de 1 mes, menciona ampicilina IV 300 mg/kg/día dividida cada 6 horas; ante factores de riesgo, ceftriaxona o cefotaxima. La cobertura debe revisarse si se sospecha <em>S. aureus</em>/SAMR comunitario o hay deterioro.</li><li>Soporte con oxígeno, líquidos IV cuando corresponda, analgesia y antitérmicos. Evaluar drenaje pleural y consulta con equipo con experiencia.</li></ul>
+          <h4>Seguimiento y evolución</h4>
+          <p>En NAC no complicada, reevaluar si empeora o no hay mejoría clínica en 48–72 horas. Para supuración pleuropulmonar, el material SAP refiere control clínico a las 48 horas y a la semana si la evolución es favorable, y controles radiográficos cada 3 meses hasta normalización. Individualizar según evolución y equipo tratante.</p>
+          <div class="source-note"><strong>Importante:</strong> las dosis aquí transcritas son recomendaciones del consenso pediátrico citado, no una prescripción individual. Verificar peso, edad, función renal, alergias, presentación disponible y protocolo local antes de indicar.</div>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-8" aria-labelledby="p-tab-8" hidden>
+          <h3>8. Complicaciones</h3>
+          <ul><li><strong>Derrame paraneumónico:</strong> líquido pleural asociado a neumonía; puede ser estéril o infectarse.</li><li><strong>Empiema:</strong> colección purulenta en el espacio pleural.</li><li><strong>Neumonía necrotizante:</strong> destrucción del parénquima, a veces con cavitación.</li><li><strong>Absceso pulmonar:</strong> colección localizada dentro del parénquima.</li><li><strong>Neumatoceles y bullas:</strong> cavidades aéreas que pueden aparecer en determinados cuadros, incluidos algunos estafilocócicos.</li><li><strong>Neumotórax/piotórax-neumotórax</strong> y <strong>fístula broncopleural</strong>.</li><li><strong>Insuficiencia respiratoria, sepsis y shock</strong> en enfermedad grave.</li></ul>
+          <p>La sospecha aumenta ante fiebre persistente, toxicidad, dolor pleurítico, hipoxemia, empeoramiento o falta de respuesta al tratamiento en 48–72 horas. Reevaluar para detectar complicaciones y reconsiderar etiología/cobertura.</p>
+        </section>
+        <section class="clinical-panel" role="tabpanel" id="p-panel-9" aria-labelledby="p-tab-9" hidden>
+          <h3>9. Supuración pleuropulmonar (SPP)</h3>
+          <h4>Definición y clasificación</h4>
+          <p>Complicación en la que una infección del parénquima pulmonar se extiende a la pleura y al espacio pleural. En pediatría, la mayoría de las infecciones del espacio pleural complica una neumonía. El término <strong>empiema</strong> se reserva para una colección pleural purulenta; puede tener origen pulmonar, mediastínico o abdominal, y puede coexistir o no con infección parenquimatosa demostrable.</p>
+          <h4>Etapas de evolución del derrame</h4>
+          <table><thead><tr><th>Etapa</th><th>Tiempo orientativo descrito</th><th>Características</th></tr></thead><tbody><tr><td>Exudativa</td><td>3–5 días</td><td>Líquido inflamatorio inicialmente estéril.</td></tr><tr><td>Fibrinopurulenta</td><td>7–10 días</td><td>Ingreso de bacterias, pus y depósito de fibrina; pueden formarse tabiques/loculaciones.</td></tr><tr><td>Organizativa</td><td>2–3 semanas</td><td>Engrosamiento fibroso pleural que puede limitar la expansión y atrapar el pulmón.</td></tr></tbody></table>
+          <p>Los tiempos son aproximados y las fases pueden solaparse; la conducta se guía por el estado clínico y la anatomía de la colección, no solo por los días de evolución.</p>
+          <h4>Manifestaciones clínicas</h4>
+          <ul><li>Fiebre persistente y compromiso sistémico pese al tratamiento.</li><li>Tos intensa, dolor torácico o pleurítico, taquipnea y aumento del trabajo respiratorio.</li><li>Disminución del murmullo vesicular y matidez a la percusión; puede haber signos de condensación.</li><li>Desplazamiento del choque de punta puede sugerir desplazamiento mediastínico y compromiso hemodinámico.</li></ul>
+          <h4>Algoritmo diagnóstico y conducta</h4>
+          <div class="algorithm">
+            <div class="algorithm-step"><strong>1 · Sospechar:</strong> neumonía que empeora o no mejora, fiebre persistente, dolor pleurítico, hipoxemia o hallazgos asimétricos.</div>
+            <div class="algorithm-step"><strong>2 · Hospitalizar y estabilizar:</strong> valorar oxígeno, perfusión, trabajo respiratorio y sepsis. La SAP recomienda internación en todos los casos de SPP.</div>
+            <div class="algorithm-step"><strong>3 · Imagen:</strong> radiografía para detectar derrame/extensión; ecografía para caracterizar volumen, tabiques y accesibilidad al drenaje. TC si hay duda diagnóstica o se sospechan necrosis, absceso, bullas, atelectasia, colapso, piotórax-neumotórax o diagnóstico diferencial complejo.</div>
+            <div class="algorithm-step"><strong>4 · Microbiología:</strong> hemocultivos y estudio de líquido pleural cuando corresponda y sin retrasar el tratamiento urgente. En el líquido: examen directo y cultivo; considerar pruebas de antígeno/PCR según disponibilidad. Considerar tuberculosis si hay indicios.</div>
+            <div class="algorithm-step"><strong>5 · Antibióticos IV:</strong> iniciar empíricamente y ajustar a la evolución y resultados. Considerar neumococo y, según presentación, <em>S. aureus</em>/SAMR comunitario.</div>
+            <div class="algorithm-step"><strong>6 · ¿Necesita drenaje/intervención?</strong> discutir con pediatría, cirugía/neumonología según disponibilidad si hay pus/empiema, colección relevante o loculada, compromiso respiratorio, piotórax-neumotórax, colapso importante o persistencia del cuadro. La decisión integra clínica, imágenes, estado toxoinfeccioso, cantidad/características del líquido y experiencia local.</div>
+            <div class="algorithm-step"><strong>7 · Reevaluar:</strong> comprobar respuesta clínica y drenaje adecuado; ante mala evolución buscar loculaciones residuales, necrosis, absceso, fístula u otra causa.</div>
+          </div>
+          <h4>Drenaje y opciones quirúrgicas</h4>
+          <ul><li><strong>Drenaje pleural:</strong> considerar cuando la colección infectada/purulenta, el volumen, el compromiso respiratorio o la evolución lo indican.</li><li><strong>Fibrinolíticos intrapleurales:</strong> pueden facilitar el drenaje en colecciones tabicadas, de acuerdo con protocolo y experiencia local.</li><li><strong>Videotoracoscopia (VATS):</strong> opción para evacuar pus y liberar tabiques, especialmente en etapas tempranas exudativas/fibrinopurulentas cuando está disponible.</li><li><strong>Decorticación:</strong> puede ser necesaria en fase organizativa con capa fibrosa madura que impide la expansión pulmonar.</li></ul>
+          <div class="source-note"><strong>Variación de conducta:</strong> la elección entre drenaje, fibrinolíticos, VATS o decorticación depende de la fase, la clínica, la imagen, la respuesta al tratamiento y los recursos/experiencia del centro. No presentar una técnica como obligatoria para todos los casos.</div>
+          <h4>Antibióticos: diferencias por edad y riesgo</h4>
+          <p>El consenso SAP describe para mayores de 1 mes ampicilina IV 300 mg/kg/día cada 6 horas y, si existen factores de riesgo, ceftriaxona o cefotaxima; en menores de 1 mes remite a esquemas específicos de neumonía neonatal. Si el cuadro sugiere <em>S. aureus</em>, incluido SAMR comunitario, la cobertura debe contemplarlo según epidemiología y protocolo local. Ajustar el esquema a cultivos y evolución.</p>
+          <h4>Seguimiento</h4>
+          <p>Control clínico a las 48 horas y a la semana si evoluciona favorablemente; radiografía de control cada 3 meses hasta normalización según el consenso SAP. Individualizar si persisten síntomas o imágenes anormales.</p>
+        </section>
+        <div class="source-note"><strong>Fuentes de esta sección:</strong> consenso de la Sociedad Argentina de Pediatría (SAP), actualización 2021 sobre infección respiratoria aguda baja (población pediátrica, con foco en menores de 2 años); capítulos de Dartiguelongue sobre neumonía y supuración pleuropulmonar. Las recomendaciones de antibióticos, umbrales y seguimiento deben leerse junto con la población específica de cada fuente y los protocolos locales.</div>
+      </section>
+      <script>
+        (function(){
+          const root=document.getElementById('neumonia-supuracion');
+          if(!root)return;
+          const tabs=[...root.querySelectorAll('.clinical-tab')];
+          const panels=[...root.querySelectorAll('.clinical-panel')];
+          function activate(n,focus){
+            tabs.forEach((tab)=>{const active=tab.dataset.panel===String(n);tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;if(active&&focus)tab.focus();});
+            panels.forEach((panel)=>{panel.hidden=panel.id!=='p-panel-'+n;});
+          }
+          tabs.forEach((tab,index)=>{
+            tab.addEventListener('click',()=>activate(tab.dataset.panel,false));
+            tab.addEventListener('keydown',(event)=>{
+              let next=index;
+              if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+              else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+              else if(event.key==='Home')next=0;
+              else if(event.key==='End')next=tabs.length-1;
+              else return;
+              event.preventDefault();activate(tabs[next].dataset.panel,true);
+            });
+          });
+          activate(1,false);
+        })();
+      </script>
     </main>
 
     <footer><span>CATEDRA 51</span><span>Por L. Márquez</span></footer>
