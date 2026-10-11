@@ -18,3 +18,17 @@
 .flow-branch.danger,.flow-step.emergency{border-top:3px solid #c34b4b;background:color-mix(in srgb,#c34b4b 5%,var(--surface))}
 .flow-step.warning{border-left:4px solid #c18b36;background:color-mix(in srgb,#c18b36 6%,var(--surface))}
 @media(max-width:650px){.algorithm-title{padding:16px}.algorithm-flow{padding:13px}.flow-branches{grid-template-columns:1fr}.flow-step,.flow-decision,.flow-branch{padding:13px}.algorithm-title h3{font-size:15px}}
+
+
+/* Preguntas de repaso con respuestas desplegables en morado */
+.review-question{margin:22px 0;padding:18px 20px;border:1px solid #c4a4e8;border-left:4px solid #8750b5;border-radius:12px;background:color-mix(in srgb,#8750b5 7%,var(--surface));}
+.review-question .section-label{color:#8750b5;margin:0 0 8px;}
+.review-question-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;}
+.review-question-heading>div{min-width:0;}
+.review-question-heading p{margin:0;color:#8750b5;font-size:14px;line-height:1.7;font-weight:600;}
+.answer-toggle{flex:none;border:1px solid #8750b5;border-radius:9px;background:#8750b5;color:#fff;padding:10px 13px;font:700 11px 'DM Sans',sans-serif;letter-spacing:.06em;cursor:pointer;}
+.answer-toggle:hover{background:#70409a;border-color:#70409a;}
+.review-answer{margin-top:15px;padding:14px 16px;border:1px solid #c4a4e8;border-radius:9px;background:color-mix(in srgb,#8750b5 10%,var(--surface));color:#8750b5;font-size:13px;line-height:1.75;}
+.review-answer[hidden]{display:none;}
+[data-theme="dark"] .review-question-heading p,[data-theme="dark"] .review-question .section-label,[data-theme="dark"] .review-answer{color:#d4b7f5;}
+@media(max-width:600px){.review-question{padding:15px}.review-question-heading{align-items:flex-start;flex-direction:column}.answer-toggle{align-self:flex-start}.review-answer{padding:12px}}
