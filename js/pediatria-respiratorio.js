@@ -16,3 +16,15 @@ if(container){const qs=quizData[current];container.innerHTML=qs.map((q,i)=>'<div
 qs.forEach((q,i)=>{container.querySelectorAll('input[name="q'+i+'"]').forEach(input=>input.addEventListener('change',()=>{const feedback=document.getElementById('feedback'+i);feedback.hidden=false;const correct=Number(input.value)===q.a;feedback.innerHTML='<strong>'+(correct?'Correcto.':'Revisá esta respuesta.')+'</strong> '+q.e;updateScore();}));});
 function updateScore(){let answered=0,correct=0;qs.forEach((q,i)=>{const selected=container.querySelector('input[name="q'+i+'"]:checked');if(selected){answered++;if(Number(selected.value)===q.a)correct++;}});document.getElementById('quizScore').textContent=answered<qs.length?'Respondidas: '+answered+'/'+qs.length+' · Aciertos hasta ahora: '+correct:'Resultado: '+correct+'/'+qs.length+' respuestas correctas.';}
 document.getElementById('quizReset').addEventListener('click',()=>{container.querySelectorAll('input').forEach(input=>input.checked=false);qs.forEach((q,i)=>{const f=document.getElementById('feedback'+i);f.hidden=true;f.innerHTML='';});document.getElementById('quizScore').textContent='Respondé las preguntas para ver tu resultado.';});}
+
+// Mostrar u ocultar respuestas de las preguntas y casos de repaso.
+document.querySelectorAll('.answer-toggle').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const answer=button.closest('.review-question')?.querySelector('.review-answer');
+    if(!answer)return;
+    const opening=answer.hidden;
+    answer.hidden=!opening;
+    button.setAttribute('aria-expanded',String(opening));
+    button.textContent=opening?'OCULTAR RESPUESTA':'RESPUESTA';
+  });
+});
