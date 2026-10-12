@@ -103,3 +103,17 @@ footer{border-top:1px solid var(--line);margin:0 clamp(18px,5vw,64px);padding:25
   .about-block p{font-size:13px;line-height:1.7}
   .about-signoff{padding-top:28px}
 }
+
+
+/* Banner compartido para los títulos de todos los temas */
+main .topic-hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:25px;max-width:none;width:100%;padding:clamp(24px,5vw,46px);margin:8px 0 30px;border:0;border-radius:24px;background:linear-gradient(130deg,#16324f,#245a78 62%,#38828a);color:#fff;box-shadow:var(--shadow)}
+main .topic-hero:after{content:"";position:absolute;z-index:-1;width:250px;height:250px;border:1px solid #ffffff2b;border-radius:50%;right:-75px;top:-90px;box-shadow:0 0 0 28px #ffffff0c,0 0 0 58px #ffffff08;pointer-events:none}
+main .topic-hero>*{position:relative;z-index:1}
+main .topic-hero .eyebrow{color:#c6e7f4}
+main .topic-hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(32px,5vw,54px);line-height:1.12;letter-spacing:-.025em;margin:12px 0;color:#fff}
+main .topic-hero h1 span{color:#fff}
+main .topic-hero p,main .topic-hero .author,main .topic-hero .hero-text{max-width:720px;color:#e3edf5;line-height:1.7;margin-bottom:0}
+main .topic-hero .topic-badge{border:1px solid #ffffff45;background:#ffffff12;color:#fff;border-radius:999px;padding:10px 14px;letter-spacing:.08em;line-height:1.5}
+main.home .topic-hero{display:block}
+main.home .topic-hero h1{margin-top:12px}
+@media(max-width:760px){main .topic-hero{border-radius:18px;padding:25px 22px;gap:12px}main .topic-hero h1{font-size:clamp(30px,8vw,40px)}main .topic-hero .topic-badge{display:none}}
