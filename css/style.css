@@ -183,3 +183,30 @@ main.home .topic-hero h1{margin-top:12px}
 .source-attribution{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;line-height:1.6;color:var(--muted)}
 .source-attribution a{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){.med-selector{gap:7px}.med-button{padding:9px 12px;font-size:12px}.med-info-grid{grid-template-columns:1fr}}
+
+
+/* Calculadoras de dosis pediátricas */
+.dose-calculator{margin-top:17px;padding:20px;border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-radius:14px;background:linear-gradient(135deg,color-mix(in srgb,#268b83 8%,var(--surface)),var(--surface-2))}
+.dose-calculator h4{margin:0 0 15px;font-size:15px;color:var(--accent)}
+.calc-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.calc-fields label{display:grid;gap:7px;font-size:11px;font-weight:700;color:var(--muted)}
+.calc-fields input,.calc-fields select{width:100%;min-width:0;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--text);font:500 13px 'DM Sans',sans-serif}
+.calc-fields input:focus,.calc-fields select:focus{outline:2px solid color-mix(in srgb,var(--accent) 30%,transparent);border-color:var(--accent)}
+.calc-button{border:0;border-radius:9px;padding:11px 17px;background:var(--accent);color:#fff;font:700 12px 'DM Sans',sans-serif;cursor:pointer}
+.calc-button:hover{filter:brightness(1.1)}
+.calc-result{display:grid;gap:5px;margin-top:13px;padding:15px;border:1px solid color-mix(in srgb,#268b83 28%,var(--line));border-radius:10px;background:var(--surface);color:var(--text);font-size:13px;line-height:1.5}
+.calc-result:empty{display:none}
+.calc-result strong{font-size:25px;line-height:1.2;color:#218276;font-variant-numeric:tabular-nums}
+.calc-result .result-label{font-size:10px;letter-spacing:.12em;font-weight:800;color:#218276;text-transform:uppercase}
+.calc-result small{font-size:11px;color:var(--muted);margin-top:3px}
+.result-error{color:#bd563d;font-weight:700}
+.calc-footnote{margin:12px 0 0;font-size:11px;line-height:1.65;color:var(--muted)}
+.calc-alert{margin-top:13px;padding:12px 14px;border-radius:9px;border-left:4px solid #d36a4c;background:color-mix(in srgb,#d36a4c 10%,var(--surface));font-size:11px;line-height:1.6;color:var(--muted)}
+.calc-alert strong{color:#bd563d}
+.emergency-calculator{background:linear-gradient(135deg,color-mix(in srgb,#d36a4c 10%,var(--surface)),var(--surface-2));border-color:color-mix(in srgb,#d36a4c 30%,var(--line))}
+.emergency-calculator h4{color:#bd563d}
+.emergency-calculator .calc-button{background:#bd563d}
+.emergency-calculator .calc-result strong{color:#bd563d}
+.emergency-calculator .calc-result .result-label{color:#bd563d}
+@media(max-width:800px){.calc-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.dose-calculator{padding:15px}.calc-fields{grid-template-columns:1fr}.calc-button{width:100%}}
