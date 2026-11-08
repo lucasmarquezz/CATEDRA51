@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fármacos en Pediatría | CATEDRA 51">
+  <meta name="description" content="Fármacos de uso frecuente y consulta rápida pediátrica | CATEDRA 51">
   <title>Fármacos · Pediatría | CATEDRA 51</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -16,7 +16,16 @@
       <a href="../index.html">← Inicio</a>
       <a href="pediatria.html">← Pediatría</a>
       <details open>
-        <summary>💊 Fármacos</summary>
+        <summary>⚡ Consulta rápida</summary>
+        <a href="#uso-frecuente">Fármacos de uso frecuente</a>
+        <a href="#paracetamol">Paracetamol</a>
+        <a href="#ibuprofeno">Ibuprofeno</a>
+        <a href="#dipirona">Dipirona</a>
+        <a href="#amoxicilina">Amoxicilina</a>
+        <a href="#adrenalina">Adrenalina</a>
+      </details>
+      <details>
+        <summary>📚 Biblioteca farmacológica</summary>
         <a href="#antibioticos">Antibióticos</a>
         <a href="#analgesicos">Analgésicos</a>
         <a href="#respiratorio">Respiratorio</a>
@@ -37,15 +46,78 @@
         <div class="eyebrow">PEDIATRÍA · FARMACOLOGÍA</div>
         <h1>Fármacos</h1>
         <p class="author">CATEDRA 51</p>
-        <p class="hero-text">Seleccioná un grupo para consultar su tabla de fármacos pediátricos.</p>
+        <p class="hero-text">Herramientas de consulta rápida para la práctica clínica pediátrica.</p>
       </section>
 
-      <section class="must-know">
+      <section class="must-know quick-meds" id="uso-frecuente">
         <div class="section-heading">
-          <div><span class="eyebrow">SELECCIONAR GRUPO</span><h2>Tablas de fármacos</h2></div>
-          <p>Las tablas todavía no contienen información y se completarán progresivamente.</p>
+          <div>
+            <span class="eyebrow">CONSULTA RÁPIDA · PEDIATRÍA</span>
+            <h2>Fármacos de uso frecuente</h2>
+          </div>
+          <p>Acceso directo a fichas farmacológicas y calculadoras de dosis por peso. La información de dosificación se incorporará tras su cotejo individual con el Formulario Farmacoterapéutico vigente del Hospital Garrahan.</p>
         </div>
 
+        <div class="med-search">
+          <label for="medSearch">BUSCAR MEDICAMENTO</label>
+          <input id="medSearch" type="search" placeholder="Ej.: adrenalina, amoxicilina..." autocomplete="off">
+        </div>
+
+        <div class="med-grid" id="medGrid">
+          <a class="med-card med-card-analgesic" href="#paracetamol" data-med="paracetamol analgesico antitermico">
+            <span class="med-card-icon">＋</span><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Paracetamol</h3><p>Ficha y cálculo de dosis por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
+          </a>
+          <a class="med-card med-card-analgesic" href="#ibuprofeno" data-med="ibuprofeno aine analgesico antitermico">
+            <span class="med-card-icon">✚</span><span class="med-card-kicker">AINE · ANALGÉSICO</span><h3>Ibuprofeno</h3><p>Ficha y cálculo de dosis por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
+          </a>
+          <a class="med-card med-card-analgesic" href="#dipirona" data-med="dipirona metamizol analgesico antitermico">
+            <span class="med-card-icon">✚</span><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Dipirona</h3><p>Ficha y cálculo de dosis por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
+          </a>
+          <a class="med-card med-card-antibiotic" href="#amoxicilina" data-med="amoxicilina antibiotico betalactamico">
+            <span class="med-card-icon">⌁</span><span class="med-card-kicker">ANTIBIÓTICO · BETALACTÁMICO</span><h3>Amoxicilina</h3><p>Ficha, indicaciones y cálculo por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
+          </a>
+          <a class="med-card med-card-emergency" href="#adrenalina" data-med="adrenalina anafilaxia paro shock emergencia">
+            <span class="med-card-icon">!</span><span class="med-card-kicker">EMERGENCIAS</span><h3>Adrenalina</h3><p>Selección de indicación y cálculo específico.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
+          </a>
+        </div>
+        <p class="med-no-results" id="medNoResults" hidden>No se encontraron medicamentos con ese nombre.</p>
+
+        <div class="source-note">
+          <div><strong>Fuente de referencia</strong><p>Formulario Farmacoterapéutico · Hospital de Pediatría Garrahan. Consultar siempre la versión electrónica vigente y corroborar las indicaciones, presentaciones y protocolos institucionales.</p></div>
+          <a href="https://farmacia.garrahan.gov.ar/Vademecum/Busqueda" target="_blank" rel="noopener noreferrer">Abrir Vademécum Garrahan ↗</a>
+        </div>
+
+        <div class="med-detail-list">
+          <section class="med-detail" id="paracetamol">
+            <div class="med-detail-heading"><span class="med-detail-number">01</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Paracetamol</h3></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán dosis por indicación, intervalo, dosis máxima, presentaciones y conversión a mL una vez cotejadas con el Vademécum Garrahan vigente.</p><span>Dosificación pendiente de validación documental</span></div>
+          </section>
+          <section class="med-detail" id="ibuprofeno">
+            <div class="med-detail-heading"><span class="med-detail-number">02</span><div><span class="med-card-kicker">AINE · ANALGÉSICO</span><h3>Ibuprofeno</h3></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán dosis por indicación, intervalo, dosis máxima, presentaciones y conversión a mL una vez cotejadas con el Vademécum Garrahan vigente.</p><span>Dosificación pendiente de validación documental</span></div>
+          </section>
+          <section class="med-detail" id="dipirona">
+            <div class="med-detail-heading"><span class="med-detail-number">03</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Dipirona (metamizol)</h3></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán dosis por indicación, intervalo, dosis máxima, presentaciones y conversión a mL una vez cotejadas con el Vademécum Garrahan vigente.</p><span>Dosificación pendiente de validación documental</span></div>
+          </section>
+          <section class="med-detail" id="amoxicilina">
+            <div class="med-detail-heading"><span class="med-detail-number">04</span><div><span class="med-card-kicker">ANTIBIÓTICO · BETALACTÁMICO</span><h3>Amoxicilina</h3></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán esquemas según indicación, dosis diaria, fraccionamiento, dosis máxima, concentraciones y conversión a mL.</p><span>Dosificación pendiente de validación documental</span></div>
+          </section>
+          <section class="med-detail" id="adrenalina">
+            <div class="med-detail-heading"><span class="med-detail-number">05</span><div><span class="med-card-kicker">EMERGENCIAS</span><h3>Adrenalina</h3></div></div>
+            <div class="calculator-placeholder emergency-placeholder"><strong>Calculadora por indicación</strong><p>La herramienta permitirá elegir anafilaxia, paro cardiorrespiratorio u otra indicación validada. Cada opción tendrá su vía, concentración, preparación, dosis y volumen específicos.</p><span>Requiere validación de cada protocolo y concentración antes de habilitar cálculos.</span></div>
+          </section>
+        </div>
+
+        <div class="clinical-warning"><strong>Importante</strong><p>Material educativo y de apoyo a la consulta. No reemplaza la evaluación clínica, la prescripción profesional ni los protocolos institucionales. Antes de administrar, verificar paciente, peso, indicación, dosis, concentración, vía, preparación y dosis máxima.</p></div>
+      </section>
+
+      <section class="must-know library-section" id="biblioteca">
+        <div class="section-heading">
+          <div><span class="eyebrow">BIBLIOTECA FARMACOLÓGICA</span><h2>Otros grupos de fármacos</h2></div>
+          <p>Se mantienen estos apartados para organizar y completar progresivamente el resto de la farmacología pediátrica.</p>
+        </div>
         <div class="topic-grid">
           <a class="topic-card" href="#antibioticos"><span>01</span><h3>Antibióticos</h3><p>Tabla pediátrica de antibióticos.</p></a>
           <a class="topic-card" href="#analgesicos"><span>02</span><h3>Analgésicos</h3><p>Tabla pediátrica de analgésicos.</p></a>
@@ -78,5 +150,20 @@
     <footer><span>CATEDRA 51</span><span>Por L. Márquez</span></footer>
   </div>
   <script src="../js/main.js"></script>
+  <script>
+    const medSearch = document.getElementById('medSearch');
+    const medCards = [...document.querySelectorAll('.med-card')];
+    const noResults = document.getElementById('medNoResults');
+    medSearch.addEventListener('input', () => {
+      const query = medSearch.value.trim().toLocaleLowerCase('es');
+      let visible = 0;
+      medCards.forEach(card => {
+        const match = card.dataset.med.includes(query);
+        card.hidden = !match;
+        if (match) visible++;
+      });
+      noResults.hidden = visible !== 0;
+    });
+  </script>
 </body>
 </html>
