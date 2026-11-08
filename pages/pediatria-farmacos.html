@@ -79,7 +79,7 @@
             <div class="dose-calculator" data-drug="paracetamol"><h4>Calculadora por peso · vía oral</h4>
               <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="10">10 mg/kg/dosis</option><option value="15" selected>15 mg/kg/dosis</option></select></label><label>Presentación<select data-concentration><option value="100" selected>Gotas · 100 mg/mL</option></select></label></div>
               <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá el peso y seleccioná la presentación.</div>
-              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>10–15 mg/kg/dosis VO cada 6 horas.</span></p><p><strong>2. Dosis máxima</strong><span>60 mg/kg/día, sin superar 2,6 g/día.</span></p></div>
+              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>10–15 mg/kg/dosis VO cada 6 horas.</span></p><p><strong>2. Dosis máxima</strong><span>2,6 g/día.</span></p></div>
               <p class="calc-tip"><strong>TIP:</strong> Gotas = Peso × 2</p>
             </div>
           </section>
@@ -234,7 +234,7 @@
         } else if (drug === 'paracetamol') {
           mg = weight*doseValue;
           frequency = 'cada 6 horas';
-          note = 'Máximo conservador de referencia: ' + (weight*60).toFixed(1) + ' mg/día.';
+          note = '';
         } else if (drug === 'ibuprofeno') {
           mg = weight*doseValue;
           frequency = doseValue === 10 ? 'cada 8 horas' : 'cada 6 horas';
@@ -250,7 +250,7 @@
         const fmt = value => Number(value.toFixed(2)).toString().replace('.', ',');
         const drops = Math.round(ml*20*10)/10;
         const volumeText = fmt(ml) + ' mL' + (drug === 'paracetamol' ? ' · ' + fmt(drops) + ' gotas (20 gotas/mL)' : '');
-        result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + fmt(mg) + ' mg</strong><span>Volumen: <b>' + volumeText + '</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span><small>' + note + ' Confirmar siempre la presentación del envase.</small>';
+        result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + fmt(mg) + ' mg</strong><span>Volumen: <b>' + volumeText + '</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span>' + (drug === 'paracetamol' ? '' : '<small>' + note + ' Confirmar siempre la presentación del envase.</small>');
       });
     });
   </script>
