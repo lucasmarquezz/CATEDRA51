@@ -55,62 +55,53 @@
             <span class="eyebrow">CONSULTA RÁPIDA · PEDIATRÍA</span>
             <h2>Fármacos de uso frecuente</h2>
           </div>
-          <p>Acceso directo a fichas farmacológicas y calculadoras de dosis por peso. La información de dosificación se incorporará tras su cotejo individual con el Formulario Farmacoterapéutico vigente del Hospital Garrahan.</p>
+          <p>Elegí un medicamento para consultar su ficha y acceder a la calculadora sin salir de esta pantalla.</p>
         </div>
 
         <div class="med-search">
           <label for="medSearch">BUSCAR MEDICAMENTO</label>
-          <input id="medSearch" type="search" placeholder="Ej.: adrenalina, amoxicilina..." autocomplete="off">
+          <input id="medSearch" type="search" placeholder="Buscar por nombre..." autocomplete="off">
         </div>
 
-        <div class="med-grid" id="medGrid">
-          <a class="med-card med-card-analgesic" href="#paracetamol" data-med="paracetamol analgesico antitermico">
-            <span class="med-card-icon">＋</span><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Paracetamol</h3><p>Ficha y cálculo de dosis por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
-          </a>
-          <a class="med-card med-card-analgesic" href="#ibuprofeno" data-med="ibuprofeno aine analgesico antitermico">
-            <span class="med-card-icon">✚</span><span class="med-card-kicker">AINE · ANALGÉSICO</span><h3>Ibuprofeno</h3><p>Ficha y cálculo de dosis por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
-          </a>
-          <a class="med-card med-card-analgesic" href="#dipirona" data-med="dipirona metamizol analgesico antitermico">
-            <span class="med-card-icon">✚</span><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Dipirona</h3><p>Ficha y cálculo de dosis por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
-          </a>
-          <a class="med-card med-card-antibiotic" href="#amoxicilina" data-med="amoxicilina antibiotico betalactamico">
-            <span class="med-card-icon">⌁</span><span class="med-card-kicker">ANTIBIÓTICO · BETALACTÁMICO</span><h3>Amoxicilina</h3><p>Ficha, indicaciones y cálculo por peso.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
-          </a>
-          <a class="med-card med-card-emergency" href="#adrenalina" data-med="adrenalina anafilaxia paro shock emergencia">
-            <span class="med-card-icon">!</span><span class="med-card-kicker">EMERGENCIAS</span><h3>Adrenalina</h3><p>Selección de indicación y cálculo específico.</p><span class="med-card-link">Abrir ficha <b>→</b></span>
-          </a>
+        <div class="med-selector" id="medGrid" role="group" aria-label="Seleccionar medicamento">
+          <button class="med-button med-card-analgesic" type="button" data-med="paracetamol analgesico antitermico" data-target="paracetamol" aria-expanded="false"><span>＋</span> Paracetamol</button>
+          <button class="med-button med-card-analgesic" type="button" data-med="ibuprofeno aine analgesico antitermico" data-target="ibuprofeno" aria-expanded="false"><span>＋</span> Ibuprofeno</button>
+          <button class="med-button med-card-analgesic" type="button" data-med="dipirona metamizol analgesico antitermico" data-target="dipirona" aria-expanded="false"><span>＋</span> Dipirona</button>
+          <button class="med-button med-card-antibiotic" type="button" data-med="amoxicilina antibiotico betalactamico" data-target="amoxicilina" aria-expanded="false"><span>＋</span> Amoxicilina</button>
+          <button class="med-button med-card-emergency" type="button" data-med="adrenalina anafilaxia paro shock emergencia" data-target="adrenalina" aria-expanded="false"><span>＋</span> Adrenalina</button>
         </div>
         <p class="med-no-results" id="medNoResults" hidden>No se encontraron medicamentos con ese nombre.</p>
 
-        <div class="source-note">
-          <div><strong>Fuente de referencia</strong><p>Formulario Farmacoterapéutico · Hospital de Pediatría Garrahan. Consultar siempre la versión electrónica vigente y corroborar las indicaciones, presentaciones y protocolos institucionales.</p></div>
-          <a href="https://farmacia.garrahan.gov.ar/Vademecum/Busqueda" target="_blank" rel="noopener noreferrer">Abrir Vademécum Garrahan ↗</a>
-        </div>
-
-        <div class="med-detail-list">
-          <section class="med-detail" id="paracetamol">
+        <div class="med-detail-list" id="medPanels">
+          <section class="med-detail" id="paracetamol" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">01</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Paracetamol</h3></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán dosis por indicación, intervalo, dosis máxima, presentaciones y conversión a mL una vez cotejadas con el Vademécum Garrahan vigente.</p><span>Dosificación pendiente de validación documental</span></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor y fiebre, según evaluación clínica.</p></div><div><strong>Datos para la consulta</strong><p>Dosis por toma, intervalo, dosis máxima diaria, edad, presentación y vía.</p></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora se habilitará al verificar dosis, intervalos, máximos y concentraciones de las presentaciones disponibles.</p><span>Dosificación pendiente de validación</span></div>
           </section>
-          <section class="med-detail" id="ibuprofeno">
-            <div class="med-detail-heading"><span class="med-detail-number">02</span><div><span class="med-card-kicker">AINE · ANALGÉSICO</span><h3>Ibuprofeno</h3></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán dosis por indicación, intervalo, dosis máxima, presentaciones y conversión a mL una vez cotejadas con el Vademécum Garrahan vigente.</p><span>Dosificación pendiente de validación documental</span></div>
+          <section class="med-detail" id="ibuprofeno" hidden>
+            <div class="med-detail-heading"><span class="med-detail-number">02</span><div><span class="med-card-kicker">AINE · ANALGÉSICO · ANTITÉRMICO</span><h3>Ibuprofeno</h3></div></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor, fiebre e inflamación, según evaluación clínica.</p></div><div><strong>Precauciones</strong><p>Valorar edad, hidratación, función renal, antecedentes gastrointestinales y contraindicaciones para AINE.</p></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora se habilitará al verificar dosis, intervalos, máximos y concentraciones de las presentaciones disponibles.</p><span>Dosificación pendiente de validación</span></div>
           </section>
-          <section class="med-detail" id="dipirona">
+          <section class="med-detail" id="dipirona" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">03</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Dipirona (metamizol)</h3></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán dosis por indicación, intervalo, dosis máxima, presentaciones y conversión a mL una vez cotejadas con el Vademécum Garrahan vigente.</p><span>Dosificación pendiente de validación documental</span></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor y fiebre en situaciones seleccionadas, según evaluación clínica.</p></div><div><strong>Precauciones</strong><p>Verificar edad, vía, antecedentes de hipersensibilidad, riesgo hematológico y normativa local.</p></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora se habilitará al verificar dosis, intervalos, máximos y concentraciones de las presentaciones disponibles.</p><span>Dosificación pendiente de validación</span></div>
           </section>
-          <section class="med-detail" id="amoxicilina">
+          <section class="med-detail" id="amoxicilina" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">04</span><div><span class="med-card-kicker">ANTIBIÓTICO · BETALACTÁMICO</span><h3>Amoxicilina</h3></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora de dosis</strong><p>Ficha en preparación: se incorporarán esquemas según indicación, dosis diaria, fraccionamiento, dosis máxima, concentraciones y conversión a mL.</p><span>Dosificación pendiente de validación documental</span></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Infecciones bacterianas sensibles; el esquema depende del foco y del microorganismo probable.</p></div><div><strong>Datos para la consulta</strong><p>Dosis diaria o por toma, fraccionamiento, duración, dosis máxima y concentración de la suspensión.</p></div></div>
+            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora contemplará esquemas diferenciados por indicación y conversión a mL según la concentración elegida.</p><span>Dosificación pendiente de validación</span></div>
           </section>
-          <section class="med-detail" id="adrenalina">
+          <section class="med-detail" id="adrenalina" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">05</span><div><span class="med-card-kicker">EMERGENCIAS</span><h3>Adrenalina</h3></div></div>
-            <div class="calculator-placeholder emergency-placeholder"><strong>Calculadora por indicación</strong><p>La herramienta permitirá elegir anafilaxia, paro cardiorrespiratorio u otra indicación validada. Cada opción tendrá su vía, concentración, preparación, dosis y volumen específicos.</p><span>Requiere validación de cada protocolo y concentración antes de habilitar cálculos.</span></div>
+            <p class="med-panel-intro">Primero seleccioná la indicación: la dosis, la vía y la concentración cambian según el escenario clínico.</p>
+            <div class="adrenaline-options"><button type="button" disabled>Anafilaxia · IM</button><button type="button" disabled>Paro cardiorrespiratorio · EV/IO</button><button type="button" disabled>Shock · Infusión</button></div>
+            <div class="calculator-placeholder emergency-placeholder"><strong>Calculadora por indicación</strong><p>Se habilitarán módulos separados con dosis, vía, concentración, preparación, volumen y repetición específicos para cada indicación validada.</p><span>Protocolos pendientes de validación</span></div>
           </section>
         </div>
 
-        <div class="clinical-warning"><strong>Importante</strong><p>Material educativo y de apoyo a la consulta. No reemplaza la evaluación clínica, la prescripción profesional ni los protocolos institucionales. Antes de administrar, verificar paciente, peso, indicación, dosis, concentración, vía, preparación y dosis máxima.</p></div>
+                <div class="clinical-warning"><strong>Importante</strong><p>Material educativo y de apoyo a la consulta. No reemplaza la evaluación clínica, la prescripción profesional ni los protocolos institucionales. Antes de administrar, verificar paciente, peso, indicación, dosis, concentración, vía, preparación y dosis máxima.</p></div>
       </section>
 
       <section class="must-know library-section" id="biblioteca">
@@ -160,6 +151,41 @@
       medCards.forEach(card => {
         const match = card.dataset.med.includes(query);
         card.hidden = !match;
+        if (match) visible++;
+      });
+      noResults.hidden = visible !== 0;
+    });
+  </script>
+</body>
+</html  <script>
+    const medSearch = document.getElementById('medSearch');
+    const medButtons = [...document.querySelectorAll('.med-button')];
+    const medPanels = [...document.querySelectorAll('.med-detail')];
+    const noResults = document.getElementById('medNoResults');
+
+    medButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.dataset.target;
+        const wasOpen = button.getAttribute('aria-expanded') === 'true';
+        medButtons.forEach(item => {
+          item.setAttribute('aria-expanded', 'false');
+          item.classList.remove('is-active');
+        });
+        medPanels.forEach(panel => panel.hidden = true);
+        if (!wasOpen) {
+          button.setAttribute('aria-expanded', 'true');
+          button.classList.add('is-active');
+          document.getElementById(targetId).hidden = false;
+        }
+      });
+    });
+
+    medSearch.addEventListener('input', () => {
+      const query = medSearch.value.trim().toLocaleLowerCase('es');
+      let visible = 0;
+      medButtons.forEach(button => {
+        const match = button.dataset.med.includes(query);
+        button.hidden = !match;
         if (match) visible++;
       });
       noResults.hidden = visible !== 0;
