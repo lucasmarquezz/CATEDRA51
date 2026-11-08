@@ -218,3 +218,5 @@ main.home .topic-hero h1{margin-top:12px}
 .calc-guidance p{display:grid;gap:5px;margin:0;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
 .calc-guidance strong{font-size:12px;color:var(--accent)}
 .calc-guidance span{font-size:12px;line-height:1.6;color:var(--muted)}
+
+.calc-tip{margin:10px 0 0;padding:10px 12px;border-radius:8px;background:color-mix(in srgb,var(--accent) 9%,var(--surface));color:var(--muted);font-size:12px;line-height:1.5}.calc-tip strong{color:var(--accent)}
