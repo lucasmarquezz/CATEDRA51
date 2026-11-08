@@ -158,3 +158,28 @@ main.home .topic-hero h1{margin-top:12px}
 .library-section{margin-top:72px}
 @media(max-width:950px){.med-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.med-grid{grid-template-columns:1fr}.med-card{min-height:170px}.source-note{display:block}.source-note>a{display:inline-block;margin-top:13px}.med-detail{padding:17px}.calculator-placeholder{padding:15px}.clinical-warning{display:block}.clinical-warning p{margin-top:6px}.library-section{margin-top:55px}}
+
+
+/* Selector compacto con ficha desplegable en la misma pantalla */
+.med-selector{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 10px}
+.med-button{--med-color:#3977a8;display:inline-flex;align-items:center;gap:9px;padding:10px 15px;border:1px solid color-mix(in srgb,var(--med-color) 35%,var(--line));border-radius:999px;background:var(--surface);color:var(--text);font:600 13px 'DM Sans',sans-serif;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
+.med-button:hover{transform:translateY(-1px);border-color:var(--med-color);background:color-mix(in srgb,var(--med-color) 7%,var(--surface))}
+.med-button>span{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:color-mix(in srgb,var(--med-color) 15%,var(--surface));color:var(--med-color);font-size:15px}
+.med-button[hidden]{display:none}
+.med-button[aria-expanded="true"],.med-button.is-active{background:var(--med-color);border-color:var(--med-color);color:#fff}
+.med-button[aria-expanded="true"]>span,.med-button.is-active>span{background:#ffffff28;color:#fff}
+.med-button.med-card-analgesic{--med-color:#268b83}
+.med-button.med-card-antibiotic{--med-color:#5679bb}
+.med-button.med-card-emergency{--med-color:#d36a4c}
+.med-detail-list{margin-top:18px}
+.med-detail[hidden]{display:none}
+.med-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.med-info-grid>div{padding:15px;border:1px solid var(--line);border-radius:11px;background:var(--surface-2)}
+.med-info-grid strong{font-size:12px;color:var(--accent)}
+.med-info-grid p,.med-panel-intro{font-size:13px;color:var(--muted);line-height:1.6;margin:7px 0 0}
+.med-panel-intro{margin:0 0 13px}
+.adrenaline-options{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.adrenaline-options button{border:1px solid var(--line);border-radius:9px;background:var(--surface-2);color:var(--muted);padding:9px 12px;font:600 11px 'DM Sans',sans-serif}
+.source-attribution{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;line-height:1.6;color:var(--muted)}
+.source-attribution a{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.med-selector{gap:7px}.med-button{padding:9px 12px;font-size:12px}.med-info-grid{grid-template-columns:1fr}}
