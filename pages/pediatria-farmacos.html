@@ -79,7 +79,7 @@
             <div class="dose-calculator" data-drug="paracetamol"><h4>Calculadora por peso · vía oral</h4>
               <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="10">10 mg/kg/dosis</option><option value="15" selected>15 mg/kg/dosis</option></select></label><label>Presentación<select data-concentration><option value="100" selected>Gotas · 100 mg/mL</option></select></label></div>
               <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá el peso y seleccioná la presentación.</div>
-              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>10–15 mg/kg/dosis VO cada 6 horas.</span></p><p><strong>2. Dosis máxima</strong><span>60 mg/kg/día (límite conservador de esta herramienta).</span></p></div>
+              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>10–15 mg/kg/dosis VO cada 6 horas.</span></p><p><strong>2. Dosis máxima</strong><span>60 mg/kg/día, sin superar 2,6 g/día.</span></p></div>
               <p class="calc-tip"><strong>TIP:</strong> Gotas = Peso × 2</p>
             </div>
           </section>
@@ -205,6 +205,7 @@
         if (drug === 'adrenalina') {
           const mode = calc.querySelector('[data-mode]').value;
           const doseRaw = weight * 0.01;
+          const fmt = value => Number(value.toFixed(2)).toString().replace('.', ',');
           if (mode === 'anaphylaxis') {
             const dose = Math.min(doseRaw,0.3);
             result.innerHTML = '<span class="result-label">Dosis IM</span><strong>' + dose.toFixed(3) + ' mg</strong><span>Volumen: <b>' + dose.toFixed(3) + ' mL</b> de adrenalina 1 mg/mL (1:1000), sin diluir.</span><small>' + (doseRaw > 0.3 ? 'Se aplicó el tope orientativo de 0,3 mg. Confirmar edad y protocolo.' : '0,01 mg/kg. Puede repetirse a los 5 minutos según respuesta.') + '</small>';
@@ -246,7 +247,10 @@
           note = 'Verificar máximo diario, edad, indicación y ficha técnica antes de administrar.';
         }
         const ml = mg/concentration;
-        result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + mg.toFixed(1) + ' mg</strong><span>Volumen: <b>' + ml.toFixed(2) + ' mL</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span><small>' + note + ' Confirmar siempre la presentación del envase.</small>';
+        const fmt = value => Number(value.toFixed(2)).toString().replace('.', ',');
+        const drops = Math.round(ml*20*10)/10;
+        const volumeText = fmt(ml) + ' mL' + (drug === 'paracetamol' ? ' · ' + fmt(drops) + ' gotas (20 gotas/mL)' : '');
+        result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + fmt(mg) + ' mg</strong><span>Volumen: <b>' + volumeText + '</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span><small>' + note + ' Confirmar siempre la presentación del envase.</small>';
       });
     });
   </script>
