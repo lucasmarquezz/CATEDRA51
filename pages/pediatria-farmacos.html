@@ -75,38 +75,38 @@
         <div class="med-detail-list" id="medPanels">
           <section class="med-detail" id="paracetamol" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">01</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Paracetamol</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor leve a moderado y fiebre.</p></div><div><strong>Precauciones</strong><p>Individualizar en hepatopatía, desnutrición grave o uso concomitante de otros productos con paracetamol. En neonatos se requieren pautas específicas.</p></div></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor leve a moderado y fiebre.</p></div><div class="med-precautions"><strong>Precauciones</strong><p>Individualizar en hepatopatía, desnutrición grave o uso concomitante de otros productos con paracetamol. En neonatos se requieren pautas específicas.</p></div></div>
             <div class="dose-calculator" data-drug="paracetamol"><h4>Calculadora por peso · vía oral</h4>
-              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="10">10 mg/kg/dosis</option><option value="15" selected>15 mg/kg/dosis</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ej. 24"></label></div>
-              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
-              <p class="calc-footnote">10–15 mg/kg/dosis cada 6 horas. Máximo conservador adoptado: 60 mg/kg/día. No extrapolar a neonatos ni a vía IV/rectal.</p>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="10">10 mg/kg/dosis</option><option value="15" selected>15 mg/kg/dosis</option></select></label><label>Presentación<select data-concentration><option value="" selected disabled>Elegí la presentación</option><option value="100">Gotas · 100 mg/mL</option><option value="24">Suspensión · 120 mg/5 mL</option><option value="32">Suspensión · 160 mg/5 mL</option></select></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá el peso y seleccioná la presentación.</div>
+              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>10–15 mg/kg/dosis VO cada 6 horas.</span></p><p><strong>2. Dosis máxima</strong><span>60 mg/kg/día (límite conservador de esta herramienta).</span></p></div>
             </div>
           </section>
           <section class="med-detail" id="ibuprofeno" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">02</span><div><span class="med-card-kicker">AINE · ANALGÉSICO · ANTITÉRMICO</span><h3>Ibuprofeno</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor, fiebre e inflamación.</p></div><div><strong>Precauciones</strong><p>Evitar en menores de 3 meses sin indicación especializada. No utilizar en deshidratación, insuficiencia renal, sangrado/úlcera digestiva o hipersensibilidad a AINE.</p></div></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor, fiebre e inflamación.</p></div><div class="med-precautions"><strong>Precauciones</strong><p>Evitar en menores de 3 meses sin indicación especializada. No utilizar en deshidratación, insuficiencia renal, sangrado/úlcera digestiva o hipersensibilidad a AINE.</p></div></div>
             <div class="dose-calculator" data-drug="ibuprofeno"><h4>Calculadora por peso · vía oral</h4>
-              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="5">5 mg/kg/dosis</option><option value="10" selected>10 mg/kg/dosis</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ej. 20"></label></div>
-              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
-              <p class="calc-footnote">5–10 mg/kg/dosis cada 6–8 horas. Máximo conservador adoptado: 30 mg/kg/día. Confirmar concentración exacta del producto antes de convertir a mL.</p>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="5">5 mg/kg/dosis</option><option value="10" selected>10 mg/kg/dosis</option></select></label><label>Presentación<select data-concentration><option value="" selected disabled>Elegí la presentación</option><option value="20">Suspensión 2% · 100 mg/5 mL</option><option value="40">Suspensión 4% · 200 mg/5 mL</option></select></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá el peso y seleccioná la presentación.</div>
+              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>5–10 mg/kg/dosis VO cada 6–8 horas.</span></p><p><strong>2. Dosis máxima</strong><span>30 mg/kg/día (límite conservador de esta herramienta).</span></p></div>
             </div>
           </section>
           <section class="med-detail" id="dipirona" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">03</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Dipirona (metamizol)</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Fiebre y dolor moderado en situaciones seleccionadas.</p></div><div><strong>Precauciones</strong><p>No usar en menores de 3 meses o 5 kg. Evitar ante antecedentes de agranulocitosis, alteraciones medulares o hipersensibilidad a pirazolonas. La vía IV requiere administración lenta y monitorización por riesgo de hipotensión.</p></div></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Fiebre y dolor moderado en situaciones seleccionadas.</p></div><div class="med-precautions"><strong>Precauciones</strong><p>No usar en menores de 3 meses o 5 kg. Evitar ante antecedentes de agranulocitosis, alteraciones medulares o hipersensibilidad a pirazolonas. La vía IV requiere administración lenta y monitorización por riesgo de hipotensión.</p></div></div>
             <div class="dose-calculator" data-drug="dipirona"><h4>Calculadora por peso · vía oral</h4>
-              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Indicación<select data-dose><option value="12.5" selected>Fiebre · 12,5 mg/kg/dosis</option><option value="20">Dolor · 20 mg/kg/dosis</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ver envase"></label></div>
-              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
-              <p class="calc-footnote">Referencia AEPap: fiebre 12,5 mg/kg/dosis cada 6 h; dolor 20 mg/kg/dosis cada 6–8 h. No se fija un máximo diario pediátrico único: verificar ficha técnica, edad, presentación y protocolo local.</p>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Indicación<select data-dose><option value="12.5" selected>Fiebre · 12,5 mg/kg/dosis</option><option value="20">Dolor · 20 mg/kg/dosis</option></select></label><label>Presentación<select data-concentration><option value="" selected disabled>Elegí la presentación</option><option value="500">Gotas · 500 mg/mL</option><option value="50">Solución · 250 mg/5 mL</option></select></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá el peso y seleccioná la presentación.</div>
+              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>Fiebre: 12,5 mg/kg/dosis cada 6 horas. Dolor: 20 mg/kg/dosis cada 6–8 horas.</span></p><p><strong>2. Dosis máxima</strong><span>Depende de edad y presentación; verificar ficha técnica y protocolo local.</span></p></div>
             </div>
           </section>
           <section class="med-detail" id="amoxicilina" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">04</span><div><span class="med-card-kicker">ANTIBIÓTICO · BETALACTÁMICO</span><h3>Amoxicilina</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Infecciones bacterianas sensibles. La elección y dosis dependen del foco, edad, gravedad, epidemiología y antecedentes de antibióticos.</p></div><div><strong>Precauciones</strong><p>Verificar alergia inmediata a betalactámicos, función renal, ajuste en insuficiencia renal y necesidad real de antibiótico.</p></div></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Infecciones bacterianas sensibles. La elección y dosis dependen del foco, edad, gravedad, epidemiología y antecedentes de antibióticos.</p></div><div class="med-precautions"><strong>Precauciones</strong><p>Verificar alergia inmediata a betalactámicos, función renal, ajuste en insuficiencia renal y necesidad real de antibiótico.</p></div></div>
             <div class="dose-calculator" data-drug="amoxicilina"><h4>Calculadora por peso · vía oral</h4>
-              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Esquema diario<select data-dose><option value="50">50 mg/kg/día · según foco</option><option value="90" selected>80–90 mg/kg/día · dosis alta (p. ej. OMA seleccionada)</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ej. 80"></label><label>Administraciones/día<select data-frequency><option value="2" selected>Cada 12 h · 2 tomas</option><option value="3">Cada 8 h · 3 tomas</option></select></label></div>
-              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
-              <p class="calc-footnote">La dosis alta de 80–90 mg/kg/día se utiliza en indicaciones seleccionadas, como otitis media aguda; máximo de referencia 3 g/día. No usar un esquema único para todas las infecciones.</p>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Esquema diario<select data-dose><option value="50">50 mg/kg/día · según foco</option><option value="90" selected>80–90 mg/kg/día · dosis alta (p. ej. OMA seleccionada)</option></select></label><label>Presentación<select data-concentration><option value="" selected disabled>Elegí la presentación</option><option value="50">Suspensión · 250 mg/5 mL</option><option value="100">Suspensión · 500 mg/5 mL</option></select></label><label>Administraciones/día<select data-frequency><option value="2" selected>Cada 12 h · 2 tomas</option><option value="3">Cada 8 h · 3 tomas</option></select></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá el peso y seleccioná la presentación.</div>
+              <div class="calc-guidance"><p><strong>1. Dosis recomendada e intervalo</strong><span>50 mg/kg/día o 80–90 mg/kg/día en indicaciones seleccionadas, dividido cada 8 o 12 horas según el foco.</span></p><p><strong>2. Dosis máxima</strong><span>3.000 mg/día (tope de referencia usado por esta calculadora; ajustar a indicación).</span></p></div>
             </div>
           </section>
           <section class="med-detail" id="adrenalina" hidden>
@@ -195,8 +195,9 @@
       const button = calc.querySelector('.calc-button');
       const result = calc.querySelector('.calc-result');
       button.addEventListener('click', () => {
-        const weight = Number(calc.querySelector('[data-weight]').value);
-        if (!Number.isFinite(weight) || weight <= 0 || weight > 100) {
+        const weightInput = calc.querySelector('[data-weight]').value;
+        const weight = Number(weightInput);
+        if (!weightInput || !Number.isFinite(weight) || weight <= 0 || weight > 100) {
           result.innerHTML = '<span class="result-error">Ingresá un peso válido (mayor a 0 y hasta 100 kg).</span>';
           return;
         }
@@ -216,7 +217,7 @@
         const doseValue = Number(calc.querySelector('[data-dose]').value);
         const concentration = Number(calc.querySelector('[data-concentration]').value);
         if (!Number.isFinite(concentration) || concentration <= 0) {
-          result.innerHTML = '<span class="result-error">Ingresá la concentración del producto en mg/mL, verificándola en el envase.</span>';
+          result.innerHTML = '<span class="result-error">Seleccioná una presentación y verificá su concentración en el envase.</span>';
           return;
         }
         let mg = 0;
@@ -244,7 +245,7 @@
           note = 'Verificar máximo diario, edad, indicación y ficha técnica antes de administrar.';
         }
         const ml = mg/concentration;
-        result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + mg.toFixed(1) + ' mg</strong><span>Volumen: <b>' + ml.toFixed(2) + ' mL</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span><small>' + note + '</small>';
+        result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + mg.toFixed(1) + ' mg</strong><span>Volumen: <b>' + ml.toFixed(2) + ' mL</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span><small>' + note + ' Confirmar siempre la presentación del envase.</small>';
       });
     });
   </script>
