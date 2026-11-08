@@ -75,34 +75,54 @@
         <div class="med-detail-list" id="medPanels">
           <section class="med-detail" id="paracetamol" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">01</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Paracetamol</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor y fiebre, según evaluación clínica.</p></div><div><strong>Datos para la consulta</strong><p>Dosis por toma, intervalo, dosis máxima diaria, edad, presentación y vía.</p></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora se habilitará al verificar dosis, intervalos, máximos y concentraciones de las presentaciones disponibles.</p><span>Dosificación pendiente de validación</span></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor leve a moderado y fiebre.</p></div><div><strong>Precauciones</strong><p>Individualizar en hepatopatía, desnutrición grave o uso concomitante de otros productos con paracetamol. En neonatos se requieren pautas específicas.</p></div></div>
+            <div class="dose-calculator" data-drug="paracetamol"><h4>Calculadora por peso · vía oral</h4>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="10">10 mg/kg/dosis</option><option value="15" selected>15 mg/kg/dosis</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ej. 24"></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
+              <p class="calc-footnote">10–15 mg/kg/dosis cada 6 horas. Máximo conservador adoptado: 60 mg/kg/día. No extrapolar a neonatos ni a vía IV/rectal.</p>
+            </div>
           </section>
           <section class="med-detail" id="ibuprofeno" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">02</span><div><span class="med-card-kicker">AINE · ANALGÉSICO · ANTITÉRMICO</span><h3>Ibuprofeno</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor, fiebre e inflamación, según evaluación clínica.</p></div><div><strong>Precauciones</strong><p>Valorar edad, hidratación, función renal, antecedentes gastrointestinales y contraindicaciones para AINE.</p></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora se habilitará al verificar dosis, intervalos, máximos y concentraciones de las presentaciones disponibles.</p><span>Dosificación pendiente de validación</span></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor, fiebre e inflamación.</p></div><div><strong>Precauciones</strong><p>Evitar en menores de 3 meses sin indicación especializada. No utilizar en deshidratación, insuficiencia renal, sangrado/úlcera digestiva o hipersensibilidad a AINE.</p></div></div>
+            <div class="dose-calculator" data-drug="ibuprofeno"><h4>Calculadora por peso · vía oral</h4>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Dosis por toma<select data-dose><option value="5">5 mg/kg/dosis</option><option value="10" selected>10 mg/kg/dosis</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ej. 20"></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
+              <p class="calc-footnote">5–10 mg/kg/dosis cada 6–8 horas. Máximo conservador adoptado: 30 mg/kg/día. Confirmar concentración exacta del producto antes de convertir a mL.</p>
+            </div>
           </section>
           <section class="med-detail" id="dipirona" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">03</span><div><span class="med-card-kicker">ANALGÉSICO · ANTITÉRMICO</span><h3>Dipirona (metamizol)</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Dolor y fiebre en situaciones seleccionadas, según evaluación clínica.</p></div><div><strong>Precauciones</strong><p>Verificar edad, vía, antecedentes de hipersensibilidad, riesgo hematológico y normativa local.</p></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora se habilitará al verificar dosis, intervalos, máximos y concentraciones de las presentaciones disponibles.</p><span>Dosificación pendiente de validación</span></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Fiebre y dolor moderado en situaciones seleccionadas.</p></div><div><strong>Precauciones</strong><p>No usar en menores de 3 meses o 5 kg. Evitar ante antecedentes de agranulocitosis, alteraciones medulares o hipersensibilidad a pirazolonas. La vía IV requiere administración lenta y monitorización por riesgo de hipotensión.</p></div></div>
+            <div class="dose-calculator" data-drug="dipirona"><h4>Calculadora por peso · vía oral</h4>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Indicación<select data-dose><option value="12.5" selected>Fiebre · 12,5 mg/kg/dosis</option><option value="20">Dolor · 20 mg/kg/dosis</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ver envase"></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
+              <p class="calc-footnote">Referencia AEPap: fiebre 12,5 mg/kg/dosis cada 6 h; dolor 20 mg/kg/dosis cada 6–8 h. No se fija un máximo diario pediátrico único: verificar ficha técnica, edad, presentación y protocolo local.</p>
+            </div>
           </section>
           <section class="med-detail" id="amoxicilina" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">04</span><div><span class="med-card-kicker">ANTIBIÓTICO · BETALACTÁMICO</span><h3>Amoxicilina</h3></div></div>
-            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Infecciones bacterianas sensibles; el esquema depende del foco y del microorganismo probable.</p></div><div><strong>Datos para la consulta</strong><p>Dosis diaria o por toma, fraccionamiento, duración, dosis máxima y concentración de la suspensión.</p></div></div>
-            <div class="calculator-placeholder"><strong>Calculadora pediátrica</strong><p>La calculadora contemplará esquemas diferenciados por indicación y conversión a mL según la concentración elegida.</p><span>Dosificación pendiente de validación</span></div>
+            <div class="med-info-grid"><div><strong>Indicaciones</strong><p>Infecciones bacterianas sensibles. La elección y dosis dependen del foco, edad, gravedad, epidemiología y antecedentes de antibióticos.</p></div><div><strong>Precauciones</strong><p>Verificar alergia inmediata a betalactámicos, función renal, ajuste en insuficiencia renal y necesidad real de antibiótico.</p></div></div>
+            <div class="dose-calculator" data-drug="amoxicilina"><h4>Calculadora por peso · vía oral</h4>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Esquema diario<select data-dose><option value="50">50 mg/kg/día · según foco</option><option value="90" selected>80–90 mg/kg/día · dosis alta (p. ej. OMA seleccionada)</option></select></label><label>Concentración (mg/mL)<input type="number" min="0.01" step="any" data-concentration placeholder="Ej. 80"></label><label>Administraciones/día<select data-frequency><option value="2" selected>Cada 12 h · 2 tomas</option><option value="3">Cada 8 h · 3 tomas</option></select></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y concentración para calcular.</div>
+              <p class="calc-footnote">La dosis alta de 80–90 mg/kg/día se utiliza en indicaciones seleccionadas, como otitis media aguda; máximo de referencia 3 g/día. No usar un esquema único para todas las infecciones.</p>
+            </div>
           </section>
           <section class="med-detail" id="adrenalina" hidden>
             <div class="med-detail-heading"><span class="med-detail-number">05</span><div><span class="med-card-kicker">EMERGENCIAS</span><h3>Adrenalina</h3></div></div>
-            <p class="med-panel-intro">Primero seleccioná la indicación: la dosis, la vía y la concentración cambian según el escenario clínico.</p>
-            <div class="adrenaline-options"><button type="button" disabled>Anafilaxia · IM</button><button type="button" disabled>Paro cardiorrespiratorio · EV/IO</button><button type="button" disabled>Shock · Infusión</button></div>
-            <div class="calculator-placeholder emergency-placeholder"><strong>Calculadora por indicación</strong><p>Se habilitarán módulos separados con dosis, vía, concentración, preparación, volumen y repetición específicos para cada indicación validada.</p><span>Protocolos pendientes de validación</span></div>
+            <p class="med-panel-intro">Seleccioná la indicación. La concentración cambia según la vía: comprobar siempre la etiqueta de la ampolla y la dilución.</p>
+            <div class="dose-calculator emergency-calculator" data-drug="adrenalina"><h4>Calculadora por indicación</h4>
+              <div class="calc-fields"><label>Peso (kg)<input type="number" min="0.1" step="0.1" data-weight placeholder="Ej. 12"></label><label>Indicación<select data-mode><option value="anaphylaxis">Anafilaxia · IM</option><option value="arrest">Paro cardiorrespiratorio · EV/IO</option></select></label></div>
+              <button class="calc-button" type="button">Calcular dosis</button><div class="calc-result" aria-live="polite">Ingresá peso y seleccioná la indicación.</div>
+              <p class="calc-footnote">Anafilaxia: 0,01 mg/kg IM con solución 1 mg/mL (1:1000), en cara anterolateral del muslo; puede repetirse a los 5 minutos según respuesta. PCR: 0,01 mg/kg EV/IO con solución 0,1 mg/mL (1:10.000), cada 3–5 minutos; máximo 1 mg por dosis. Shock con infusión requiere protocolo de UCIP y titulación: no se calcula aquí.</p>
+              <div class="calc-alert"><strong>Alerta:</strong> 1 mg/mL y 0,1 mg/mL no son intercambiables. En anafilaxia se aplica un tope pediátrico orientativo de 0,3 mg; confirmar edad y protocolo local.</div>
+            </div>
           </section>
         </div>
 
                 <div class="clinical-warning"><strong>Importante</strong><p>Material educativo y de apoyo a la consulta. No reemplaza la evaluación clínica, la prescripción profesional ni los protocolos institucionales. Antes de administrar, verificar paciente, peso, indicación, dosis, concentración, vía, preparación y dosis máxima.</p></div>
-        <p class="source-attribution">Fuente de referencia para dosis y recomendaciones: <a href="https://farmacia.garrahan.gov.ar/Vademecum/Busqueda" target="_blank" rel="noopener noreferrer">Formulario Farmacoterapéutico · Hospital de Pediatría Garrahan</a>. Consultar la versión vigente y los protocolos institucionales.</p>
+        <p class="source-attribution">Fuentes complementarias: <a href="https://farmacia.garrahan.gov.ar/Vademecum/Busqueda" target="_blank" rel="noopener noreferrer">Formulario Farmacoterapéutico · Hospital Garrahan</a> · <a href="https://algoritmos.aepap.org/algoritmo/61/tratamiento-del-dolor-agudo-en-pediatria-de-atencion-prim" target="_blank" rel="noopener noreferrer">AEPap · Tratamiento del dolor agudo</a> · <a href="https://www.msf.org.ar/wp-content/uploads/sites/3/2023/09/guia_clinica_y_terapeutica.pdf" target="_blank" rel="noopener noreferrer">MSF · Guía clínica y terapéutica</a> · <a href="https://publications.aap.org/pediatrics/article/doi/10.1542/peds.2025-074351/205236/Part-8-Pediatric-Advanced-Life-Support-2025" target="_blank" rel="noopener noreferrer">AHA/AAP · PALS 2025</a>.</p>
       </section>
 
       <section class="must-know library-section" id="biblioteca">
@@ -144,42 +164,20 @@
   <script src="../js/main.js"></script>
   <script>
     const medSearch = document.getElementById('medSearch');
-    const medCards = [...document.querySelectorAll('.med-card')];
-    const noResults = document.getElementById('medNoResults');
-    medSearch.addEventListener('input', () => {
-      const query = medSearch.value.trim().toLocaleLowerCase('es');
-      let visible = 0;
-      medCards.forEach(card => {
-        const match = card.dataset.med.includes(query);
-        card.hidden = !match;
-        if (match) visible++;
-      });
-      noResults.hidden = visible !== 0;
-    });
-  </script>
-</body>
-</html  <script>
-    const medSearch = document.getElementById('medSearch');
     const medButtons = [...document.querySelectorAll('.med-button')];
     const medPanels = [...document.querySelectorAll('.med-detail')];
     const noResults = document.getElementById('medNoResults');
 
-    medButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const targetId = button.dataset.target;
-        const wasOpen = button.getAttribute('aria-expanded') === 'true';
-        medButtons.forEach(item => {
-          item.setAttribute('aria-expanded', 'false');
-          item.classList.remove('is-active');
-        });
-        medPanels.forEach(panel => panel.hidden = true);
-        if (!wasOpen) {
-          button.setAttribute('aria-expanded', 'true');
-          button.classList.add('is-active');
-          document.getElementById(targetId).hidden = false;
-        }
-      });
-    });
+    medButtons.forEach(button => button.addEventListener('click', () => {
+      const wasOpen = button.getAttribute('aria-expanded') === 'true';
+      medButtons.forEach(item => { item.setAttribute('aria-expanded','false'); item.classList.remove('is-active'); });
+      medPanels.forEach(panel => panel.hidden = true);
+      if (!wasOpen) {
+        button.setAttribute('aria-expanded','true');
+        button.classList.add('is-active');
+        document.getElementById(button.dataset.target).hidden = false;
+      }
+    }));
 
     medSearch.addEventListener('input', () => {
       const query = medSearch.value.trim().toLocaleLowerCase('es');
@@ -190,6 +188,64 @@
         if (match) visible++;
       });
       noResults.hidden = visible !== 0;
+    });
+
+    document.querySelectorAll('.dose-calculator').forEach(calc => {
+      const drug = calc.dataset.drug;
+      const button = calc.querySelector('.calc-button');
+      const result = calc.querySelector('.calc-result');
+      button.addEventListener('click', () => {
+        const weight = Number(calc.querySelector('[data-weight]').value);
+        if (!Number.isFinite(weight) || weight <= 0 || weight > 100) {
+          result.innerHTML = '<span class="result-error">Ingresá un peso válido (mayor a 0 y hasta 100 kg).</span>';
+          return;
+        }
+        if (drug === 'adrenalina') {
+          const mode = calc.querySelector('[data-mode]').value;
+          const doseRaw = weight * 0.01;
+          if (mode === 'anaphylaxis') {
+            const dose = Math.min(doseRaw,0.3);
+            result.innerHTML = '<span class="result-label">Dosis IM</span><strong>' + dose.toFixed(3) + ' mg</strong><span>Volumen: <b>' + dose.toFixed(3) + ' mL</b> de adrenalina 1 mg/mL (1:1000), sin diluir.</span><small>' + (doseRaw > 0.3 ? 'Se aplicó el tope orientativo de 0,3 mg. Confirmar edad y protocolo.' : '0,01 mg/kg. Puede repetirse a los 5 minutos según respuesta.') + '</small>';
+          } else {
+            const dose = Math.min(doseRaw,1);
+            const volume = dose/0.1;
+            result.innerHTML = '<span class="result-label">Dosis EV/IO</span><strong>' + dose.toFixed(3) + ' mg</strong><span>Volumen: <b>' + volume.toFixed(2) + ' mL</b> de solución 0,1 mg/mL (1:10.000).</span><small>0,01 mg/kg. Repetir cada 3–5 minutos durante RCP según algoritmo. Máximo 1 mg por dosis.</small>';
+          }
+          return;
+        }
+        const doseValue = Number(calc.querySelector('[data-dose]').value);
+        const concentration = Number(calc.querySelector('[data-concentration]').value);
+        if (!Number.isFinite(concentration) || concentration <= 0) {
+          result.innerHTML = '<span class="result-error">Ingresá la concentración del producto en mg/mL, verificándola en el envase.</span>';
+          return;
+        }
+        let mg = 0;
+        let frequency = '';
+        let note = '';
+        if (drug === 'amoxicilina') {
+          const freq = Number(calc.querySelector('[data-frequency]').value);
+          const daily = Math.min(weight*doseValue,3000);
+          mg = daily/freq;
+          frequency = freq === 2 ? 'cada 12 horas' : 'cada 8 horas';
+          note = 'Dosis diaria calculada: ' + daily.toFixed(1) + ' mg/día (tope de referencia 3.000 mg/día).';
+        } else if (drug === 'paracetamol') {
+          mg = weight*doseValue;
+          frequency = 'cada 6 horas';
+          note = 'Máximo conservador de referencia: ' + (weight*60).toFixed(1) + ' mg/día.';
+        } else if (drug === 'ibuprofeno') {
+          mg = weight*doseValue;
+          frequency = 'cada 6–8 horas';
+          const maxDose = weight*30/(doseValue===10?3:4);
+          mg = Math.min(mg,maxDose);
+          note = 'Máximo conservador de referencia: ' + (weight*30).toFixed(1) + ' mg/día.';
+        } else {
+          mg = weight*doseValue;
+          frequency = doseValue===12.5 ? 'cada 6 horas' : 'cada 6–8 horas';
+          note = 'Verificar máximo diario, edad, indicación y ficha técnica antes de administrar.';
+        }
+        const ml = mg/concentration;
+        result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + mg.toFixed(1) + ' mg</strong><span>Volumen: <b>' + ml.toFixed(2) + ' mL</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span><small>' + note + '</small>';
+      });
     });
   </script>
 </body>
