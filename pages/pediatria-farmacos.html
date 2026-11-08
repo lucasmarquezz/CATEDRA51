@@ -122,7 +122,7 @@
         </div>
 
                 <div class="clinical-warning"><strong>Importante</strong><p>Material educativo y de apoyo a la consulta. No reemplaza la evaluación clínica, la prescripción profesional ni los protocolos institucionales. Antes de administrar, verificar paciente, peso, indicación, dosis, concentración, vía, preparación y dosis máxima.</p></div>
-        <p class="source-attribution">Fuentes complementarias: <a href="https://farmacia.garrahan.gov.ar/Vademecum/Busqueda" target="_blank" rel="noopener noreferrer">Formulario Farmacoterapéutico · Hospital Garrahan</a> · <a href="https://algoritmos.aepap.org/algoritmo/61/tratamiento-del-dolor-agudo-en-pediatria-de-atencion-prim" target="_blank" rel="noopener noreferrer">AEPap · Tratamiento del dolor agudo</a> · <a href="https://www.msf.org.ar/wp-content/uploads/sites/3/2023/09/guia_clinica_y_terapeutica.pdf" target="_blank" rel="noopener noreferrer">MSF · Guía clínica y terapéutica</a> · <a href="https://publications.aap.org/pediatrics/article/doi/10.1542/peds.2025-074351/205236/Part-8-Pediatric-Advanced-Life-Support-2025" target="_blank" rel="noopener noreferrer">AHA/AAP · PALS 2025</a>.</p>
+        <p class="source-attribution">Fuentes complementarias: <a href="https://farmacia.garrahan.gov.ar/Vademecum/Busqueda" target="_blank" rel="noopener noreferrer">Formulario Farmacoterapéutico · Hospital Garrahan</a> · <a href="https://algoritmos.aepap.org/algoritmo/61/tratamiento-del-dolor-agudo-en-pediatria-de-atencion-prim" target="_blank" rel="noopener noreferrer">AEPap · Tratamiento del dolor agudo</a> · <a href="https://www.msf.org.ar/wp-content/uploads/sites/3/2023/09/guia_clinica_y_terapeutica.pdf" target="_blank" rel="noopener noreferrer">MSF · Guía clínica y terapéutica</a> · <a href="https://algoritmos.aepap.org/algoritmo/37/otitis-media-aguda" target="_blank" rel="noopener noreferrer">AEPap · Otitis media aguda</a> · <a href="https://publications.aap.org/pediatrics/article/doi/10.1542/peds.2025-074351/205236/Part-8-Pediatric-Advanced-Life-Support-2025" target="_blank" rel="noopener noreferrer">AHA/AAP · PALS 2025</a>.</p>
       </section>
 
       <section class="must-know library-section" id="biblioteca">
@@ -234,7 +234,7 @@
           note = 'Máximo conservador de referencia: ' + (weight*60).toFixed(1) + ' mg/día.';
         } else if (drug === 'ibuprofeno') {
           mg = weight*doseValue;
-          frequency = 'cada 6–8 horas';
+          frequency = doseValue === 10 ? 'cada 8 horas' : 'cada 6 horas';
           const maxDose = weight*30/(doseValue===10?3:4);
           mg = Math.min(mg,maxDose);
           note = 'Máximo conservador de referencia: ' + (weight*30).toFixed(1) + ' mg/día.';
