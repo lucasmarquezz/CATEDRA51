@@ -122,42 +122,37 @@
           </section>
         </div>
 
-                <div class="clinical-warning"><strong>Importante</strong><p>Material educativo y de apoyo a la consulta. No reemplaza la evaluación clínica, la prescripción profesional ni los protocolos institucionales. Antes de administrar, verificar paciente, peso, indicación, dosis, concentración, vía, preparación y dosis máxima.</p></div>
-        <p class="source-attribution">Fuentes complementarias: <a href="https://farmacia.garrahan.gov.ar/Vademecum/Busqueda" target="_blank" rel="noopener noreferrer">Formulario Farmacoterapéutico · Hospital Garrahan</a> · <a href="https://algoritmos.aepap.org/algoritmo/61/tratamiento-del-dolor-agudo-en-pediatria-de-atencion-prim" target="_blank" rel="noopener noreferrer">AEPap · Tratamiento del dolor agudo</a> · <a href="https://www.msf.org.ar/wp-content/uploads/sites/3/2023/09/guia_clinica_y_terapeutica.pdf" target="_blank" rel="noopener noreferrer">MSF · Guía clínica y terapéutica</a> · <a href="https://algoritmos.aepap.org/algoritmo/37/otitis-media-aguda" target="_blank" rel="noopener noreferrer">AEPap · Otitis media aguda</a> · <a href="https://publications.aap.org/pediatrics/article/doi/10.1542/peds.2025-074351/205236/Part-8-Pediatric-Advanced-Life-Support-2025" target="_blank" rel="noopener noreferrer">AHA/AAP · PALS 2025</a>.</p>
       </section>
 
       <section class="must-know library-section" id="biblioteca">
         <div class="section-heading">
-          <div><span class="eyebrow">BIBLIOTECA FARMACOLÓGICA</span><h2>Otros grupos de fármacos</h2></div>
-          <p>Se mantienen estos apartados para organizar y completar progresivamente el resto de la farmacología pediátrica.</p>
+          <div><span class="eyebrow">BIBLIOTECA FARMACOLÓGICA</span><h2>Buscador de fármacos</h2></div>
+          <p>Buscá por nombre para encontrar rápidamente el medicamento en las tablas.</p>
         </div>
-        <div class="topic-grid">
-          <a class="topic-card" href="#antibioticos"><span>01</span><h3>Antibióticos</h3><p>Tabla pediátrica de antibióticos.</p></a>
-          <a class="topic-card" href="#analgesicos"><span>02</span><h3>Analgésicos</h3><p>Tabla pediátrica de analgésicos.</p></a>
-          <a class="topic-card" href="#respiratorio"><span>03</span><h3>Respiratorio</h3><p>Fármacos utilizados en patología respiratoria pediátrica.</p></a>
-          <a class="topic-card" href="#cardiovascular"><span>04</span><h3>Cardiovascular</h3><p>Fármacos utilizados en patología cardiovascular pediátrica.</p></a>
+        <div class="pharm-search">
+          <label for="pharmSearch">BUSCAR FÁRMACO</label>
+          <div class="pharm-search-row"><input id="pharmSearch" type="search" placeholder="Ej. vancomicina..." autocomplete="off"><button id="pharmSearchButton" type="button">Buscar</button></div>
+          <p id="pharmSearchStatus" aria-live="polite">12 antibióticos disponibles.</p>
         </div>
-
-        <div id="antibioticos" class="pharm-section" style="margin-top:55px">
-          <div class="section-heading"><div><span class="eyebrow">PEDIATRÍA · FÁRMACOS</span><h2>Antibióticos</h2></div></div>
-          <div class="pharm-table-wrap"><table class="pharm-table"><thead><tr><th>Fármaco</th><th>Indicación</th><th>Dosis pediátrica</th><th>Vía</th><th>Observaciones</th></tr></thead><tbody><tr><td colspan="5">Tabla pendiente de completar.</td></tr></tbody></table></div>
-        </div>
-
-        <div id="analgesicos" class="pharm-section" style="margin-top:55px">
-          <div class="section-heading"><div><span class="eyebrow">PEDIATRÍA · FÁRMACOS</span><h2>Analgésicos</h2></div></div>
-          <div class="pharm-table-wrap"><table class="pharm-table"><thead><tr><th>Fármaco</th><th>Indicación</th><th>Dosis pediátrica</th><th>Vía</th><th>Observaciones</th></tr></thead><tbody><tr><td colspan="5">Tabla pendiente de completar.</td></tr></tbody></table></div>
-        </div>
-
-        <div id="respiratorio" class="pharm-section" style="margin-top:55px">
-          <div class="section-heading"><div><span class="eyebrow">PEDIATRÍA · FÁRMACOS</span><h2>Respiratorio</h2></div></div>
-          <div class="pharm-table-wrap"><table class="pharm-table"><thead><tr><th>Fármaco</th><th>Indicación</th><th>Dosis pediátrica</th><th>Vía</th><th>Observaciones</th></tr></thead><tbody><tr><td colspan="5">Tabla pendiente de completar.</td></tr></tbody></table></div>
-        </div>
-
-        <div id="cardiovascular" class="pharm-section" style="margin-top:55px">
-          <div class="section-heading"><div><span class="eyebrow">PEDIATRÍA · FÁRMACOS</span><h2>Cardiovascular</h2></div></div>
-          <div class="pharm-table-wrap"><table class="pharm-table"><thead><tr><th>Fármaco</th><th>Indicación</th><th>Dosis pediátrica</th><th>Vía</th><th>Observaciones</th></tr></thead><tbody><tr><td colspan="5">Tabla pendiente de completar.</td></tr></tbody></table></div>
+        <div id="antibioticos" class="pharm-section">
+          <div class="section-heading"><div><span class="eyebrow">PEDIATRÍA · FARMACOLOGÍA</span><h2>Antibióticos</h2></div></div>
+          <div class="pharm-table-wrap"><table class="pharm-table pharm-table-wide"><thead><tr><th>Fármaco</th><th>Dosis</th><th>Indicación</th><th>Microorganismos que cubre</th><th>Precauciones</th></tr></thead><tbody id="antibioticRows">
+            <tr id="ab-amoxicilina" data-drug="amoxicilina"><td><strong>Amoxicilina</strong></td><td>40–50 mg/kg/día VO, cada 8 h. Máx. 6 g/día.</td><td>Infecciones respiratorias, otitis media y otras infecciones sensibles.</td><td><em>Streptococcus pneumoniae</em> sensible, <em>Streptococcus pyogenes</em> y algunos <em>Enterococcus faecalis</em>.</td><td>Alergia a penicilinas. Ajustar en insuficiencia renal.</td></tr>
+            <tr id="ab-amoxicilina-clavulanico" data-drug="amoxicilina clavulanico ácido clavulanico"><td><strong>Amoxicilina + ácido clavulánico</strong></td><td>40–50 mg/kg/día del componente amoxicilina VO, cada 8 h.</td><td>Infecciones respiratorias, otitis, sinusitis e infecciones por productores de betalactamasas.</td><td><em>S. pneumoniae</em>, <em>H. influenzae</em>, <em>Moraxella catarrhalis</em>, MSSA y anaerobios sensibles.</td><td>Alergia a betalactámicos. Vigilar función hepática y proporción amoxicilina/clavulánico.</td></tr>
+            <tr id="ab-ampicilina" data-drug="ampicilina"><td><strong>Ampicilina</strong></td><td>100 mg/kg/día EV/IM, cada 6 h. Máx. 12 g/día.</td><td>Infecciones por microorganismos sensibles, incluidas algunas infecciones neonatales.</td><td><em>Listeria monocytogenes</em>, estreptococos del grupo B, enterococos sensibles y algunos gramnegativos sensibles.</td><td>Alergia a betalactámicos. Ajustar en insuficiencia renal.</td></tr>
+            <tr id="ab-ampicilina-sulbactam" data-drug="ampicilina sulbactam"><td><strong>Ampicilina + sulbactam</strong></td><td>150 mg/kg/día (suma de ambos componentes) EV, cada 6 h. Máx. 6 g/día (suma de ambos componentes).</td><td>Infecciones graves: meningitis, bacteriemias, infecciones intraabdominales complicadas y osteomielitis.</td><td>MSSA, estreptococos, anaerobios y algunos gramnegativos sensibles.</td><td>Alergia a betalactámicos. Ajustar en insuficiencia renal.</td></tr>
+            <tr id="ab-azitromicina" data-drug="azitromicina"><td><strong>Azitromicina</strong></td><td>10 mg/kg/día VO/EV, cada 24 h. Máx. habitual 500 mg/día.</td><td>Infecciones respiratorias por microorganismos sensibles y patógenos atípicos.</td><td><em>Mycoplasma pneumoniae</em>, <em>Chlamydia pneumoniae</em>, <em>Bordetella pertussis</em> y algunos estreptococos.</td><td>Precaución con prolongación del QT y alteraciones hepáticas.</td></tr>
+            <tr id="ab-cefazolina" data-drug="cefazolina"><td><strong>Cefazolina</strong></td><td>50–100 mg/kg/día EV/IM, cada 8 h. Máx. 8 g/día.</td><td>Infecciones de piel y partes blandas, osteoarticulares y profilaxis quirúrgica.</td><td>MSSA, estreptococos y algunos enterobacterales sensibles.</td><td>Alergia a cefalosporinas y betalactámicos. Ajustar en insuficiencia renal.</td></tr>
+            <tr id="ab-ceftriaxona" data-drug="ceftriaxona"><td><strong>Ceftriaxona</strong></td><td>50–75 mg/kg/día EV/IM, cada 12–24 h. Máx. 4 g/día.</td><td>Neumonía, meningitis, sepsis e infecciones bacterianas sensibles.</td><td><em>S. pneumoniae</em>, <em>Neisseria meningitidis</em>, <em>H. influenzae</em> y enterobacterales sensibles.</td><td>Precauciones especiales en neonatos y con soluciones que contienen calcio. No cubre Pseudomonas, Listeria ni enterococos.</td></tr>
+            <tr id="ab-claritromicina" data-drug="claritromicina"><td><strong>Claritromicina</strong></td><td>15 mg/kg/día VO, cada 12 h. Máx. 250 mg/dosis.</td><td>Infecciones respiratorias por microorganismos sensibles y patógenos atípicos.</td><td><em>Mycoplasma pneumoniae</em>, <em>Chlamydia pneumoniae</em>, <em>Bordetella pertussis</em> y algunos estreptococos.</td><td>Prolongación del QT e interacciones medicamentosas.</td></tr>
+            <tr id="ab-clindamicina" data-drug="clindamicina"><td><strong>Clindamicina</strong></td><td>VO: 10–20 mg/kg/día. EV: 20–30 mg/kg/día, cada 6–8 h.</td><td>Infecciones de piel, partes blandas, osteoarticulares y anaerobias.</td><td>MSSA, algunos MRSA comunitarios sensibles, estreptococos y anaerobios.</td><td>Riesgo de colitis por <em>Clostridioides difficile</em>. No cubre gramnegativos aerobios.</td></tr>
+            <tr id="ab-eritromicina" data-drug="eritromicina"><td><strong>Eritromicina</strong></td><td>40–50 mg/kg/día, cada 6–8 h. Máx. 2 g/día.</td><td>Infecciones por microorganismos sensibles y patógenos atípicos.</td><td>Algunos estreptococos, <em>Mycoplasma pneumoniae</em>, <em>Chlamydia pneumoniae</em> y <em>Bordetella pertussis</em>.</td><td>Prolongación del QT, interacciones medicamentosas y efectos gastrointestinales.</td></tr>
+            <tr id="ab-meropenem" data-drug="meropenem"><td><strong>Meropenem</strong></td><td>60 mg/kg/día EV, cada 8 h. Máx. 6 g/día.</td><td>Infecciones graves, sepsis e infecciones por microorganismos resistentes.</td><td>Enterobacterales, <em>Pseudomonas aeruginosa</em>, estreptococos y anaerobios sensibles.</td><td>Ajustar en insuficiencia renal. No cubre MRSA ni microorganismos atípicos.</td></tr>
+            <tr id="ab-vancomicina" data-drug="vancomicina"><td><strong>Vancomicina</strong></td><td>≤12 años: 45 mg/kg/día EV, cada 6–8 h.</td><td>Infecciones graves por grampositivos, incluyendo sospecha o confirmación de MRSA.</td><td>MRSA, estafilococos coagulasa negativos, estreptococos y enterococos sensibles.</td><td>Ajustar según función renal y monitorizar exposición (AUC/concentraciones). Infundir lentamente.</td></tr>
+          </tbody></table></div>
         </div>
       </section>
+
     </main>
 
     <footer><span>CATEDRA 51</span><span>Por L. Márquez</span></footer>
@@ -253,6 +248,24 @@
         result.innerHTML = '<span class="result-label">Dosis por toma</span><strong>' + fmt(mg) + ' mg</strong><span>Volumen: <b>' + volumeText + '</b> (' + concentration + ' mg/mL) · ' + frequency + '.</span>' + (drug === 'paracetamol' ? '' : '<small>' + note + ' Confirmar siempre la presentación del envase.</small>');
       });
     });
+
+    const pharmSearch = document.getElementById('pharmSearch');
+    const pharmSearchButton = document.getElementById('pharmSearchButton');
+    const pharmRows = [...document.querySelectorAll('#antibioticRows tr')];
+    const pharmStatus = document.getElementById('pharmSearchStatus');
+    function searchPharm() {
+      const query = pharmSearch.value.trim().toLocaleLowerCase('es').normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+      const matches = pharmRows.filter(row => row.dataset.drug.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').includes(query));
+      pharmRows.forEach(row => { row.hidden = query !== '' && !matches.includes(row); row.classList.remove('pharm-highlight'); });
+      pharmStatus.textContent = query === '' ? pharmRows.length + ' antibióticos disponibles.' : matches.length ? matches.length + ' resultado(s).' : 'No se encontraron fármacos.';
+      if (matches.length === 1) {
+        matches[0].classList.add('pharm-highlight');
+        matches[0].scrollIntoView({behavior:'smooth',block:'center'});
+      }
+    }
+    pharmSearchButton.addEventListener('click', searchPharm);
+    pharmSearch.addEventListener('keydown', event => { if (event.key === 'Enter') searchPharm(); });
+    pharmSearch.addEventListener('input', () => { if (!pharmSearch.value.trim()) searchPharm(); });
   </script>
 </body>
 </html>
